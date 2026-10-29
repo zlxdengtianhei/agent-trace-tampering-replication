@@ -55,6 +55,10 @@ FILE_WRITE_TOOLS = {"Write", "Edit", "MultiEdit", "NotebookEdit", "write", "edit
 READ_TOOLS = {"Read", "read"}
 SHELL_TOOLS = {"Bash", "bash"}
 ARGV_LIMIT = {"bpf": 1023, "strace": 4096}  # longest argv string each recorder keeps
+# Programs a harness replaces with its own binary through shell functions (seen as argv[0] of that
+# binary). Claude Code 2.1.312's shell snapshot defines find -> embedded bfs and grep -> embedded ugrep
+# (and rg, when no rg is installed). The trace still says "find"; the kernel sees claude.exe.
+HARNESS_SHADOW = {"claude": {"find": "bfs", "grep": "ugrep", "rg": "rg"}}
 # Child processes the harness starts for itself, not as a tool call. Still listed, with this label.
 HARNESS_INTERNAL = {
     "probe": [],
@@ -153,7 +157,7 @@ class Procs:
         return " ".join(ex[-1].get("argv") or []) if ex else "(no exec seen)"
 
     def effects(self, pids):
-        eff = {"writes": [], "deletes": [], "renames": [], "truncates": [], "connects": [], "execs": []}
+        eff = {"writes": [], "deletes": [], "renames": [], "truncates": [], "connects": [], "execs": [], "argv0": []}
         for e in self.events:
             if e["pid"] not in pids:
                 continue
@@ -171,6 +175,9 @@ class Procs:
                 eff["connects"].append(f'{e.get("addr")}:{e.get("port")}')
             elif k == "exec":
                 eff["execs"].append(os.path.basename(e.get("path") or ""))
+                a0 = os.path.basename((e.get("argv") or [""])[0] or "")
+                if a0 and a0 != eff["execs"][-1]:
+                    eff["argv0"].append(a0)
         return {k: sorted(set(v)) for k, v in eff.items() if v}
 
     def resolve_proc_fd(self, e):
@@ -463,17 +470,25 @@ def match_claims(pr, ever, agent):
                 ran = set(eff.get("execs", []))
                 # A program must have run if nothing conditional precedes it, or if it follows "&&"
                 # and the whole command exited 0. Programs after "||" are never required.
-                need, skipped = [], []
+                need, skipped, shadowed = [], [], []
+                alias, a0s = HARNESS_SHADOW.get(pr.agent, {}), set(eff.get("argv0", []))
                 for w, cond in first_programs(cl["command"], with_cond=True):
-                    if os.path.basename(w) in ran:
+                    b = os.path.basename(w)
+                    if b in ran:
+                        continue
+                    if alias.get(b) in a0s:
+                        shadowed.append(f"{b} ran as the harness's embedded {alias[b]}")
                         continue
                     (need if cond is None or (cond == "&&" and rc == 0) else skipped).append(w)
+                if shadowed:
+                    r["harness_shadowed"] = shadowed
                 if need:
                     problems.append("claimed program(s) never executed: " + ", ".join(need))
                 if skipped:
                     r["not_run_conditional"] = skipped
+                ok = "matched" + (f" ({'; '.join(shadowed)})" if shadowed else "")
                 r.update(pid=pid, observed_exit=rc, reported_exit=rexit, reported_is_error=rep.get("is_error"),
-                         effects=eff, verdict="misreported: " + "; ".join(problems) if problems else "matched")
+                         effects=eff, verdict="misreported: " + "; ".join(problems) if problems else ok)
         elif tool in FILE_WRITE_TOOLS:
             hits = []
             for p in cl.get("paths") or []:
