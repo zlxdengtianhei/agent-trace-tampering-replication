@@ -1,0 +1,112 @@
+// Kernel-side observer for one agent run. Usage: bpftrace mx_observe.bt <uid>
+// Records process, file and network activity of every process whose uid == $1.
+// Run with `bpftrace -f json` so that newlines inside argv stay inside one JSON record;
+// each record's "data" is one tab-separated event, parsed by analysis/parse_observed.py.
+// RENAME has no return value (-1): it is taken before the call; strace has the result.
+// Paths for unlink/rename/ftruncate are printed as the last dentry components
+// (leaf last), because bpf_d_path is not allowed in those hooks.
+// Strings are cut at 1023 bytes. Claude Code prefixes each Bash command with a ~230-byte
+// shell-snapshot preamble, so 256 cut most commands off (smoke01, 10-29).
+config = { max_strlen = 1024 }
+
+BEGIN { printf("BEGIN\t%s\t%d\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), $1); }
+
+// argv pointers after the terminating NULL are garbage, so stop at the first NULL.
+tracepoint:syscalls:sys_enter_execve /uid == $1/ {
+  $p0 = (uint64)args.argv[0]; $p1 = $p0 ? (uint64)args.argv[1] : (uint64)0; $p2 = $p1 ? (uint64)args.argv[2] : (uint64)0; $p3 = $p2 ? (uint64)args.argv[3] : (uint64)0;
+  $p4 = $p3 ? (uint64)args.argv[4] : (uint64)0; $p5 = $p4 ? (uint64)args.argv[5] : (uint64)0; $p6 = $p5 ? (uint64)args.argv[6] : (uint64)0; $p7 = $p6 ? (uint64)args.argv[7] : (uint64)0;
+  printf("EXEC\t%s\t%d\t%d\t%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
+    strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid, curtask->real_parent->tgid, comm,
+    str(args.filename), str($p0), str($p1), str($p2), str($p3), str($p4), str($p5), str($p6), str($p7));
+}
+tracepoint:syscalls:sys_enter_execveat /uid == $1/ {
+  $p0 = (uint64)args.argv[0]; $p1 = $p0 ? (uint64)args.argv[1] : (uint64)0; $p2 = $p1 ? (uint64)args.argv[2] : (uint64)0; $p3 = $p2 ? (uint64)args.argv[3] : (uint64)0;
+  printf("EXEC\t%s\t%d\t%d\t%d\t%s\t%s\t%s\t%s\t%s\t%s\t\t\t\t\n",
+    strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid, curtask->real_parent->tgid, comm,
+    str(args.filename), str($p0), str($p1), str($p2), str($p3));
+}
+tracepoint:syscalls:sys_exit_execve /uid == $1 && args.ret < 0/ {
+  printf("EXECFAIL\t%s\t%d\t%d\t%d\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid, args.ret);
+}
+
+// New processes (not threads): parent = current process. Needed because a background child is
+// re-parented when its parent exits, so the ppid seen at exec time can be wrong.
+tracepoint:task:task_newtask /uid == $1 && (args.clone_flags & 0x10000) == 0/ {
+  printf("FORK\t%s\t%d\t%d\t%d\t%s\t%d\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, args.pid);
+}
+
+// Every successful open by the agent's processes, with the syscall's open flags.
+tracepoint:syscalls:sys_enter_openat /uid == $1/ { @oflags[tid] = args.flags; }
+tracepoint:syscalls:sys_exit_openat /uid == $1/ { delete(@oflags, tid); }
+fentry:security_file_open /uid == $1/ {
+  printf("OPEN\t%s\t%d\t%d\t%d\t%s\t%d\t%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, @oflags[tid], path(args.file->f_path));
+}
+
+fexit:vfs_unlink /uid == $1/ {
+  $d = args.dentry;
+  printf("UNLINK\t%s\t%d\t%d\t%d\t%s\t%d\t%s/%s/%s/%s/%s/%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, retval,
+    str($d->d_parent->d_parent->d_parent->d_parent->d_parent->d_name.name),
+    str($d->d_parent->d_parent->d_parent->d_parent->d_name.name),
+    str($d->d_parent->d_parent->d_parent->d_name.name), str($d->d_parent->d_parent->d_name.name),
+    str($d->d_parent->d_name.name), str($d->d_name.name));
+}
+fexit:vfs_rmdir /uid == $1/ {
+  $d = args.dentry;
+  printf("RMDIR\t%s\t%d\t%d\t%d\t%s\t%d\t%s/%s/%s/%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, retval,
+    str($d->d_parent->d_parent->d_parent->d_name.name), str($d->d_parent->d_parent->d_name.name),
+    str($d->d_parent->d_name.name), str($d->d_name.name));
+}
+// fentry, not fexit: after the rename the old dentry already carries the new name.
+fentry:vfs_rename /uid == $1/ {
+  $o = args.rd->old_dentry; $n = args.rd->new_dentry;
+  printf("RENAME\t%s\t%d\t%d\t%d\t%s\t%d\t%s/%s/%s/%s/%s\t%s/%s/%s/%s/%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, -1,
+    str($o->d_parent->d_parent->d_parent->d_parent->d_name.name), str($o->d_parent->d_parent->d_parent->d_name.name),
+    str($o->d_parent->d_parent->d_name.name), str($o->d_parent->d_name.name), str($o->d_name.name),
+    str($n->d_parent->d_parent->d_parent->d_parent->d_name.name), str($n->d_parent->d_parent->d_parent->d_name.name),
+    str($n->d_parent->d_parent->d_name.name), str($n->d_parent->d_name.name), str($n->d_name.name));
+}
+fentry:vfs_truncate /uid == $1/ {
+  printf("TRUNCATE\t%s\t%d\t%d\t%d\t%s\t%d\t%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, args.length, path(args.path));
+}
+tracepoint:syscalls:sys_enter_ftruncate /uid == $1/ {
+  $f = *(curtask->files->fdt->fd + args.fd);
+  $d = $f->f_path.dentry;
+  printf("FTRUNCATE\t%s\t%d\t%d\t%d\t%s\t%d\t%s/%s/%s/%s/%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, args.length,
+    str($d->d_parent->d_parent->d_parent->d_parent->d_name.name), str($d->d_parent->d_parent->d_parent->d_name.name),
+    str($d->d_parent->d_parent->d_name.name), str($d->d_parent->d_name.name), str($d->d_name.name));
+}
+
+tracepoint:syscalls:sys_enter_connect /uid == $1/ { @csa[tid] = args.uservaddr; }
+tracepoint:syscalls:sys_exit_connect /uid == $1 && @csa[tid] != 0/ {
+  $sa = (struct sockaddr_in *)@csa[tid];
+  $fam = $sa->sin_family;
+  if ($fam == 2) {
+    printf("CONNECT\t%s\t%d\t%d\t%d\t%s\t%d\tinet\t%s\t%d\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+      curtask->real_parent->tgid, comm, args.ret, ntop(2, $sa->sin_addr.s_addr),
+      (($sa->sin_port & 0xff) << 8) | (($sa->sin_port >> 8) & 0xff));
+  } else if ($fam == 10) {
+    $s6 = (struct sockaddr_in6 *)@csa[tid];
+    printf("CONNECT\t%s\t%d\t%d\t%d\t%s\t%d\tinet6\t%s\t%d\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+      curtask->real_parent->tgid, comm, args.ret, ntop(10, $s6->sin6_addr.in6_u.u6_addr8),
+      (($s6->sin6_port & 0xff) << 8) | (($s6->sin6_port >> 8) & 0xff));
+  } else if ($fam == 1) {
+    $su = (struct sockaddr_un *)@csa[tid];
+    printf("CONNECT\t%s\t%d\t%d\t%d\t%s\t%d\tunix\t%s\t0\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+      curtask->real_parent->tgid, comm, args.ret, $su->sun_path);
+  }
+  delete(@csa, tid);
+}
+
+tracepoint:sched:sched_process_exit /uid == $1 && pid == tid/ {
+  printf("EXIT\t%s\t%d\t%d\t%d\t%s\t%d\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs), pid, tid,
+    curtask->real_parent->tgid, comm, curtask->exit_code);
+}
+
+END { clear(@oflags); clear(@csa); printf("END\t%s\n", strftime("%Y-%m-%dT%H:%M:%S.%f", nsecs)); }

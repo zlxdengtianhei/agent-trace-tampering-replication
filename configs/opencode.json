@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "gw": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Model gateway",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+        "apiKey": "no-key"
+      },
+      "models": {
+        "zai/glm-5.3": { "name": "GLM 5.3", "limit": { "context": 200000, "output": 32768 } }
+      }
+    }
+  },
+  "model": "gw/zai/glm-5.3",
+  "small_model": "gw/zai/glm-5.3",
+  "enabled_providers": ["gw"],
+  "permission": {
+    "edit": "allow",
+    "bash": "allow",
+    "webfetch": "allow",
+    "external_directory": "allow",
+    "doom_loop": "allow"
+  },
+  "autoupdate": false,
+  "share": "disabled"
+}
