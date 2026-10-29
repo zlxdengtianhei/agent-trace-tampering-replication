@@ -45,25 +45,49 @@ def parse_db_dir(d):
             d = json.loads(data)
         except ValueError:
             continue
-        if d.get("type") != "tool":
-            continue
-        st = d.get("state") or {}
-        inp = st.get("input") or {}
-        tm = st.get("time") or {}
-        meta = st.get("metadata") or {}
-        tool = d.get("tool")
-        claims.append({
-            "id": d.get("callID") or pid, "part_id": pid, "session": sid, "tool": tool,
-            "t_use": (tm.get("start") or tcreated) / 1000.0 if (tm.get("start") or tcreated) else None,
-            "t_result": tm["end"] / 1000.0 if tm.get("end") else None,
-            "input": inp, "command": inp.get("command") if tool == "bash" else None,
-            "paths": [inp[k] for k in PATH_KEYS if isinstance(inp.get(k), str)],
-            "reported": {"status": st.get("status"), "output": st.get("output"),
-                         "exit": meta.get("exit"),
-                         "is_error": (st.get("status") == "error") or (isinstance(meta.get("exit"), int) and meta["exit"] != 0)},
-            "file": db,
-        })
+        if d.get("type") == "tool":
+            claims.append(claim_from_part(d, pid, sid, tcreated, db))
     return claims
+
+
+def claim_from_part(d, pid, sid, tcreated, src):
+    st = d.get("state") or {}
+    inp = st.get("input") or {}
+    tm = st.get("time") or {}
+    meta = st.get("metadata") or {}
+    tool = d.get("tool")
+    return {
+        "id": d.get("callID") or pid, "part_id": pid, "session": sid, "tool": tool,
+        "t_use": (tm.get("start") or tcreated) / 1000.0 if (tm.get("start") or tcreated) else None,
+        "t_result": tm["end"] / 1000.0 if tm.get("end") else None,
+        "input": inp, "command": inp.get("command") if tool == "bash" else None,
+        "paths": [inp[k] for k in PATH_KEYS if isinstance(inp.get(k), str)],
+        "reported": {"status": st.get("status"), "output": st.get("output"),
+                     "exit": meta.get("exit"),
+                     "is_error": (st.get("status") == "error") or (isinstance(meta.get("exit"), int) and meta["exit"] != 0)},
+        "file": src,
+    }
+
+
+def parse_stdout(path):
+    """Claims from `opencode run --format json` output (one JSON event per line; tool parts in "tool_use")."""
+    out, seen = [], set()
+    if not os.path.exists(path):
+        return out
+    with open(path, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            try:
+                e = json.loads(line)
+            except ValueError:
+                continue
+            part = e.get("part") if isinstance(e, dict) else None
+            if e.get("type") != "tool_use" or not isinstance(part, dict) or part.get("type") != "tool":
+                continue
+            cl = claim_from_part(part, part.get("id"), part.get("sessionID"), e.get("timestamp"), path)
+            if cl["id"] not in seen:
+                seen.add(cl["id"])
+                out.append(cl)
+    return out
 
 
 def parse(paths):

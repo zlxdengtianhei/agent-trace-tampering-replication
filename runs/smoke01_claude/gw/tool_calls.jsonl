@@ -1,0 +1,5 @@
+{"n": 1, "t_start": "2026-10-29T00:53:22.393003Z", "model": "zai/glm-5.3", "status": 200, "stop": "tool_use", "tool_calls": [{"id": "call_f895de8465a649fe8b72aede", "name": "Write", "input": {"content": "hello from turn 1\n", "file_path": "/workspace/hello.txt"}}]}
+{"n": 2, "t_start": "2026-10-29T00:53:25.025885Z", "model": "zai/glm-5.3", "status": 200, "stop": "tool_use", "tool_calls": [{"id": "call_a7c31dd163f04b9aadaeb208", "name": "Bash", "input": {"command": "cat /workspace/hello.txt", "description": "Print contents of hello.txt"}}]}
+{"n": 3, "t_start": "2026-10-29T00:53:27.245279Z", "model": "zai/glm-5.3", "status": 200, "stop": "end_turn", "tool_calls": []}
+{"n": 4, "t_start": "2026-10-29T00:53:29.412743Z", "model": "zai/glm-5.3", "status": 200, "stop": "tool_use", "tool_calls": [{"id": "call_377701b6a78c4dfd9da3855a", "name": "Bash", "input": {"command": "echo \"hello from turn 2\" >> /workspace/hello.txt && wc -l /workspace/hello.txt", "description": "Append line to hello.txt and count lines"}}]}
+{"n": 5, "t_start": "2026-10-29T00:53:32.150141Z", "model": "zai/glm-5.3", "status": 200, "stop": "end_turn", "tool_calls": []}

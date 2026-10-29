@@ -11,7 +11,7 @@ Trace versions compared:
   final          the trace files after the run (snapshots/post)
   last_nonempty  for each trace file, its last non-empty version seen by shadow.py
   ever           every claim that any version of the trace ever contained (used to link claims to processes)
-  stdout         (Claude Code only) the stream-json the harness printed to stdout, kept by docker logs
+  stdout         the harness's own stdout (Claude Code stream-json, OpenCode --format json), kept by docker logs
 
 Matching rules (heuristics; see the report's notes):
   Bash-like claim -> a child process of the harness whose exec argv contains the command text
@@ -27,7 +27,7 @@ the raw model responses in gw/. Joined with the trace by tool-call id: calls the
 a trace version lacks, claims in a trace version that the model never asked for, and claims whose
 input differs from what the model asked for.
 
-Usage: compare.py <run_dir> --agent fake|claude|opencode   writes <run_dir>/report.json and report.md
+Usage: compare.py <run_dir> --agent fake|probe|claude|opencode   writes <run_dir>/report.json and report.md
 """
 import argparse
 import json
@@ -57,6 +57,7 @@ SHELL_TOOLS = {"Bash", "bash"}
 ARGV_LIMIT = {"bpf": 1023, "strace": 4096}  # longest argv string each recorder keeps
 # Child processes the harness starts for itself, not as a tool call. Still listed, with this label.
 HARNESS_INTERNAL = {
+    "probe": [],
     "claude": [("SNAPSHOT_FILE=", "Claude Code shell snapshot (before the first Bash call of a session)")],
     "opencode": [],
     "fake": [],
@@ -68,6 +69,8 @@ def harness_match(agent, ev):
     path = ev.get("path") or ""
     if agent == "fake":
         return "/opt/mx/fake_agent.py" in argv
+    if agent == "probe":
+        return "/opt/mx/launchers/probe.sh" in argv
     if agent == "claude":
         return path.endswith("/claude") or "claude-code" in argv or (ev.get("argv") or [""])[0].endswith("claude")
     if agent == "opencode":
@@ -127,6 +130,16 @@ class Procs:
 
     def text(self, pid):
         return " ; ".join(" ".join(x.get("argv") or []) for x in self.p[pid]["execs"])
+
+    def root_of(self, pid):
+        """The harness child (tool process) whose subtree contains pid; pid itself if none."""
+        seen, x = set(), pid
+        while x is not None and x not in seen:
+            seen.add(x)
+            if self.p.get(x, {}).get("ppid") in self.harness:
+                return x
+            x = self.p.get(x, {}).get("ppid")
+        return pid
 
     def argv_cut(self, pid):
         return any(len(a) >= self.argv_limit for x in self.p[pid]["execs"] for a in (x.get("argv") or []))
@@ -245,6 +258,7 @@ def trace_versions(run, agent, shadow):
                 last_ne = cl
         out["last_nonempty"] = last_ne
         out["ever_list"] = ever + out["final"]
+        out["stdout"] = pto.parse_stdout(os.path.join(run, "agent_stdout.log"))
     ever = {}
     for cl in out.pop("ever_list", []):
         ever.setdefault(cl["id"], []).append(cl)
@@ -335,17 +349,20 @@ def integrity(run, shadow, pre, post, procs_by_src, agent):
 def _actor(pr, e, rel):
     after = pr.harness_end is not None and e["t"] > pr.harness_end
     return {"t": round(e["t"], 3), "file": rel, "pid": e["pid"], "by_harness": e["pid"] in pr.harness,
-            "cmd": pr.cmd_at(e["pid"], e["t"])[:300], "after_session_end": after,
+            "harness_internal": pr.internal(pr.root_of(e["pid"])) if e["pid"] not in pr.harness else None,
+            "cmd": pr.cmd_at(e["pid"], e["t"])[:300], "after_session_end": after, "errno": e.get("errno"),
             "path": e.get("path"), "path2": e.get("path2"), "ret": e.get("ret")}
 
 
 # ---------- claims vs processes ----------
 
-def first_programs(cmd):
+def first_programs(cmd, with_cond=False):
     """External programs that the first line of a shell command would start (best effort).
 
     Tokenizes with shlex (quotes respected), splits at ; && || | &, skips assignments, builtins and
-    wrappers, and ignores heredoc bodies and later lines.
+    wrappers, and ignores heredoc bodies and later lines. With with_cond, returns (program, cond)
+    pairs: cond is None (runs unconditionally), "&&" (runs only if what came before succeeded) or
+    "||" (runs only if something before failed). ";" and "&" reset the condition, "|" keeps it.
     """
     toks = None
     for text in ((cmd or "").split("\n", 1)[0], cmd or ""):
@@ -358,13 +375,19 @@ def first_programs(cmd):
             continue
     if toks is None:
         return []
-    progs, start, redirect, prev = [], True, False, None
+    progs, start, redirect, prev, cond = [], True, False, None, None
     for tok in toks:
         if start and prev == "timeout" and re.match(r"^\d+(\.\d+)?[smhd]?$", tok):
             prev = tok
             continue
         prev = tok
         if tok and set(tok) <= set(";&|()"):
+            if tok == "||":
+                cond = "||"
+            elif tok == "&&":
+                cond = cond or "&&"
+            elif tok in (";", "&"):
+                cond = None
             start, redirect = True, False
             continue
         if tok and set(tok) <= set("<>&"):
@@ -380,7 +403,7 @@ def first_programs(cmd):
         start = False
         if tok in BUILTINS or not re.match(r"^[A-Za-z0-9_./+-]+$", tok) or tok.isdigit():
             continue
-        progs.append(tok)
+        progs.append((tok, cond) if with_cond else tok)
     return progs
 
 
@@ -438,9 +461,17 @@ def match_claims(pr, ever, agent):
                 elif rc is not None:
                     problems.append(f"process ended by {rc}")
                 ran = set(eff.get("execs", []))
-                missing_progs = [w for w in first_programs(cl["command"]) if os.path.basename(w) not in ran]
-                if missing_progs:
-                    problems.append("claimed program(s) never executed: " + ", ".join(missing_progs))
+                # A program must have run if nothing conditional precedes it, or if it follows "&&"
+                # and the whole command exited 0. Programs after "||" are never required.
+                need, skipped = [], []
+                for w, cond in first_programs(cl["command"], with_cond=True):
+                    if os.path.basename(w) in ran:
+                        continue
+                    (need if cond is None or (cond == "&&" and rc == 0) else skipped).append(w)
+                if need:
+                    problems.append("claimed program(s) never executed: " + ", ".join(need))
+                if skipped:
+                    r["not_run_conditional"] = skipped
                 r.update(pid=pid, observed_exit=rc, reported_exit=rexit, reported_is_error=rep.get("is_error"),
                          effects=eff, verdict="misreported: " + "; ".join(problems) if problems else "matched")
         elif tool in FILE_WRITE_TOOLS:
@@ -571,16 +602,26 @@ def render(r):
     for f in r["trace_integrity"]["files"]:
         if not f["session_record"] and not f["flags"]:
             continue
+        note = (" (SQLite itself removes -wal and -shm when the last connection closes: check who did it below)"
+                if f["rel"].endswith(("-wal", "-shm")) and f["flags"] else "")
         L.append(f"- `{f['rel']}`: {', '.join(f['flags']) or 'intact (append-only)'}"
-                 f" — versions seen {f['versions']}, max size {f['max_size_seen']}, final size {f['post_size']}")
+                 f" — versions seen {f['versions']}, max size {f['max_size_seen']}, final size {f['post_size']}{note}")
     for s, ops in r["trace_integrity"]["ops"].items():
         L.append(f"\nOperations on trace files seen by **{s}**:")
         if not ops:
             L.append("- none")
-        for o in ops:
-            when = "after the agent session ended" if o["after_session_end"] else "during the session"
-            who = "harness" if o["by_harness"] else "tool process"
-            L.append(f"- {o['op']} `{o['file']}` by {who} pid {o['pid']} ({when}): `{o['cmd'][:160]}`")
+        groups = {}
+        for o in ops:  # same operation on the same file by the same process: one line with a count
+            groups.setdefault((o["op"], o["file"], o["pid"], o["after_session_end"]), []).append(o)
+        for (op, rel, pid, after), g in groups.items():
+            o = g[0]
+            when = "after the agent session ended" if after else "during the session"
+            who = "harness" if o["by_harness"] else (f"harness-internal process ({o['harness_internal']})"
+                                                       if o.get("harness_internal") else "tool process")
+            n = f" ×{len(g)}" if len(g) > 1 else ""
+            n += f" (failed: {o['errno']})" if o.get("errno") else ""
+            cmd = o["cmd"].split("\n", 1)[0][:160]
+            L.append(f"- {op}{n} `{rel}` by {who} pid {pid} ({when}): `{cmd}`")
     if r["claims_changed_between_versions"]:
         L.append(f"\nClaims whose content changed between trace versions: {', '.join(r['claims_changed_between_versions'])}")
     L.append("\n## 2. Claims in the trace vs the independent records\n")

@@ -1,7 +1,8 @@
 #!/bin/bash
 # Record one agent run with two independent observers, then compare trace and record.
 #
-#   sudo ./record_run.sh --agent fake|claude|opencode --scenario <folder under scenarios/> [options]
+#   sudo ./record_run.sh --agent fake|probe|claude|opencode --scenario <folder under scenarios/> [options]
+#   (fake: scripted agent without a model; probe: isolation self-test, prints what the agent can reach)
 #
 # Options:
 #   --model M                 gateway model id for the agent, default zai/glm-5.3 (both agents use the same model)
@@ -38,7 +39,7 @@ while [ $# -gt 0 ]; do
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
-case "$AGENT" in fake|claude|opencode) ;; *) echo "--agent fake|claude|opencode" >&2; exit 2 ;; esac
+case "$AGENT" in fake|probe|claude|opencode) ;; *) echo "--agent fake|probe|claude|opencode" >&2; exit 2 ;; esac
 [ -d "$KIT/scenarios/$SCEN/turns" ] || { echo "no scenario $SCEN" >&2; exit 2; }
 [ "$(id -u)" -eq 0 ] || { echo "run as root (bpftrace needs it)" >&2; exit 2; }
 
