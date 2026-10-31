@@ -1,0 +1,18 @@
+id: uid=23001(agent) gid=23001(agent) groups=23001(agent)
+TracerPid:	15
+CapEff:	0000000000000000
+ok    /observe not readable
+ok    strace log not writable
+ok    /run/mx-gw (bridge socket) not reachable
+ok    cannot kill pid 1 (root)
+interfaces: lo 
+ok    1.1.1.1:443 not reachable
+ok    8.8.8.8:53 not reachable
+ok    172.17.0.1:22 not reachable
+ok    172.17.0.1:3425 not reachable
+ok    127.0.0.1:3425 not reachable
+ok    no DNS
+ok    no docker.sock
+models via gateway: {"object": "list", "data": [{"id": "zai/glm-5.3", "object": "model", "type": "model", "display_name": "zai/glm-5.3", "owned_by": "gateway"}]}
+ok    other gateway paths: 404
+ok    other model ids: 403

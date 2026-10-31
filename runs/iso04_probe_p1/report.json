@@ -1,0 +1,93 @@
+{
+ "meta": {
+  "run_id": "iso04_probe_p1",
+  "agent": "probe",
+  "scenario": "s0_smoke",
+  "model": "zai/glm-5.3",
+  "gateway_upstream": "127.0.0.1:3425",
+  "network": "none + gateway bridge",
+  "image": "mx-agents:2026-10-28",
+  "image_id": "sha256:a1018573f9bedfc909023884b1d46873296de179d8a55ab8ffc8bc3e1c46a236",
+  "agent_uid": 23001,
+  "turns": "turns",
+  "nonce": "1df5c4e3b55a",
+  "host_kernel": "6.12.113+deb13-amd64",
+  "bpftrace": "bpftrace v0.23.2",
+  "work_dir": "/root/mx-exercise/work/iso04_probe_p1",
+  "started_utc": "2026-10-31T18:04:55Z",
+  "timeout_s": 1800
+ },
+ "agent": "probe",
+ "trace_integrity": {
+  "files": [],
+  "ops": {
+   "strace": [],
+   "bpf": []
+  }
+ },
+ "claims_changed_between_versions": [],
+ "claim_counts": {
+  "ever": 0
+ },
+ "by_source": {
+  "strace": {
+   "events": 1114,
+   "processes": 33,
+   "harness_pids": [
+    20
+   ],
+   "harness_end": 1793469897.407586,
+   "tool_processes": 20,
+   "claims": {},
+   "versions": {}
+  },
+  "bpf": {
+   "events": 777,
+   "processes": 33,
+   "harness_pids": [
+    1457364
+   ],
+   "harness_end": 1793469897.407527,
+   "tool_processes": 20,
+   "claims": {},
+   "versions": {}
+  }
+ },
+ "gateway": {
+  "model_calls": 3,
+  "by_status": {
+   "200": 1,
+   "403": 1,
+   "404": 1
+  },
+  "models": [
+   "-",
+   "some-other-model"
+  ],
+  "refused_by_bridge": [
+   {
+    "n": 2,
+    "target": "/api/settings",
+    "model": null,
+    "status": 404
+   },
+   {
+    "n": 3,
+    "target": "/v1/messages",
+    "model": "some-other-model",
+    "status": 403
+   }
+  ],
+  "errors": [],
+  "tool_calls_asked": 0,
+  "asked": {},
+  "versions": {
+   "ever": {
+    "claims": 0,
+    "asked_not_in_trace": [],
+    "in_trace_not_asked": [],
+    "input_differs": []
+   }
+  }
+ }
+}

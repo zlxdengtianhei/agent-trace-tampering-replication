@@ -216,6 +216,12 @@ def strace_events(path):
             for k in ("path", "path2"):
                 if isinstance(ev.get(k), str) and SELF_FD.match(ev[k]):
                     ev[k] = self_fd(ev[k], pid, fds)
+            if ev.get("kind") in ("truncate", "fallocate") and not ev.get("path") and str(ev.get("fd", "")).isdigit():
+                # strace's -yy does not annotate every fd: take the path of this thread's latest open of that fd
+                # (close() is not traced, so the path is inferred).
+                guess = fds.get((pid, int(ev["fd"])))
+                if guess:
+                    ev.update(path=guess, path_inferred=True)
             if ev.get("kind") == "open" and isinstance(rval, int) and rval >= 0 and ev.get("path"):
                 fds[(pid, rval)] = ev["path"]  # close() is not traced: the latest open of an fd number wins
             events.append(ev)

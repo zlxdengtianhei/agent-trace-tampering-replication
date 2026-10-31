@@ -1,0 +1,5 @@
+{"t_start": "2026-10-31T18:04:57.352111Z", "event": "bridge_start", "upstream": "127.0.0.1:3425", "allow": ["zai/glm-5.3"]}
+{"t_start": "2026-10-31T18:04:57.889752Z", "n": 1, "method": "GET", "target": "/v1/models", "user_agent": "curl/8.14.1", "req_bytes": 0, "model": null, "status": 200, "resp_bytes": 141, "answered_by": "bridge", "t_end": "2026-10-31T18:04:57.889913Z"}
+{"t_start": "2026-10-31T18:04:57.910123Z", "n": 2, "method": "GET", "target": "/api/settings", "user_agent": "curl/8.14.1", "req_bytes": 0, "model": null, "status": 404, "resp_bytes": 87, "answered_by": "bridge", "t_end": "2026-10-31T18:04:57.910254Z"}
+{"t_start": "2026-10-31T18:04:57.929388Z", "n": 3, "method": "POST", "target": "/v1/messages", "user_agent": "curl/8.14.1", "req_bytes": 87, "model": "some-other-model", "status": 403, "resp_bytes": 100, "answered_by": "bridge", "t_end": "2026-10-31T18:04:57.929686Z"}
+{"t_start": "2026-10-31T18:04:59.131381Z", "event": "bridge_stop", "requests": 3}

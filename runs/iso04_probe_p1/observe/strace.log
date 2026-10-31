@@ -1,0 +1,1330 @@
+20    1793469897.140084 execve("/usr/bin/setpriv", ["setpriv", "--reuid=23001", "--regid=23001", "--clear-groups", "--inh-caps=-all", "--bounding-set=-all", "--no-new-privs", "env", "-i", "HOME=/home/agent", "USER=agent", "LOGNAME=agent", "SHELL=/bin/bash", "LANG=C.UTF-8", "TERM=dumb", "PATH=/usr/local/bin:/usr/bin:/bin", "MX_AGENT=probe", "MX_MODEL=zai/glm-5.3", "/opt/mx/launchers/probe.sh", "/scenario"], 0x7fff435f4148 /* 10 vars */) = 0
+20    1793469897.141367 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+20    1793469897.141615 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcap-ng.so.0", O_RDONLY|O_CLOEXEC) = 3</usr/lib/x86_64-linux-gnu/libcap-ng.so.0.0.0>
+20    1793469897.142654 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/x86_64-linux-gnu/libc.so.6>
+20    1793469897.143052 openat(AT_FDCWD</>, "/proc/sys/kernel/cap_last_cap", O_RDONLY) = 3</proc/sys/kernel/cap_last_cap>
+20    1793469897.143237 connect(3<UNIX-STREAM:[54776849]>, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+20    1793469897.143817 connect(3<UNIX-STREAM:[54776850]>, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+20    1793469897.143945 openat(AT_FDCWD</>, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3</etc/nsswitch.conf>
+20    1793469897.144064 openat(AT_FDCWD</>, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3</etc/passwd>
+20    1793469897.144164 openat(AT_FDCWD</>, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3</etc/passwd>
+20    1793469897.144257 connect(3<UNIX-STREAM:[54776851]>, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+20    1793469897.144374 connect(3<UNIX-STREAM:[54776852]>, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+20    1793469897.144477 openat(AT_FDCWD</>, "/etc/group", O_RDONLY|O_CLOEXEC) = 3</etc/group>
+20    1793469897.144579 openat(AT_FDCWD</>, "/proc/20/status", O_RDONLY|O_CLOEXEC) = 3</proc/20/status>
+20    1793469897.144688 openat(AT_FDCWD</>, "/proc/20/status", O_RDONLY|O_CLOEXEC) = 3</proc/20/status>
+20    1793469897.144794 openat(AT_FDCWD</>, "/proc/sys/kernel/cap_last_cap", O_RDONLY) = 3</proc/sys/kernel/cap_last_cap>
+20    1793469897.144904 openat(AT_FDCWD</>, "/proc/20/status", O_RDONLY|O_CLOEXEC) = 3</proc/20/status>
+20    1793469897.144995 openat(AT_FDCWD</>, "/proc/20/status", O_RDONLY|O_CLOEXEC) = 3</proc/20/status>
+20    1793469897.145132 openat(AT_FDCWD</>, "/proc/20/status", O_RDONLY|O_CLOEXEC) = 3</proc/20/status>
+20    1793469897.145233 execve("/usr/local/sbin/env", ["env", "-i", "HOME=/home/agent", "USER=agent", "LOGNAME=agent", "SHELL=/bin/bash", "LANG=C.UTF-8", "TERM=dumb", "PATH=/usr/local/bin:/usr/bin:/bin", "MX_AGENT=probe", "MX_MODEL=zai/glm-5.3", "/opt/mx/launchers/probe.sh", "/scenario"], 0x7fff8542de20 /* 10 vars */) = -1 ENOENT (No such file or directory)
+20    1793469897.145338 execve("/usr/local/bin/env", ["env", "-i", "HOME=/home/agent", "USER=agent", "LOGNAME=agent", "SHELL=/bin/bash", "LANG=C.UTF-8", "TERM=dumb", "PATH=/usr/local/bin:/usr/bin:/bin", "MX_AGENT=probe", "MX_MODEL=zai/glm-5.3", "/opt/mx/launchers/probe.sh", "/scenario"], 0x7fff8542de20 /* 10 vars */) = -1 ENOENT (No such file or directory)
+20    1793469897.145478 execve("/usr/sbin/env", ["env", "-i", "HOME=/home/agent", "USER=agent", "LOGNAME=agent", "SHELL=/bin/bash", "LANG=C.UTF-8", "TERM=dumb", "PATH=/usr/local/bin:/usr/bin:/bin", "MX_AGENT=probe", "MX_MODEL=zai/glm-5.3", "/opt/mx/launchers/probe.sh", "/scenario"], 0x7fff8542de20 /* 10 vars */) = -1 ENOENT (No such file or directory)
+20    1793469897.145579 execve("/usr/bin/env", ["env", "-i", "HOME=/home/agent", "USER=agent", "LOGNAME=agent", "SHELL=/bin/bash", "LANG=C.UTF-8", "TERM=dumb", "PATH=/usr/local/bin:/usr/bin:/bin", "MX_AGENT=probe", "MX_MODEL=zai/glm-5.3", "/opt/mx/launchers/probe.sh", "/scenario"], 0x7fff8542de20 /* 10 vars */) = 0
+20    1793469897.146703 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.146821 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.147147 execve("/opt/mx/launchers/probe.sh", ["/opt/mx/launchers/probe.sh", "/scenario"], 0x56535c57e400 /* 9 vars */) = 0
+20    1793469897.147633 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.147737 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.147923 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.148568 openat(AT_FDCWD</>, "/dev/tty", O_RDWR|O_NONBLOCK) = -1 ENXIO (No such device or address)
+20    1793469897.148805 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.148917 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.149007 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.149078 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.149601 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.149756 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.149829 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.150159 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.150268 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.150678 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.150779 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.151254 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.151381 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.151763 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.151897 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.152311 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.152425 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.152581 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.153157 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.153272 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.153697 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.153801 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.154147 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.154235 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.154645 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.154726 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.155035 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+20    1793469897.155104 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+20    1793469897.155677 openat(AT_FDCWD</>, "/opt/mx/launchers/probe.sh", O_RDONLY) = 3
+20    1793469897.156006 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 21
+21    1793469897.158777 execve("/usr/bin/id", ["id"], 0x5581d05747c0 /* 12 vars */) = 0
+21    1793469897.160024 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.160209 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.161669 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.161905 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.162487 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.162989 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.163090 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.163179 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.163255 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.163386 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.163515 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.163610 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.163731 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.163820 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.163945 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.164033 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.164150 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.164235 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.164362 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.164448 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.164558 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.164647 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.164749 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.164862 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.164947 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.165053 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.165129 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.165227 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.165302 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.165414 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.165520 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.165635 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21    1793469897.165712 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.165920 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+21    1793469897.166071 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+21    1793469897.166188 openat(AT_FDCWD</>, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.166322 openat(AT_FDCWD</>, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.166458 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+21    1793469897.166565 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+21    1793469897.166684 openat(AT_FDCWD</>, "/etc/group", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.166823 openat(AT_FDCWD</>, "/proc/sys/kernel/ngroups_max", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.166940 openat(AT_FDCWD</>, "/proc/sys/kernel/ngroups_max", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.167045 openat(AT_FDCWD</>, "/etc/group", O_RDONLY|O_CLOEXEC) = 3
+21    1793469897.167197 exit_group(0)   = ?
+21    1793469897.167539 +++ exited with 0 +++
+20    1793469897.167901 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 22
+22    1793469897.168819 execve("/usr/bin/grep", ["grep", "-E", "TracerPid|CapEff", "/proc/self/status"], 0x5581d0572fb0 /* 12 vars */) = 0
+22    1793469897.169589 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.169799 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.169973 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.170584 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.170705 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.170786 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.170852 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.170994 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.171124 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.171203 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.171347 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.171471 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.171598 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.171686 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.171829 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.171922 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.172050 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.172154 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.172289 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.172399 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.172532 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.172667 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.172757 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.172883 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.172975 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.173107 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.173193 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.173323 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.173415 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.173567 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+22    1793469897.173656 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+22    1793469897.173826 openat(AT_FDCWD</>, "/proc/self/maps", O_RDONLY) = 3
+22    1793469897.174292 openat(AT_FDCWD</>, "/proc/self/status", O_RDONLY|O_NOCTTY) = 3
+22    1793469897.174664 exit_group(0)   = ?
+22    1793469897.175228 +++ exited with 0 +++
+20    1793469897.175605 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 23
+23    1793469897.176602 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+23    1793469897.177229 execve("/usr/bin/ls", ["ls", "/observe"], 0x5581d0572fb0 /* 12 vars */) = 0
+23    1793469897.178480 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.178658 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.178849 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.179471 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.179699 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.180245 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.180434 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.180510 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.180577 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.180640 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.180730 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.180819 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.180880 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.180973 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.181034 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.181123 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.181233 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.181365 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.181446 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.181563 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.181628 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.181715 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.181786 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.181867 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.181955 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.182017 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.182111 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.182174 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.182262 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.182324 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.182421 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.182485 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.182570 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+23    1793469897.182632 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+23    1793469897.182761 openat(AT_FDCWD</>, "/observe", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 EACCES (Permission denied)
+23    1793469897.182868 exit_group(2)   = ?
+23    1793469897.183098 +++ exited with 2 +++
+20    1793469897.183401 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 24
+24    1793469897.184398 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+24    1793469897.184535 openat(AT_FDCWD</>, "/observe/strace.log", O_WRONLY|O_CREAT|O_APPEND, 0666) = -1 EACCES (Permission denied)
+24    1793469897.184682 exit_group(1)   = ?
+24    1793469897.184862 +++ exited with 1 +++
+20    1793469897.185034 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 25
+25    1793469897.185779 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+25    1793469897.185905 execve("/usr/bin/ls", ["ls", "/run/mx-gw"], 0x5581d0572fb0 /* 12 vars */) = 0
+25    1793469897.186326 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.186443 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.186610 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.186803 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.186969 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.187529 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.187723 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.187800 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.187870 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.187935 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.188044 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.188145 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.188211 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.188374 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.188450 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.188566 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.188637 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.188738 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.188807 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.188906 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.188978 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.189081 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.189150 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.189247 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.189371 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.189479 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.189695 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.189790 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.189903 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.189970 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.190062 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.190128 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.190219 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+25    1793469897.190286 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+25    1793469897.190422 openat(AT_FDCWD</>, "/run/mx-gw", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 EACCES (Permission denied)
+25    1793469897.190538 exit_group(2)   = ?
+25    1793469897.190764 +++ exited with 2 +++
+20    1793469897.191013 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+20    1793469897.191160 kill(1, SIGKILL) = -1 EPERM (Operation not permitted)
+20    1793469897.191371 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 26
+26    1793469897.192788 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 27
+26    1793469897.193128 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 28
+27    1793469897.193816 execve("/usr/bin/ls", ["ls", "/sys/class/net"], 0x5581d0572fb0 /* 12 vars */) = 0
+27    1793469897.194451 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.194633 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.194825 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.194877 execve("/usr/bin/tr", ["tr", "\\n", " "], 0x5581d0572fb0 /* 12 vars */ <unfinished ...>
+27    1793469897.194916 <... openat resumed>) = 3
+27    1793469897.195018 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.195216 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.195847 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.196058 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.196097 <... execve resumed>) = 0
+27    1793469897.196117 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.196161 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27    1793469897.196245 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.196274 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.196312 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.196369 <... openat resumed>) = 3
+27    1793469897.196394 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.196427 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.196473 <... openat resumed>) = 3
+28    1793469897.196494 <... openat resumed>) = 3
+27    1793469897.196533 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.196684 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27    1793469897.196810 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.196884 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.196913 <... openat resumed>) = 3
+28    1793469897.196939 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197001 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197049 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197077 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.197097 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197116 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197142 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197168 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197211 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197236 <... openat resumed>) = 3
+28    1793469897.197277 <... openat resumed>) = 3
+27    1793469897.197299 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197326 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197352 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197401 <... openat resumed>) = 3
+27    1793469897.197421 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197447 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+27    1793469897.197555 <... openat resumed>) = 3
+28    1793469897.197577 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197612 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197639 <... openat resumed>) = 3
+27    1793469897.197659 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197690 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197714 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197738 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197779 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197804 <... openat resumed>) = 3
+28    1793469897.197848 <... openat resumed>) = 3
+27    1793469897.197868 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197894 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.197918 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.197936 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.197954 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.197978 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.198030 <... openat resumed>) = 3
+28    1793469897.198075 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198101 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198127 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.198144 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.198162 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198187 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198212 <... openat resumed>) = 3
+27    1793469897.198250 <... openat resumed>) = 3
+28    1793469897.198271 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198296 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198321 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.198374 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198399 <... openat resumed>) = 3
+28    1793469897.198439 <... openat resumed>) = 3
+27    1793469897.198478 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198505 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198530 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.198549 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.198566 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198592 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198629 <... openat resumed>) = 3
+28    1793469897.198650 <... openat resumed>) = 3
+28    1793469897.198689 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198714 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198740 <... openat resumed>) = 3
+27    1793469897.198760 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.198792 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198816 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198847 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.198884 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.198909 <... openat resumed>) = 3
+28    1793469897.198945 <... openat resumed>) = 3
+27    1793469897.198966 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.198992 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.199017 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.199036 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.199054 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.199079 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.199104 <... openat resumed>) = 3
+28    1793469897.199138 <... openat resumed>) = 3
+27    1793469897.199158 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.199184 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.199209 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.199227 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.199245 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.199270 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.199304 <... openat resumed>) = 3
+28    1793469897.199325 <... openat resumed>) = 3
+27    1793469897.199389 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.199418 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.199443 <... openat resumed>) = -1 ENOENT (No such file or directory)
+28    1793469897.199461 <... openat resumed>) = -1 ENOENT (No such file or directory)
+27    1793469897.199479 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+28    1793469897.199503 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+27    1793469897.199574 <... openat resumed>) = 3
+28    1793469897.199613 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+28    1793469897.199685 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+27    1793469897.199714 openat(AT_FDCWD</>, "/sys/class/net", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY <unfinished ...>
+28    1793469897.199739 <... openat resumed>) = 3
+27    1793469897.199776 <... openat resumed>) = 3
+27    1793469897.199891 exit_group(0 <unfinished ...>
+28    1793469897.199911 exit_group(0 <unfinished ...>
+27    1793469897.199930 <... exit_group resumed>) = ?
+28    1793469897.199947 <... exit_group resumed>) = ?
+28    1793469897.200138 +++ exited with 0 +++
+27    1793469897.200153 +++ exited with 0 +++
+26    1793469897.200324 exit_group(0)   = ?
+26    1793469897.200547 +++ exited with 0 +++
+20    1793469897.200938 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 29
+29    1793469897.201720 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+29    1793469897.201875 execve("/usr/bin/timeout", ["timeout", "4", "bash", "-c", "</dev/tcp/1.1.1.1/443"], 0x5581d0572fb0 /* 12 vars */) = 0
+29    1793469897.203025 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.203155 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.203536 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.203632 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.203716 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.203790 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.203900 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.204005 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.204072 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.204177 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.204247 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.204350 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.204429 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.204539 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.204612 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.204720 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.204789 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.204892 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.204959 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.205059 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.205161 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.205241 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.205340 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.205419 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.205597 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.205683 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.205789 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.205863 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.205967 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29    1793469897.206034 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+29    1793469897.206169 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fbf3cebca10) = 30
+30    1793469897.206645 execve("/usr/local/bin/bash", ["bash", "-c", "</dev/tcp/1.1.1.1/443"], 0x7ffcea23eaf8 /* 12 vars */) = -1 ENOENT (No such file or directory)
+30    1793469897.206831 execve("/usr/bin/bash", ["bash", "-c", "</dev/tcp/1.1.1.1/443"], 0x7ffcea23eaf8 /* 12 vars */) = 0
+30    1793469897.207278 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.207425 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.207567 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.208196 openat(AT_FDCWD</>, "/dev/tty", O_RDWR|O_NONBLOCK) = -1 ENXIO (No such device or address)
+30    1793469897.208370 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.208454 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.208530 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.208600 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.208708 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.208814 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.208886 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.208984 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.209055 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.209152 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.209246 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.209367 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.209442 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.209567 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.209641 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.209748 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.209820 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.209913 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.210012 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.210082 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.210180 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.210250 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.210350 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.210440 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.210545 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.210616 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.210718 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+30    1793469897.210789 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+30    1793469897.211176 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f15a2f79e50) = 31
+31    1793469897.212014 connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("1.1.1.1")}, 16) = -1 ENETUNREACH (Network is unreachable)
+31    1793469897.212217 exit_group(1)   = ?
+31    1793469897.212430 +++ exited with 1 +++
+30    1793469897.212542 exit_group(1)   = ?
+30    1793469897.212799 +++ exited with 1 +++
+29    1793469897.212900 exit_group(1)   = ?
+29    1793469897.213081 +++ exited with 1 +++
+20    1793469897.213397 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 32
+32    1793469897.214180 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+32    1793469897.214336 execve("/usr/bin/timeout", ["timeout", "4", "bash", "-c", "</dev/tcp/8.8.8.8/53"], 0x5581d0572fb0 /* 12 vars */) = 0
+32    1793469897.214875 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.214991 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.215352 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.215478 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.215551 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.215618 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.215730 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.215835 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.215903 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.215998 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.216068 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.216165 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.216233 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.216333 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.216415 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.216514 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.216590 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.216705 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.216785 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.216875 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.216974 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.217046 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.217142 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.217213 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.217307 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.217400 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.217601 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.217688 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.217799 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+32    1793469897.217875 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+32    1793469897.218012 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f69d4a7aa10) = 33
+33    1793469897.218525 execve("/usr/local/bin/bash", ["bash", "-c", "</dev/tcp/8.8.8.8/53"], 0x7ffdf0a3ccf8 /* 12 vars */) = -1 ENOENT (No such file or directory)
+33    1793469897.218719 execve("/usr/bin/bash", ["bash", "-c", "</dev/tcp/8.8.8.8/53"], 0x7ffdf0a3ccf8 /* 12 vars */) = 0
+33    1793469897.219199 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.219348 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.219521 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.220043 openat(AT_FDCWD</>, "/dev/tty", O_RDWR|O_NONBLOCK) = -1 ENXIO (No such device or address)
+33    1793469897.220192 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.220278 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.220351 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.220440 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.220536 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.220635 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.220705 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.220804 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.220885 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.220989 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.221069 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.221172 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.221253 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.221372 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.221474 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.221597 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.221681 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.221781 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.221883 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.221959 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.222065 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.222147 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.222249 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.222332 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.222465 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.222553 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.222654 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+33    1793469897.222749 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+33    1793469897.223145 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fcadf671e50) = 34
+34    1793469897.224197 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("8.8.8.8")}, 16) = -1 ENETUNREACH (Network is unreachable)
+34    1793469897.224525 exit_group(1)   = ?
+34    1793469897.224829 +++ exited with 1 +++
+33    1793469897.224959 exit_group(1)   = ?
+33    1793469897.225263 +++ exited with 1 +++
+32    1793469897.225419 exit_group(1)   = ?
+32    1793469897.225719 +++ exited with 1 +++
+20    1793469897.225913 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 35
+35    1793469897.226805 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+35    1793469897.227000 execve("/usr/bin/timeout", ["timeout", "4", "bash", "-c", "</dev/tcp/172.17.0.1/22"], 0x5581d0572fb0 /* 12 vars */) = 0
+35    1793469897.227557 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.227688 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.228063 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.228173 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.228255 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.228333 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.228452 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.228562 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.228640 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.228748 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.228829 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.228929 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.229006 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.229108 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.229187 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.229288 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.229382 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.229561 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.229653 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.229756 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.229860 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.229939 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.230039 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.230117 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.230233 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.230314 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.230447 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.230530 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.230639 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+35    1793469897.230719 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+35    1793469897.230857 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fca9857da10) = 36
+36    1793469897.231386 execve("/usr/local/bin/bash", ["bash", "-c", "</dev/tcp/172.17.0.1/22"], 0x7ffce4b853c8 /* 12 vars */) = -1 ENOENT (No such file or directory)
+36    1793469897.231553 execve("/usr/bin/bash", ["bash", "-c", "</dev/tcp/172.17.0.1/22"], 0x7ffce4b853c8 /* 12 vars */) = 0
+36    1793469897.232151 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.232314 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.232517 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.233121 openat(AT_FDCWD</>, "/dev/tty", O_RDWR|O_NONBLOCK) = -1 ENXIO (No such device or address)
+36    1793469897.233331 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.233463 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.233569 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.233657 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.233778 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.233897 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.233981 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.234092 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.234175 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.234289 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.234385 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.234506 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.234591 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.234707 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.234820 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.234939 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.235026 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.235131 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.235243 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.235324 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.235469 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.235555 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.235663 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.235743 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.235857 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.235937 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.236043 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+36    1793469897.236124 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+36    1793469897.236535 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f44da33be50) = 37
+37    1793469897.237477 connect(3, {sa_family=AF_INET, sin_port=htons(22), sin_addr=inet_addr("172.17.0.1")}, 16) = -1 ENETUNREACH (Network is unreachable)
+37    1793469897.237734 exit_group(1)   = ?
+37    1793469897.237957 +++ exited with 1 +++
+36    1793469897.238062 exit_group(1)   = ?
+36    1793469897.238275 +++ exited with 1 +++
+35    1793469897.238368 exit_group(1)   = ?
+35    1793469897.238565 +++ exited with 1 +++
+20    1793469897.238877 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 38
+38    1793469897.239681 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+38    1793469897.239849 execve("/usr/bin/timeout", ["timeout", "4", "bash", "-c", "</dev/tcp/172.17.0.1/3425"], 0x5581d0572fb0 /* 12 vars */) = 0
+38    1793469897.240325 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.240466 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.240811 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.240920 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.241005 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.241083 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.241194 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.241301 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.241395 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.241582 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.241658 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.241757 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.241827 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.241922 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.241993 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.242090 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.242160 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.242258 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.242347 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.242457 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.242558 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.242635 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.242726 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.242799 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.242891 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.242964 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.243067 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.243147 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.243252 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+38    1793469897.243331 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+38    1793469897.243535 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f4745020a10) = 39
+39    1793469897.244014 execve("/usr/local/bin/bash", ["bash", "-c", "</dev/tcp/172.17.0.1/3425"], 0x7ffd956ee1d8 /* 12 vars */) = -1 ENOENT (No such file or directory)
+39    1793469897.244170 execve("/usr/bin/bash", ["bash", "-c", "</dev/tcp/172.17.0.1/3425"], 0x7ffd956ee1d8 /* 12 vars */) = 0
+39    1793469897.244677 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.244814 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.244970 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.245554 openat(AT_FDCWD</>, "/dev/tty", O_RDWR|O_NONBLOCK) = -1 ENXIO (No such device or address)
+39    1793469897.245713 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.245803 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.245887 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.245966 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.246083 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.246196 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.246276 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.246397 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.246483 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.246590 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.246671 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.246785 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.246868 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.246978 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.247069 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.247179 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.247258 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.247369 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.247473 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.247549 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.247646 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.247721 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.247817 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.247890 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.247993 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.248076 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.248175 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+39    1793469897.248251 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+39    1793469897.248620 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fc5980a8e50) = 40
+40    1793469897.249500 connect(3, {sa_family=AF_INET, sin_port=htons(3425), sin_addr=inet_addr("172.17.0.1")}, 16) = -1 ENETUNREACH (Network is unreachable)
+40    1793469897.249742 exit_group(1)   = ?
+40    1793469897.249950 +++ exited with 1 +++
+39    1793469897.250066 exit_group(1)   = ?
+39    1793469897.250320 +++ exited with 1 +++
+38    1793469897.250417 exit_group(1)   = ?
+38    1793469897.250623 +++ exited with 1 +++
+20    1793469897.250817 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 41
+41    1793469897.251753 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+41    1793469897.251941 execve("/usr/bin/timeout", ["timeout", "4", "bash", "-c", "</dev/tcp/127.0.0.1/3425"], 0x5581d0572fb0 /* 12 vars */) = 0
+41    1793469897.252550 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.252702 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.253130 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.253249 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.253337 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.253435 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.253587 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.253703 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.253782 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.253892 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.253972 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.254083 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.254179 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.254308 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.254394 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.254498 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.254565 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.254660 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.254726 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.254827 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.254919 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.254986 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.255097 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.255177 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.255274 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.255347 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.255474 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.255544 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.255650 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+41    1793469897.255721 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+41    1793469897.255871 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2e90e44a10) = 42
+42    1793469897.256403 execve("/usr/local/bin/bash", ["bash", "-c", "</dev/tcp/127.0.0.1/3425"], 0x7fff53f8a3c8 /* 12 vars */) = -1 ENOENT (No such file or directory)
+42    1793469897.256649 execve("/usr/bin/bash", ["bash", "-c", "</dev/tcp/127.0.0.1/3425"], 0x7fff53f8a3c8 /* 12 vars */) = 0
+42    1793469897.257311 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.257573 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.257765 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.258341 openat(AT_FDCWD</>, "/dev/tty", O_RDWR|O_NONBLOCK) = -1 ENXIO (No such device or address)
+42    1793469897.258519 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.258600 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.258681 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.258756 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.258867 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.258982 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.259052 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.259146 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.259221 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.259316 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.259395 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.259505 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.259600 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.259713 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.259792 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.259898 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.259970 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.260069 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.260181 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.260260 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.260403 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.260477 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.260599 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.260678 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.260788 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.260867 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.260971 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+42    1793469897.261039 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+42    1793469897.261509 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f83f5b97e50) = 43
+43    1793469897.262422 connect(3, {sa_family=AF_INET, sin_port=htons(3425), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 ECONNREFUSED (Connection refused)
+43    1793469897.262780 exit_group(1)   = ?
+43    1793469897.262999 +++ exited with 1 +++
+42    1793469897.263125 exit_group(1)   = ?
+42    1793469897.263405 +++ exited with 1 +++
+41    1793469897.263511 exit_group(1)   = ?
+41    1793469897.263698 +++ exited with 1 +++
+20    1793469897.264004 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 44
+44    1793469897.264858 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+44    1793469897.265036 execve("/usr/bin/getent", ["getent", "hosts", "example.com"], 0x5581d0572fb0 /* 12 vars */) = 0
+44    1793469897.266708 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.266858 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.267297 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.267425 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.267502 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.267571 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.267705 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.267824 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.267914 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.268084 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.268171 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.268281 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.268383 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.268540 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.268641 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.268774 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.268847 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.268951 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.269033 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.269147 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.269257 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.269330 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.269509 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.269781 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.269913 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.269997 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.270118 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.270201 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.270323 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+44    1793469897.270421 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.270581 openat(AT_FDCWD</>, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.271069 openat(AT_FDCWD</>, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.271262 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+44    1793469897.271435 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+44    1793469897.271560 openat(AT_FDCWD</>, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.271702 openat(AT_FDCWD</>, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.271856 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.252.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.271982 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.225.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272081 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.252.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272199 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.225.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272318 openat(AT_FDCWD</>, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+44    1793469897.272468 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.252.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272568 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.225.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272661 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.252.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272752 connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("46.38.225.230")}, 16) = -1 ENETUNREACH (Network is unreachable)
+44    1793469897.272860 exit_group(2)   = ?
+44    1793469897.273249 +++ exited with 2 +++
+20    1793469897.273644 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 45
+45    1793469897.274715 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+45    1793469897.274927 execve("/usr/bin/ls", ["ls", "/var/run/docker.sock"], 0x5581d0572fb0 /* 12 vars */) = 0
+45    1793469897.275642 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.275772 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.275951 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.276102 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.276262 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.276893 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.277091 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.277169 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.277245 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.277320 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.277465 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.277595 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.277669 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.277778 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.277851 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.277956 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.278026 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.278135 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.278205 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.278308 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.278390 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.278512 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.278590 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.278690 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.278803 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.278875 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.278995 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.279072 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.279189 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.279270 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.279397 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.279484 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.279761 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+45    1793469897.279842 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+45    1793469897.280125 exit_group(2)   = ?
+45    1793469897.280548 +++ exited with 2 +++
+20    1793469897.280827 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 46
+46    1793469897.283221 execve("/usr/bin/curl", ["curl", "-s", "-m", "10", "http://127.0.0.1:8080/v1/models"], 0x5581d05743e0 /* 12 vars */) = 0
+46    1793469897.284820 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.284989 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcurl.so.4", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.286122 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.286345 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.286569 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnghttp3.so.9", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.287692 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnghttp2.so.14", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.288497 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libidn2.so.0", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.289708 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/librtmp.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.290547 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libssh2.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.291492 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpsl.so.5", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.292428 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.292628 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.292806 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.294324 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libldap.so.2", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.295812 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/liblber.so.2", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.296685 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libzstd.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.296908 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libbrotlidec.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.297848 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libunistring.so.5", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.299217 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgnutls.so.30", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.300604 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libhogweed.so.6", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.301844 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnettle.so.8", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.303228 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgmp.so.10", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.304427 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.306101 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.306990 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.307601 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.308304 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libsasl2.so.2", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.309288 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libbrotlicommon.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.310237 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libp11-kit.so.0", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.311144 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtasn1.so.6", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.312098 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.312756 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.313547 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libffi.so.8", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.339129 openat(AT_FDCWD</>, "/usr/lib/ssl/openssl.cnf", O_RDONLY) = 3
+46    1793469897.343194 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.343346 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.343432 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.343500 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.343630 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.343742 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.343812 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.343914 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.343981 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.344077 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.344145 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.344255 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.344345 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.344484 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.344560 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.344661 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.344728 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.344816 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.344914 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.344981 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.345083 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.345150 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.345295 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.345401 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.345638 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.345731 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.345843 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+46    1793469897.345998 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.346166 openat(AT_FDCWD</>, "/home/agent/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+46    1793469897.346292 openat(AT_FDCWD</>, "/home/agent/.config/curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+46    1793469897.346434 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+46    1793469897.346664 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+46    1793469897.346823 openat(AT_FDCWD</>, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.346998 openat(AT_FDCWD</>, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+46    1793469897.347152 openat(AT_FDCWD</>, "/home/agent/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+46    1793469897.347746 connect(4, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+46    1793469897.353790 exit_group(0)   = ?
+46    1793469897.355253 +++ exited with 0 +++
+20    1793469897.355585 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 47
+47    1793469897.357645 execve("/usr/bin/curl", ["curl", "-s", "-m", "10", "-o", "/dev/null", "-w", "%{http_code}", "http://127.0.0.1:8080/api/settings"], 0x5581d0574720 /* 12 vars */) = 0
+47    1793469897.358283 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.358442 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcurl.so.4", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.358596 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.358739 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.358886 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnghttp3.so.9", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359017 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnghttp2.so.14", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359152 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libidn2.so.0", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359278 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/librtmp.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359410 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libssh2.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359540 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpsl.so.5", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359663 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359791 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.359937 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360063 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libldap.so.2", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360196 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/liblber.so.2", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360368 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libzstd.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360515 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libbrotlidec.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360655 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libunistring.so.5", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360784 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgnutls.so.30", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.360916 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libhogweed.so.6", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361053 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnettle.so.8", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361174 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgmp.so.10", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361305 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361464 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361605 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361729 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361859 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libsasl2.so.2", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.361985 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libbrotlicommon.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.362116 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libp11-kit.so.0", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.362256 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtasn1.so.6", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.362420 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.362554 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.362686 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libffi.so.8", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.367848 openat(AT_FDCWD</>, "/usr/lib/ssl/openssl.cnf", O_RDONLY) = 3
+47    1793469897.368332 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.368442 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.368520 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.368591 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.368709 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.368822 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.368898 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.369007 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.369079 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.369181 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.369253 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.369368 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.369442 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.369603 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.369691 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.369788 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.369854 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.369941 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.370038 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.370104 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.370199 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.370272 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.370377 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.370446 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.370542 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.370609 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.370702 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+47    1793469897.370767 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.370881 openat(AT_FDCWD</>, "/home/agent/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+47    1793469897.370953 openat(AT_FDCWD</>, "/home/agent/.config/curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+47    1793469897.371062 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+47    1793469897.371180 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+47    1793469897.371282 openat(AT_FDCWD</>, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.371405 openat(AT_FDCWD</>, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+47    1793469897.371519 openat(AT_FDCWD</>, "/home/agent/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+47    1793469897.371801 connect(4, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+47    1793469897.373003 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 5
+47    1793469897.373585 exit_group(0)   = ?
+47    1793469897.374820 +++ exited with 0 +++
+20    1793469897.375037 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 48
+48    1793469897.377070 execve("/usr/bin/curl", ["curl", "-s", "-m", "20", "-o", "/dev/null", "-w", "%{http_code}", "http://127.0.0.1:8080/v1/messages", "-H", "content-type: application/json", "-d", "{\"model\":\"some-other-model\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}"], 0x5581d057e2f0 /* 12 vars */) = 0
+48    1793469897.377797 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.377944 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcurl.so.4", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378085 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378217 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378383 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnghttp3.so.9", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378513 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnghttp2.so.14", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378666 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libidn2.so.0", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378801 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/librtmp.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.378930 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libssh2.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.379081 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpsl.so.5", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.379224 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.379368 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.379551 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.379711 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libldap.so.2", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.379909 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/liblber.so.2", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.380094 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libzstd.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.380235 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libbrotlidec.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.380452 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libunistring.so.5", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.380675 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgnutls.so.30", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.380849 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libhogweed.so.6", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.381012 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libnettle.so.8", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.381234 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libgmp.so.10", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.381437 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.381667 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.381838 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.382008 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.382181 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libsasl2.so.2", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.382347 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libbrotlicommon.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.382538 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libp11-kit.so.0", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.382728 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libtasn1.so.6", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.382910 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.383085 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.383264 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libffi.so.8", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.388683 openat(AT_FDCWD</>, "/usr/lib/ssl/openssl.cnf", O_RDONLY) = 3
+48    1793469897.389182 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.389270 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.389343 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.389430 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.389645 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.389800 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.389905 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.390027 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.390116 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.390234 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.390321 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.390433 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.390507 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.390621 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.390706 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.390822 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.390925 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.391040 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.391162 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.391254 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.391385 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.391478 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.391587 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.391665 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.391772 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.391861 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.391976 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+48    1793469897.392061 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.392182 openat(AT_FDCWD</>, "/home/agent/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+48    1793469897.392265 openat(AT_FDCWD</>, "/home/agent/.config/curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+48    1793469897.392400 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+48    1793469897.392542 connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+48    1793469897.392666 openat(AT_FDCWD</>, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.392807 openat(AT_FDCWD</>, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+48    1793469897.392935 openat(AT_FDCWD</>, "/home/agent/.curlrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+48    1793469897.393193 connect(4, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+48    1793469897.394626 openat(AT_FDCWD</>, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 5
+48    1793469897.395224 exit_group(0)   = ?
+48    1793469897.396551 +++ exited with 0 +++
+20    1793469897.396827 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 49
+20    1793469897.397349 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 50
+20    1793469897.397856 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 51
+20    1793469897.398268 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1b8b4a4e50) = 52
+50    1793469897.398588 execve("/usr/bin/grep", ["grep", "-i", "-E", "key|token|secret"], 0x5581d0572fb0 /* 12 vars */ <unfinished ...>
+49    1793469897.398755 execve("/usr/bin/env", ["env"], 0x5581d0572fb0 /* 12 vars */ <unfinished ...>
+50    1793469897.399070 <... execve resumed>) = 0
+49    1793469897.399125 <... execve resumed>) = 0
+50    1793469897.399245 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.399296 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.399331 <... openat resumed>) = 3
+49    1793469897.399378 <... openat resumed>) = 3
+50    1793469897.399404 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.399434 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.399473 <... openat resumed>) = 3
+49    1793469897.399506 <... openat resumed>) = 3
+50    1793469897.399564 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+49    1793469897.399816 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.399847 execve("/usr/bin/sed", ["sed", "s/=.*/=<set>/"], 0x5581d0572fb0 /* 12 vars */ <unfinished ...>
+49    1793469897.399882 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.399925 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.399952 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.399978 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.400007 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.400021 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400045 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400070 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.400088 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.400107 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400131 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.400152 execve("/usr/bin/sed", ["sed", "s/^/env: /"], 0x5581d0572fb0 /* 12 vars */ <unfinished ...>
+50    1793469897.400185 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.400199 <... openat resumed>) = 3
+50    1793469897.400219 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400259 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400303 <... openat resumed>) = 3
+49    1793469897.400335 <... openat resumed>) = 3
+50    1793469897.400411 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400441 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400490 <... openat resumed>) = 3
+49    1793469897.400508 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.400544 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400566 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400599 <... openat resumed>) = 3
+50    1793469897.400619 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.400655 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400677 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400716 <... openat resumed>) = 3
+49    1793469897.400733 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.400768 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400789 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400811 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.400847 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400869 <... openat resumed>) = 3
+50    1793469897.400903 <... openat resumed>) = 3
+49    1793469897.400934 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.400957 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.400983 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.401011 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.401033 <... execve resumed>) = 0
+49    1793469897.401049 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.401073 <... execve resumed>) = 0
+50    1793469897.401090 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.401115 <... openat resumed>) = 3
+50    1793469897.401150 <... openat resumed>) = 3
+49    1793469897.401172 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.401195 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.401223 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.401251 openat(AT_FDCWD</>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.401275 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.401299 <... openat resumed>) = 3
+50    1793469897.401332 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.401351 <... openat resumed>) = 3
+49    1793469897.401395 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.401422 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libacl.so.1", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.401469 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.401516 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libacl.so.1", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.401554 <... openat resumed>) = 3
+50    1793469897.401572 <... openat resumed>) = 3
+51    1793469897.401619 <... openat resumed>) = 3
+49    1793469897.401648 <... openat resumed>) = 3
+50    1793469897.401669 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+49    1793469897.401733 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.401761 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.401804 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.401824 <... openat resumed>) = 3
+49    1793469897.401843 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.401871 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+49    1793469897.401926 <... openat resumed>) = 3
+50    1793469897.401948 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.401996 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402028 <... openat resumed>) = 3
+52    1793469897.402046 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.402074 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402094 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.402114 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.402136 <... openat resumed>) = 3
+51    1793469897.402154 <... openat resumed>) = 3
+50    1793469897.402170 <... openat resumed>) = 3
+49    1793469897.402187 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402215 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.402238 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.402266 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402292 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.402307 <... openat resumed>) = 3
+52    1793469897.402329 <... openat resumed>) = 3
+51    1793469897.402345 <... openat resumed>) = 3
+50    1793469897.402378 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.402400 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402438 <... openat resumed>) = 3
+52    1793469897.402458 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.402496 openat(AT_FDCWD</>, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.402527 <... openat resumed>) = 3
+49    1793469897.402557 <... openat resumed>) = 3
+51    1793469897.402582 <... openat resumed>) = 3
+50    1793469897.402598 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.402623 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402651 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.402669 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.402688 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.402710 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402747 <... openat resumed>) = 3
+49    1793469897.402767 <... openat resumed>) = 3
+50    1793469897.402805 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.402829 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.402856 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.402872 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.402891 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.402915 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.402942 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.402969 openat(AT_FDCWD</>, "/proc/filesystems", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.403005 <... openat resumed>) = 3
+52    1793469897.403031 <... openat resumed>) = 3
+49    1793469897.403061 <... openat resumed>) = 3
+51    1793469897.403087 <... openat resumed>) = 3
+50    1793469897.403104 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403131 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.403162 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403185 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.403199 openat(AT_FDCWD</>, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.403221 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.403238 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.403261 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.403278 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.403292 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.403305 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403329 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.403371 openat(AT_FDCWD</>, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.403403 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403427 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.403454 <... openat resumed>) = 3
+52    1793469897.403483 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.403517 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.403541 <... openat resumed>) = 3
+50    1793469897.403561 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403603 <... openat resumed>) = 3
+51    1793469897.403626 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.403649 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.403663 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403687 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.403713 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.403728 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403750 <... openat resumed>) = 3
+51    1793469897.403766 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.403785 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.403802 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.403826 <... openat resumed>) = 3
+52    1793469897.403845 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.403858 <... openat resumed>) = 3
+49    1793469897.403874 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.403897 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.403923 openat(AT_FDCWD</>, "/proc/self/maps", O_RDONLY <unfinished ...>
+52    1793469897.403948 <... openat resumed>) = 3
+51    1793469897.403964 openat(AT_FDCWD</>, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.403985 <... openat resumed>) = 3
+50    1793469897.404005 <... openat resumed>) = 3
+52    1793469897.404027 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.404054 <... openat resumed>) = 3
+49    1793469897.404072 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404096 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.404114 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404141 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.404166 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.404180 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.404196 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404222 <... openat resumed>) = 3
+49    1793469897.404238 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404276 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.404303 <... openat resumed>) = 3
+52    1793469897.404323 <... openat resumed>) = -1 ENOENT (No such file or directory)
+49    1793469897.404337 <... openat resumed>) = 3
+52    1793469897.404365 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.404433 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404468 <... openat resumed>) = 3
+49    1793469897.404491 exit_group(0 <unfinished ...>
+51    1793469897.404513 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.404534 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.404562 <... exit_group resumed>) = ?
+51    1793469897.404578 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404599 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.404646 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.404669 <... openat resumed>) = 3
+52    1793469897.404712 <... openat resumed>) = 3
+50    1793469897.404733 exit_group(1 <unfinished ...>
+51    1793469897.404755 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+49    1793469897.404794 +++ exited with 0 +++
+52    1793469897.404814 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+50    1793469897.404835 <... exit_group resumed>) = ?
+51    1793469897.404852 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.404866 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.404881 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.404902 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+51    1793469897.404953 <... openat resumed>) = 3
+52    1793469897.404991 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405013 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405039 <... openat resumed>) = -1 ENOENT (No such file or directory)
+50    1793469897.405057 +++ exited with 1 +++
+52    1793469897.405073 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405094 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.405127 <... openat resumed>) = 3
+51    1793469897.405144 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405165 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+51    1793469897.405240 <... openat resumed>) = 3
+52    1793469897.405281 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405319 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405340 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.405364 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.405396 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405417 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405481 <... openat resumed>) = 3
+51    1793469897.405502 <... openat resumed>) = 3
+52    1793469897.405565 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405586 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405609 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.405642 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405663 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.405698 <... openat resumed>) = 3
+51    1793469897.405758 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405802 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405830 <... openat resumed>) = 3
+52    1793469897.405848 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.405863 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405884 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.405914 <... openat resumed>) = 3
+52    1793469897.405939 <... openat resumed>) = 3
+51    1793469897.405956 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.405993 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.406013 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.406029 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.406044 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.406065 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.406094 <... openat resumed>) = 3
+52    1793469897.406111 <... openat resumed>) = 3
+51    1793469897.406150 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.406171 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.406192 <... openat resumed>) = -1 ENOENT (No such file or directory)
+52    1793469897.406207 <... openat resumed>) = -1 ENOENT (No such file or directory)
+51    1793469897.406222 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+52    1793469897.406243 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+51    1793469897.406271 <... openat resumed>) = 3
+52    1793469897.406295 <... openat resumed>) = 3
+51    1793469897.406312 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+51    1793469897.406392 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+51    1793469897.406481 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+51    1793469897.406545 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+51    1793469897.406631 openat(AT_FDCWD</>, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+51    1793469897.406696 openat(AT_FDCWD</>, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+51    1793469897.406900 exit_group(0 <unfinished ...>
+52    1793469897.406925 exit_group(0 <unfinished ...>
+51    1793469897.406941 <... exit_group resumed>) = ?
+52    1793469897.406956 <... exit_group resumed>) = ?
+51    1793469897.407153 +++ exited with 0 +++
+52    1793469897.407176 +++ exited with 0 +++
+20    1793469897.407329 exit_group(0)   = ?
+20    1793469897.407586 +++ exited with 0 +++

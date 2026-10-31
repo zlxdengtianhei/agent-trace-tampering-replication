@@ -122,11 +122,29 @@ def from_openai(objs):
     return out, "".join(text), stop
 
 
+def tool_results(req):
+    """Tool results the harness sent to the model in one request: {tool-call id: {"output", "is_error"}}
+    (is_error: Anthropic format only)."""
+    out = {}
+    for m in req.get("messages") or []:
+        if m.get("role") == "tool":  # OpenAI chat format
+            out[m.get("tool_call_id")] = {"output": _text(m.get("content")), "is_error": None}
+        elif isinstance(m.get("content"), list):  # Anthropic messages format
+            for b in m["content"]:
+                if isinstance(b, dict) and b.get("type") == "tool_result":
+                    out[b.get("tool_use_id")] = {"output": _text(b.get("content")), "is_error": bool(b.get("is_error"))}
+    return out
+
+
 def load(run):
     gw = os.path.join(run, "gw")
     path = os.path.join(gw, "gw.jsonl")
     if not os.path.exists(path):
         return None
+    if not os.path.isdir(os.path.join(gw, "bodies")) and os.path.exists(os.path.join(gw, "tool_calls.jsonl")):
+        # Published runs carry gw/tool_calls.jsonl (written by export_run.py) instead of the raw bodies.
+        with open(os.path.join(gw, "tool_calls.jsonl")) as f:
+            return [json.loads(line) for line in f if line.strip()]
     calls = []
     with open(path) as f:
         for line in f:
@@ -138,7 +156,7 @@ def load(run):
                 continue
             rec = {k: r.get(k) for k in ("n", "t_start", "t_end", "method", "target", "model", "status",
                                          "answered_by", "error")}
-            rec["tool_calls"], rec["text"], rec["stop"] = [], "", None
+            rec["tool_calls"], rec["text"], rec["stop"], rec["tool_results"] = [], "", None, {}
             req_p = os.path.join(gw, "bodies", f"{r['n']:05d}.req.json")
             if os.path.exists(req_p):
                 try:
@@ -146,6 +164,7 @@ def load(run):
                         req = json.loads(g.read())
                     rec["stream"] = bool(req.get("stream"))
                     rec["messages_sent"] = len(req.get("messages") or [])
+                    rec["tool_results"] = tool_results(req)
                 except ValueError:
                     pass
             resp_p = os.path.join(gw, "bodies", f"{r['n']:05d}.resp.http")
@@ -163,6 +182,48 @@ def load(run):
                 rec["tool_calls"], rec["text"], rec["stop"] = (from_openai if fmt == "openai" else from_anthropic)(objs)
             calls.append(rec)
     return calls
+
+
+def _text(content):
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        return "\n".join(_text(c.get("text") if isinstance(c, dict) and "text" in c else
+                               (c.get("content") if isinstance(c, dict) else c)) for c in content)
+    return "" if content is None else json.dumps(content)
+
+
+def results_sent(run):
+    """{tool-call id: text} of every tool result the harness sent back to the model (first time it was sent),
+    read from the request bodies; for published runs, from gw/tool_results_sent.jsonl."""
+    gw = os.path.join(run, "gw")
+    bodies = os.path.join(gw, "bodies")
+    out = {}
+    if not os.path.isdir(bodies):
+        p = os.path.join(gw, "tool_results_sent.jsonl")
+        if os.path.exists(p):
+            with open(p) as f:
+                for line in f:
+                    if line.strip():
+                        r = json.loads(line)
+                        out[r["id"]] = r["text"]
+        return out
+    for name in sorted(os.listdir(bodies)):
+        if not name.endswith(".req.json"):
+            continue
+        try:
+            with open(os.path.join(bodies, name), "rb") as f:
+                req = json.loads(f.read())
+        except ValueError:
+            continue
+        for m in req.get("messages") or []:
+            if m.get("role") == "tool" and m.get("tool_call_id"):  # OpenAI chat completions
+                out.setdefault(m["tool_call_id"], _text(m.get("content")))
+            elif isinstance(m.get("content"), list):  # Anthropic messages
+                for b in m["content"]:
+                    if isinstance(b, dict) and b.get("type") == "tool_result" and b.get("tool_use_id"):
+                        out.setdefault(b["tool_use_id"], _text(b.get("content")))
+    return out
 
 
 if __name__ == "__main__":

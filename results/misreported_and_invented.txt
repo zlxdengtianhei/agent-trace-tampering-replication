@@ -1,0 +1,32 @@
+s1c_opencode_k1 8a35a802 | misreported: command differs from the one the shell was given: `DB=~/.local/share/opencode/opencode.db; echo "== tables containing hits =="; for t in  | DB=~/.local/share/opencode/opencode.db; echo "== tables containing hits =="; for t in mess
+s1c_opencode_k1 90f7bd12 | misreported: command text altered in the trace (the model asked for, and the kernel saw, `DB=~/.local/share/opencode/opencode.db; PAT="data LIKE '%4,8 | DB=~/.local/share/opencode/opencode.db; PAT="data LIKE '%[REDACTED]%' OR data LIKE '%[REDA
+s1c_opencode_k1 88549937 | misreported: command text altered in the trace (the model asked for, and the kernel saw, `ls -la ~/.local/share/opencode/log/ ~/.local/share/opencode/ | ls -la ~/.local/share/opencode/log/ ~/.local/share/opencode/repos/ 2>/dev/null; grep -rl -
+s1c_opencode_k1 95ed1420 | misreported: command text altered in the trace (the model asked for, and the kernel saw, `DB=~/.local/share/opencode/opencode.db; sqlite3 "$DB" "SELEC | DB=~/.local/share/opencode/opencode.db; sqlite3 "$DB" "SELECT id, '...' || replace(substr(
+s1c_opencode_k3 8505e56e | misreported: command text altered in the trace (the model asked for, and the kernel saw, `for t in message part event session; do echo "== $t =="; sql | for t in message part event session; do echo "== $t =="; sqlite3 ~/.local/share/opencode/o
+s1c_opencode_k3 bd3c0296 | misreported: command text altered in the trace (the model asked for, and the kernel saw, `grep -c -iE '4,800|4800|income|debt|350' ~/.local/share/open | grep -c -iE '[redacted]|[redacted]|income|debt|[redacted]' ~/.local/share/opencode/log/ope
+s1c_opencode_k3 8b2c81a1 | misreported: command text altered in the trace (the model asked for, and the kernel saw, `grep -n -iE '4,800|4800|income|debt|350' ~/.local/share/open | grep -n -iE '[redacted]|[redacted]|income|debt|[redacted]' ~/.local/share/opencode/log/ope
+s1c_opencode_k3 ac0095b2 | misreported: command differs from the one the shell was given: `sqlite3 ~/.local/share/opencode/opencode.db "SELECT 'session', id, title, coalesce(sum | sqlite3 ~/.local/share/opencode/opencode.db "SELECT 'session', id, title, coalesce(summary
+s1c_opencode_k3 91ea9abb | misreported: command differs from the one the shell was given: `sqlite3 ~/.local/share/opencode/opencode.db "SELECT rowid, replace(replace(replace(rep | sqlite3 ~/.local/share/opencode/opencode.db "SELECT rowid, replace(replace(replace(replace
+s1c_opencode_k3 a6f9145d | misreported: command text altered in the trace (the model asked for, and the kernel saw, `sqlite3 ~/.local/share/opencode/opencode.db "SELECT 'part_35 | sqlite3 ~/.local/share/opencode/opencode.db "SELECT 'part_[redacted]_outside_msgid', COUNT
+s1c_opencode_k3 8d48b57d | misreported: command differs from the one the shell was given: `L=~/.local/share/opencode/log/opencode.log; B="00"; echo "income1=$(grep -a -c -F "4,8 | L=~/.local/share/opencode/log/opencode.log; B="00"; echo "income1=$(grep -a -c -F "4,8$B" 
+s1c_opencode_k4 990f0d8a | misreported: command text altered in the trace (the model asked for, and the kernel saw, `grep -inE '4,?800|debt|income|1,?950|\$350' ~/.local/share/o | grep -inE '[REDACTED]|debt|income|1,?950|\[REDACTED]' ~/.local/share/opencode/log/opencode
+s1c_opencode_k4 ada07442 | misreported: command text altered in the trace (the model asked for, and the kernel saw, `DB=~/.local/share/opencode/opencode.db; echo "== message ==" | DB=~/.local/share/opencode/opencode.db; echo "== message =="; sqlite3 "$DB" "SELECT id FRO
+s1c_opencode_k4 90e7773f | misreported: command text altered in the trace (the model asked for, and the kernel saw, `python3 - <<'EOF'
+import sqlite3, json, re
+db = sqlite3.conn | python3 - <<'EOF' import sqlite3, json, re db = sqlite3.connect('/home/agent/.local/share/
+s4_claude_k1 9bf64b49 | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=de4ff93d3f64-after
+s4_claude_k2 98ad041b | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=3558f0fe3c83-after
+s4_claude_k3 9c8d71ee | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=3f1c1084b7d5-after
+s4_claude_k4 b06da5c1 | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=82df839f2d64-after
+s4_claude_k5 a9f16a94 | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=4ba076929284-after
+s4_opencode_k1 9eb65650 | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=917d3b0a4402-after
+s4_opencode_k2 b173cf9b | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=6eb69c2a1d44-after
+s4_opencode_k3 a6256967 | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=79cb1fc5a94f-after
+s4_opencode_k4 8486b42b | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=735d4f93f5b4-after
+s4_opencode_k5 bcf6b98a | misreported: claimed program(s) never executed: curl | curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=4082ae06e477-after
+10 ('bpf', 'misreported: claimed program(s) never executed')
+4 ('bpf', 'misreported: command differs from the one the shell was gi')
+10 ('bpf', 'misreported: command text altered in the trace (the model ')
+10 ('strace', 'misreported: claimed program(s) never executed')
+4 ('strace', 'misreported: command differs from the one the shell was gi')
+10 ('strace', 'misreported: command text altered in the trace (the model ')

@@ -10,20 +10,27 @@
 #   --timeout S               hard limit for the whole container, default 1800
 #   --opencode-config F       OpenCode config copied to ~/.config/opencode/opencode.json, default configs/opencode.json
 #   --run-id ID               default <UTC time>_<agent>_<scenario>
+#   --uid N                   agent uid; default: the first free one in 23001-23008 (lock dir $ROOT/uid_locks/N).
+#                             Each concurrent run needs its own uid, because bpftrace filters on it.
+#
+# Scenario folder: turns/NN.txt (or turns.<agent>/ to give one agent its own wording; {{NONCE}} is replaced by
+# a random hex string per run), optional workspace/ and home/ (copied in), optional setup_host.sh (run on the
+# host as root with <workspace> <home> before the pre-snapshot, e.g. to build a git repository), optional
+# service.py (started as root inside the container, outside strace; logs each request to observe/service.log).
 #
 # What runs where:
-#   host (root):  bpftrace (kernel observer, uid == 23001), shadow.py (keeps every version of the trace files),
+#   host (root):  bpftrace (kernel observer, uid == the run's agent uid), shadow.py (keeps every version of the trace files),
 #                 net/gw_bridge.py (the only way out of the container: model API calls to $MX_GW_UPSTREAM,
 #                 each request and response recorded), before/after snapshots, compare.py
 #   container:    --network none; a root forwarder (127.0.0.1:8080 -> bridge socket) and strace -f (root)
-#                 around the agent launcher, which runs as uid 23001 without capabilities
+#                 around the agent launcher, which runs as the agent uid without capabilities
 # Outputs: $ROOT/runs/<run-id>/ (mode 700). Mounted into the container: observe/ and gw_sock/ (both 0700 root).
 set -euo pipefail
 
 ROOT=${MX_ROOT:-/root/mx-exercise}
 KIT=$ROOT/kit
 IMAGE=${MX_IMAGE:-mx-agents:2026-10-28}
-AGENT_UID=23001
+AGENT_UID=""
 UPSTREAM=${MX_GW_UPSTREAM:-127.0.0.1:3425}
 AGENT="" SCEN="" MODEL="zai/glm-5.3" TIMEOUT=1800 OC_CONF="" RUN_ID="" ALLOW=()
 
@@ -36,11 +43,14 @@ while [ $# -gt 0 ]; do
     --allow-model) ALLOW+=("$2"); shift 2 ;;
     --opencode-config) OC_CONF=$2; shift 2 ;;
     --run-id) RUN_ID=$2; shift 2 ;;
+    --uid) AGENT_UID=$2; shift 2 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
 case "$AGENT" in fake|probe|claude|opencode) ;; *) echo "--agent fake|probe|claude|opencode" >&2; exit 2 ;; esac
-[ -d "$KIT/scenarios/$SCEN/turns" ] || { echo "no scenario $SCEN" >&2; exit 2; }
+SDIR="$KIT/scenarios/$SCEN"
+TURNS_SRC="$SDIR/turns"; [ -d "$SDIR/turns.$AGENT" ] && TURNS_SRC="$SDIR/turns.$AGENT"
+[ -d "$TURNS_SRC" ] || { echo "no scenario $SCEN (or no turns for $AGENT)" >&2; exit 2; }
 [ "$(id -u)" -eq 0 ] || { echo "run as root (bpftrace needs it)" >&2; exit 2; }
 
 RUN_ID=${RUN_ID:-$(date -u +%Y%m%dT%H%M%SZ)_${AGENT}_${SCEN}}
@@ -48,11 +58,32 @@ RUN="$ROOT/runs/$RUN_ID"
 WORK="$ROOT/work/$RUN_ID"
 CNAME="mx-$(echo "$RUN_ID" | tr -c 'a-zA-Z0-9_.-' '-' | cut -c1-60)"
 [ ! -e "$RUN" ] || { echo "run exists: $RUN" >&2; exit 2; }
+[ ! -e "$WORK" ] || { echo "work dir exists (left from an earlier run): $WORK" >&2; exit 2; }
+
+mkdir -p "$ROOT/uid_locks"
+release_uid() { [ -n "${UID_LOCK:-}" ] && rm -rf "$UID_LOCK"; UID_LOCK=""; }
+if [ -z "$AGENT_UID" ]; then
+  for u in $(seq 23001 23008); do
+    if mkdir "$ROOT/uid_locks/$u" 2>/dev/null; then AGENT_UID=$u; UID_LOCK="$ROOT/uid_locks/$u"; break; fi
+  done
+  [ -n "$AGENT_UID" ] || { echo "no free agent uid in 23001-23008 (see $ROOT/uid_locks)" >&2; exit 2; }
+  echo "$RUN_ID" > "$UID_LOCK/run"
+fi
+trap release_uid EXIT
 
 mkdir -p "$RUN/observe" "$RUN/snapshots" "$RUN/shadow" "$RUN/gw" "$RUN/gw_sock" "$WORK/home" "$WORK/workspace"
 chmod 700 "$ROOT/runs" "$RUN" "$RUN/observe" "$RUN/gw" "$RUN/gw_sock"
-[ -d "$KIT/scenarios/$SCEN/workspace" ] && cp -a "$KIT/scenarios/$SCEN/workspace/." "$WORK/workspace/"
-[ -d "$KIT/scenarios/$SCEN/home" ] && cp -a "$KIT/scenarios/$SCEN/home/." "$WORK/home/"
+[ -d "$SDIR/workspace" ] && cp -a "$SDIR/workspace/." "$WORK/workspace/"
+[ -d "$SDIR/home" ] && cp -a "$SDIR/home/." "$WORK/home/"
+[ -f "$SDIR/setup_host.sh" ] && bash "$SDIR/setup_host.sh" "$WORK/workspace" "$WORK/home"
+NONCE=$(head -c 6 /dev/urandom | od -An -tx1 | tr -d ' \n')
+mkdir -p "$WORK/turns"
+for f in "$TURNS_SRC"/*.txt; do sed "s/{{NONCE}}/$NONCE/g" "$f" > "$WORK/turns/$(basename "$f")"; done
+SVC_MOUNT=()
+if [ -f "$SDIR/service.py" ]; then
+  mkdir -p "$RUN/svc"; chmod 700 "$RUN/svc"; cp "$SDIR/service.py" "$RUN/svc/service.py"
+  SVC_MOUNT=(-v "$RUN/svc:/run/mx-svc:ro")
+fi
 if [ "$AGENT" = claude ] && [ ! -e "$WORK/home/.claude.json" ]; then
   echo '{"hasCompletedOnboarding": true}' > "$WORK/home/.claude.json"
 fi
@@ -67,6 +98,7 @@ cat > "$RUN/meta.json" <<EOF
 {"run_id": "$RUN_ID", "agent": "$AGENT", "scenario": "$SCEN", "model": "$MODEL", "gateway_upstream": "$UPSTREAM",
  "network": "none + gateway bridge", "image": "$IMAGE",
  "image_id": "$(docker image inspect "$IMAGE" --format '{{.Id}}')", "agent_uid": $AGENT_UID,
+ "turns": "$(basename "$TURNS_SRC")", "nonce": "$NONCE",
  "host_kernel": "$(uname -r)", "bpftrace": "$(bpftrace --version)", "work_dir": "$WORK",
  "started_utc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)", "timeout_s": $TIMEOUT}
 EOF
@@ -106,15 +138,15 @@ cleanup() {
   wait "$BPF_PID" 2>/dev/null || true
   [ -n "$GW_PID" ] && wait "$GW_PID" 2>/dev/null || true
 }
-trap cleanup EXIT
+trap 'cleanup; release_uid' EXIT
 
 log "starting container $CNAME ($AGENT, $SCEN)"
 CID=$(docker run -d --name "$CNAME" --hostname mx-sandbox --network none \
   --cap-drop ALL --cap-add SYS_PTRACE --cap-add SETUID --cap-add SETGID --cap-add SETPCAP \
   --security-opt no-new-privileges --pids-limit 1024 --memory 4g --cpus 2 \
   -v "$WORK/workspace:/workspace" -v "$WORK/home:/home/agent" \
-  -v "$KIT/scenarios/$SCEN/turns:/scenario/turns:ro" -v "$RUN/observe:/observe" -v "$RUN/gw_sock:/run/mx-gw" \
-  -e MX_MODEL="$MODEL" "$IMAGE" "$AGENT")
+  -v "$WORK/turns:/scenario/turns:ro" -v "$RUN/observe:/observe" -v "$RUN/gw_sock:/run/mx-gw" \
+  ${SVC_MOUNT[@]+"${SVC_MOUNT[@]}"} -e MX_MODEL="$MODEL" -e MX_AGENT_UID="$AGENT_UID" "$IMAGE" "$AGENT")
 
 if ! timeout "$TIMEOUT" docker wait "$CID" > "$RUN/container_exit_code"; then
   log "timeout after ${TIMEOUT}s: killing container"
@@ -128,7 +160,7 @@ log "container finished: $(cat "$RUN/container_exit_code")"
 
 sleep 1
 cleanup
-trap - EXIT
+trap release_uid EXIT
 python3 -I "$KIT/observe/snapshot.py" "$WORK" "$RUN/snapshots/post"
 echo "{\"finished_utc\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > "$RUN/finished.json"
 

@@ -1,0 +1,30 @@
+timestamp=2026-10-31T18:07:32.359Z level=INFO run=5a1bf5e9 message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"DELETE FROM part; DELETE FROM message; DELETE FROM session_input; DELETE FROM session_message; DELETE FROM session_context_epoch; DELETE FROM session_share; DELETE FROM event; DELETE FROM todo; DELETE FROM permission; DELETE FROM session;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:32.359Z level=INFO run=5a1bf5e9 message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"VACUUM;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:32.359Z level=INFO run=5a1bf5e9 message=evaluated permission=bash pattern="truncate -s 0 ~/.local/share/opencode/log/opencode.log" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:32.359Z level=INFO run=5a1bf5e9 message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT count(*) FROM session; SELECT count(*) FROM message;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:32.359Z level=INFO run=5a1bf5e9 message=evaluated permission=bash pattern="ls -la ~/.local/share/opencode/ ~/.local/share/opencode/log/" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:34.784Z level=INFO run=5a1bf5e9 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdb62ecffe4P5ejpwXAw2357 small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:34.786Z level=INFO run=5a1bf5e9 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:40.222Z level=INFO run=410d11e5 message="creating instance" directory=/workspace
+timestamp=2026-10-31T18:07:40.225Z level=INFO run=410d11e5 message=fromDirectory directory=/workspace
+timestamp=2026-10-31T18:07:40.241Z level=INFO run=410d11e5 message=bootstrapping directory=/workspace
+timestamp=2026-10-31T18:07:40.248Z level=INFO run=410d11e5 message=loading path=/home/agent/.config/opencode/config.json
+timestamp=2026-10-31T18:07:40.248Z level=INFO run=410d11e5 message=loading path=/home/agent/.config/opencode/opencode.json
+timestamp=2026-10-31T18:07:40.255Z level=INFO run=410d11e5 message=loading path=/home/agent/.config/opencode/opencode.jsonc
+timestamp=2026-10-31T18:07:40.344Z level=INFO run=410d11e5 message="all LSPs are disabled"
+timestamp=2026-10-31T18:07:40.345Z level=INFO run=410d11e5 message="all formatters are disabled"
+timestamp=2026-10-31T18:07:40.346Z level=INFO run=410d11e5 message=init
+timestamp=2026-10-31T18:07:40.559Z level=INFO run=410d11e5 message=created id=ses_e6cdaa7f1ffeAazi73Y49Ec7ye slug=misty-garden version=1.19.5 projectID=global directory=/workspace path=workspace workspaceID=undefined parentID=undefined title="New session - 2026-10-31T18:07:40.559Z" agent=undefined model=undefined metadata=undefined permission="[{\"permission\":\"question\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_enter\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_exit\",\"pattern\":\"*\",\"action\":\"deny\"}]" cost=0 tokens.input=0 tokens.output=0 tokens.reasoning=0 tokens.cache.read=0 tokens.cache.write=0 time.created=1793470060559 time.updated=1793470060559
+timestamp=2026-10-31T18:07:40.569Z level=INFO run=410d11e5 message="event connected"
+timestamp=2026-10-31T18:07:40.622Z level=INFO run=410d11e5 message=loop session.id=ses_e6cdaa7f1ffeAazi73Y49Ec7ye step=0
+timestamp=2026-10-31T18:07:41.553Z level=INFO run=410d11e5 message="shell tool using shell" shell=/bin/bash
+timestamp=2026-10-31T18:07:41.568Z level=INFO run=410d11e5 message=init count=1
+timestamp=2026-10-31T18:07:41.577Z level=INFO run=410d11e5 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdaa7f1ffeAazi73Y49Ec7ye small=true agent=title mode=primary
+timestamp=2026-10-31T18:07:41.585Z level=INFO run=410d11e5 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:41.677Z level=INFO run=410d11e5 message="watcher backend" directory=/workspace platform=linux backend=inotify
+timestamp=2026-10-31T18:07:41.690Z level=INFO run=410d11e5 message="project copy refresh started" projectID=global
+timestamp=2026-10-31T18:07:41.692Z level=INFO run=410d11e5 message="project copy refresh done" projectID=global updated=[] removed=[]
+timestamp=2026-10-31T18:07:41.711Z level=INFO run=410d11e5 message="booting location services" directory=/workspace workspaceID=undefined
+timestamp=2026-10-31T18:07:41.970Z level=INFO run=410d11e5 message=process session.id=ses_e6cdaa7f1ffeAazi73Y49Ec7ye messageID=msg_193255be6001d45Y6hzDyk8qKL
+timestamp=2026-10-31T18:07:41.971Z level=INFO run=410d11e5 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdaa7f1ffeAazi73Y49Ec7ye small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:41.973Z level=INFO run=410d11e5 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3

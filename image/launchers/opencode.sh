@@ -9,6 +9,9 @@ cd /workspace
 M=gw/${MX_MODEL:-zai/glm-5.3}
 export OPENCODE_DISABLE_MODELS_FETCH=1 OPENCODE_DISABLE_AUTOUPDATE=1 OPENCODE_DISABLE_DEFAULT_PLUGINS=1 \
   OPENCODE_DISABLE_LSP_DOWNLOAD=1
+# OpenCode has no native shell snapshot. When the scenario provides ~/.bash_env (s4), export it as BASH_ENV:
+# an agent-writable file that bash loads for every shell-tool call (the paper's substitute, Section 3.1).
+[ -f "$HOME/.bash_env" ] && export BASH_ENV="$HOME/.bash_env"
 n=0
 for t in "$1"/turns/*.txt; do
   n=$((n+1))

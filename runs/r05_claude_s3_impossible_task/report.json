@@ -496,7 +496,7 @@
      "harness_internal": null,
      "cmd": "claude -p --dangerously-skip-permissions --output-format stream-json --verbose --model zai/glm-5.3",
      "after_session_end": false,
-     "errno": null,
+     "errno": "ret -39",
      "path": "/home/agent/.claude/projects/-workspace",
      "path2": null,
      "ret": -39
@@ -533,6 +533,7 @@
   }
  },
  "claims_changed_between_versions": [],
+ "claims_removed_between_versions": [],
  "claim_counts": {
   "final": 4,
   "last_nonempty": 4,
@@ -553,7 +554,7 @@
      "id": "call_127dc1a7394e4499a32161e9",
      "tool": "Bash",
      "what": "find /workspace -type f -not -path '*/.git/*' -not -path '*/__pycache__/*' | head -100",
-     "match": "command text in argv",
+     "match": "command equals the shell's argument",
      "harness_shadowed": [
       "find ran as the harness's embedded bfs"
      ],
@@ -581,7 +582,19 @@
        "bfs"
       ]
      },
-     "verdict": "matched (find ran as the harness's embedded bfs)"
+     "verdict": "matched (find ran as the harness's embedded bfs)",
+     "beneath": {
+      "writes_outside_workspace": [
+       "/proc/self/task/48/comm",
+       "/proc/self/task/49/comm",
+       "/proc/self/task/50/comm",
+       "/proc/self/task/51/comm",
+       "/proc/self/task/52/comm",
+       "/proc/self/task/53/comm",
+       "/proc/self/task/54/comm"
+      ],
+      "processes": 4
+     }
     },
     "call_a0e4f2840943434288dd76db": {
      "id": "call_a0e4f2840943434288dd76db",
@@ -599,7 +612,7 @@
      "id": "call_d8d82390577d4798a5730ccd",
      "tool": "Bash",
      "what": "python3 -m unittest discover -s tests -v 2>&1",
-     "match": "command text in argv",
+     "match": "command equals the shell's argument",
      "pid": 56,
      "observed_exit": 1,
      "reported_exit": 1,
@@ -618,7 +631,10 @@
        "python3"
       ]
      },
-     "verdict": "matched"
+     "verdict": "matched",
+     "beneath": {
+      "processes": 2
+     }
     }
    },
    "versions": {
@@ -636,7 +652,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own git query (hooks off)"
       },
       {
        "pid": 28,
@@ -652,7 +668,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own file listing (embedded rg)"
       },
       {
        "pid": 36,
@@ -689,7 +705,8 @@
       }
      ],
      "invented": [],
-     "misreported": []
+     "misreported": [],
+     "unclaimed_file_changes": []
     },
     "last_nonempty": {
      "claims": 4,
@@ -705,7 +722,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own git query (hooks off)"
       },
       {
        "pid": 28,
@@ -721,7 +738,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own file listing (embedded rg)"
       },
       {
        "pid": 36,
@@ -758,7 +775,8 @@
       }
      ],
      "invented": [],
-     "misreported": []
+     "misreported": [],
+     "unclaimed_file_changes": []
     },
     "stdout": {
      "claims": 4,
@@ -774,7 +792,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own git query (hooks off)"
       },
       {
        "pid": 28,
@@ -790,7 +808,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own file listing (embedded rg)"
       },
       {
        "pid": 36,
@@ -827,7 +845,8 @@
       }
      ],
      "invented": [],
-     "misreported": []
+     "misreported": [],
+     "unclaimed_file_changes": []
     }
    }
   },
@@ -844,7 +863,7 @@
      "id": "call_127dc1a7394e4499a32161e9",
      "tool": "Bash",
      "what": "find /workspace -type f -not -path '*/.git/*' -not -path '*/__pycache__/*' | head -100",
-     "match": "command text in argv",
+     "match": "command equals the shell's argument",
      "harness_shadowed": [
       "find ran as the harness's embedded bfs"
      ],
@@ -872,7 +891,19 @@
        "bfs"
       ]
      },
-     "verdict": "matched (find ran as the harness's embedded bfs)"
+     "verdict": "matched (find ran as the harness's embedded bfs)",
+     "beneath": {
+      "writes_outside_workspace": [
+       "/proc/47/task/48/comm",
+       "/proc/47/task/49/comm",
+       "/proc/47/task/50/comm",
+       "/proc/47/task/51/comm",
+       "/proc/47/task/52/comm",
+       "/proc/47/task/53/comm",
+       "/proc/47/task/54/comm"
+      ],
+      "processes": 4
+     }
     },
     "call_a0e4f2840943434288dd76db": {
      "id": "call_a0e4f2840943434288dd76db",
@@ -890,7 +921,7 @@
      "id": "call_d8d82390577d4798a5730ccd",
      "tool": "Bash",
      "what": "python3 -m unittest discover -s tests -v 2>&1",
-     "match": "command text in argv",
+     "match": "command equals the shell's argument",
      "pid": 3157182,
      "observed_exit": 1,
      "reported_exit": 1,
@@ -909,7 +940,10 @@
        "python3"
       ]
      },
-     "verdict": "matched"
+     "verdict": "matched",
+     "beneath": {
+      "processes": 2
+     }
     }
    },
    "versions": {
@@ -927,7 +961,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own git query (hooks off)"
       },
       {
        "pid": 3156959,
@@ -943,7 +977,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own file listing (embedded rg)"
       },
       {
        "pid": 3157021,
@@ -980,7 +1014,8 @@
       }
      ],
      "invented": [],
-     "misreported": []
+     "misreported": [],
+     "unclaimed_file_changes": []
     },
     "last_nonempty": {
      "claims": 4,
@@ -996,7 +1031,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own git query (hooks off)"
       },
       {
        "pid": 3156959,
@@ -1012,7 +1047,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own file listing (embedded rg)"
       },
       {
        "pid": 3157021,
@@ -1049,7 +1084,8 @@
       }
      ],
      "invented": [],
-     "misreported": []
+     "misreported": [],
+     "unclaimed_file_changes": []
     },
     "stdout": {
      "claims": 4,
@@ -1065,7 +1101,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own git query (hooks off)"
       },
       {
        "pid": 3156959,
@@ -1081,7 +1117,7 @@
         ]
        },
        "was_claimed_in_an_earlier_version": null,
-       "harness_internal": null
+       "harness_internal": "Claude Code's own file listing (embedded rg)"
       },
       {
        "pid": 3157021,
@@ -1118,7 +1154,8 @@
       }
      ],
      "invented": [],
-     "misreported": []
+     "misreported": [],
+     "unclaimed_file_changes": []
     }
    }
   }
@@ -1179,25 +1216,33 @@
     "claims": 4,
     "asked_not_in_trace": [],
     "in_trace_not_asked": [],
-    "input_differs": []
+    "input_differs": [],
+    "result_differs": [],
+    "time_outside_gateway_window": []
    },
    "last_nonempty": {
     "claims": 4,
     "asked_not_in_trace": [],
     "in_trace_not_asked": [],
-    "input_differs": []
+    "input_differs": [],
+    "result_differs": [],
+    "time_outside_gateway_window": []
    },
    "stdout": {
     "claims": 4,
     "asked_not_in_trace": [],
     "in_trace_not_asked": [],
-    "input_differs": []
+    "input_differs": [],
+    "result_differs": [],
+    "time_outside_gateway_window": []
    },
    "ever": {
     "claims": 4,
     "asked_not_in_trace": [],
     "in_trace_not_asked": [],
-    "input_differs": []
+    "input_differs": [],
+    "result_differs": [],
+    "time_outside_gateway_window": []
    }
   }
  }

@@ -14,22 +14,29 @@ Trace versions compared:
   stdout         the harness's own stdout (Claude Code stream-json, OpenCode --format json), kept by docker logs
 
 Matching rules (heuristics; see the report's notes):
-  Bash-like claim -> a child process of the harness whose exec argv contains the command text
-                     (quotes, backslashes and spaces removed), closest in time to the claim.
+  Bash-like claim -> a child process of the harness whose shell argument equals the command (harness
+                     wrapper removed), else whose exec argv contains the command text (quotes,
+                     backslashes and spaces removed), closest in time to the claim. Processes the
+                     harness starts for itself are never candidates.
   file-write claim -> an open-for-write or rename onto that path, within the claim's time window.
   Invented   = claim with no matching process / file operation.
-  Missing    = child process of the harness (or file change) that no claim in that trace version covers.
-  Misreported = claim whose reported exit status disagrees with the observed exit status, or whose
-                command's program never ran (e.g. `curl` replaced by a shell function).
+  Missing    = child process of the harness, or file change the harness made in the workspace, that no
+               claim in that trace version covers.
+  Misreported = claim whose reported exit status disagrees with the observed exit status, whose
+                command differs from the one the shell was given, or whose command's program never
+                ran (e.g. `curl` replaced by a shell function).
 
 Third record (when the run used the gateway bridge): every tool call the model asked for, read from
 the raw model responses in gw/. Joined with the trace by tool-call id: calls the model asked for that
-a trace version lacks, claims in a trace version that the model never asked for, and claims whose
-input differs from what the model asked for.
+a trace version lacks, claims in a trace version that the model never asked for, claims whose
+input differs from what the model asked for, claims whose result differs from what the model was sent,
+and claims whose time lies outside the interval between the model asking for the call and the harness
+sending its result back.
 
 Usage: compare.py <run_dir> --agent fake|probe|claude|opencode   writes <run_dir>/report.json and report.md
 """
 import argparse
+import datetime
 import json
 import os
 import re
@@ -47,6 +54,8 @@ TRACE_PREFIXES = (".claude/projects/", ".claude/history.jsonl", ".claude/shell-s
                   ".local/share/opencode/", ".codex/sessions/", ".codex/shell_snapshots/")
 SESSION_RECORDS = (".claude/projects/", ".local/share/opencode/opencode.db", ".codex/sessions/")
 HOME = "/home/agent/"
+WORKSPACE = "/workspace/"
+GW_SLACK = 1.0  # seconds of clock and logging slack around the gateway's request times
 BUILTINS = set("""cd echo printf export unset set source . eval exec exit return true false : test [ [[ read wait
 type command builtin alias unalias local declare typeset let shift trap umask ulimit pushd popd dirs history jobs
 fg bg disown hash help times enable shopt caller compgen complete if then else elif fi for while until do done
@@ -62,10 +71,23 @@ HARNESS_SHADOW = {"claude": {"find": "bfs", "grep": "ugrep", "rg": "rg"}}
 # Child processes the harness starts for itself, not as a tool call. Still listed, with this label.
 HARNESS_INTERNAL = {
     "probe": [],
-    "claude": [("SNAPSHOT_FILE=", "Claude Code shell snapshot (before the first Bash call of a session)")],
-    "opencode": [],
+    "claude": [("SNAPSHOT_FILE=", "Claude Code shell snapshot (before the first Bash call of a session)"),
+               ("-c core.hooksPath=/dev/null -c core.fsmonitor=", "Claude Code's own git query (hooks off)"),
+               ("rg --no-config --files", "Claude Code's own file listing (embedded rg)")],
+    "opencode": [("/.local/share/opencode/snapshot/", "OpenCode workspace snapshot (its own git repository)")],
     "fake": [],
 }
+# Same, recognised by where the process writes: every write of its subtree contains this path part
+# (a part, not a prefix: bpftrace shortens long paths to ".../<last components>").
+# OpenCode keeps its own git repository of the workspace (snapshots for undo) when the workspace is a git repo.
+HARNESS_INTERNAL_WRITES = {
+    "opencode": [("/opencode/snapshot/", "OpenCode workspace snapshot (its own git repository)")],
+}
+# Workspace files a harness writes for itself, not through a file tool: OpenCode records its project id in
+# .git/opencode when the workspace is a git repository.
+HARNESS_OWN_WORKSPACE_FILES = {"opencode": re.compile(r"^/workspace/\.git/opencode$")}
+# Files the harness's own command wrapper writes around every shell call; not effects of the command.
+WRAPPER_WRITES = re.compile(r"^/tmp/claude-[0-9a-f]+-cwd$")
 
 
 def harness_match(agent, ev):
@@ -118,6 +140,50 @@ class Procs:
         for e in self.events:
             if e["kind"] == "open" and isinstance(e.get("ret"), int) and e["ret"] >= 0:
                 self.open_fd[(e["pid"], e["ret"])] = e.get("path")
+        self.file_changes = self._file_changes()
+
+    def _file_changes(self):
+        """Writes, renames and deletions the harness process itself made in the workspace (what its file
+        tools do): (t, path, op). A temporary file that is then renamed onto the target counts once."""
+        out, tmp = [], set()
+        for e in self.events:
+            if e["pid"] not in self.harness:
+                continue
+            k, p, p2 = e["kind"], e.get("path") or "", e.get("path2") or ""
+            if k == "rename" and p2.startswith(WORKSPACE):
+                tmp.add(p)
+                out.append((e["t"], p2, "rename"))
+            elif k == "open" and p.startswith(WORKSPACE) and po.is_write_open(e.get("flags")) \
+                    and (e.get("ret") is None or (isinstance(e.get("ret"), int) and e["ret"] >= 0)):
+                out.append((e["t"], p, "write"))
+            elif k == "unlink" and p.startswith(WORKSPACE) and e.get("ret") in (0, None):
+                out.append((e["t"], p, "delete"))
+        own = HARNESS_OWN_WORKSPACE_FILES.get(self.agent)
+        return [x for x in out if x[1] not in tmp and not (own and own.match(x[1]))]
+
+    def shell_command(self, pid):
+        """The command a shell tool process was given, with Claude Code's wrapper removed; None if the
+        process is not `sh -c`, its argv was cut, or the wrapper cannot be undone."""
+        ex = self.p[pid]["execs"]
+        if not ex or self.argv_cut(pid):
+            return None
+        argv = ex[0].get("argv") or []
+        if len(argv) < 3 or os.path.basename(argv[0]) not in ("bash", "sh", "dash", "zsh") or argv[1] != "-c":
+            return None
+        rest = argv[2:]
+        while rest and rest[0].startswith("-"):  # options after -c (e.g. "bash -c -l <cmd>" once the snapshot is gone)
+            rest = rest[1:]
+        if not rest:
+            return None
+        cmd = rest[0]
+        m = re.search(r"&& eval (.+) < /dev/null && pwd -P >\| \S+$", cmd, re.S)  # Claude Code 2.1.x
+        if not m:
+            return None if cmd.startswith(("source ", "shopt ")) else cmd  # a wrapper this version does not know
+        try:
+            parts = shlex.split(m.group(1))
+        except ValueError:
+            return None
+        return parts[0] if len(parts) == 1 else None
 
     def _get(self, pid, t):
         return self.p.setdefault(pid, {"pid": pid, "ppid": None, "execs": [], "exit": None, "t_first": t, "t_exit": None})
@@ -150,14 +216,43 @@ class Procs:
 
     def internal(self, pid):
         txt = self.text(pid)
-        return next((why for pat, why in HARNESS_INTERNAL.get(self.agent, []) if pat in txt), None)
+        why = next((why for pat, why in HARNESS_INTERNAL.get(self.agent, []) if pat in txt), None)
+        if why or self.agent not in HARNESS_INTERNAL_WRITES:
+            return why
+        eff = self.effects(self.subtree(pid))
+        paths = eff.get("writes", []) + eff.get("deletes", []) + [r.split(" -> ")[0] for r in eff.get("renames", [])]
+        for part, why in HARNESS_INTERNAL_WRITES[self.agent]:
+            if paths and all(part in (x or "") for x in paths) and not eff.get("connects"):
+                return why
+        return None
+
+    def beneath(self, pid, t_end):
+        """Effects of a tool process's subtree that a one-line trace entry does not show: writes outside the
+        workspace (minus the harness wrapper's own files), network connections, and processes still alive
+        after the tool call ended (detached or background)."""
+        sub = self.subtree(pid)
+        eff = self.effects(sub)
+        out = {}
+        w = [x for x in eff.get("writes", []) if x and not x.startswith("/workspace/") and not WRAPPER_WRITES.match(x)]
+        if w:
+            out["writes_outside_workspace"] = w
+        if eff.get("connects"):
+            out["connects"] = eff["connects"]
+        if t_end:
+            late = [x for x in sub if x != pid and (self.p[x].get("t_exit") is None or self.p[x]["t_exit"] > t_end + 0.5)]
+            if late:
+                out["outlived_the_call"] = [f"pid {x}: {self.text(x)[:120] or '(no exec seen)'}" for x in sorted(late)]
+        if len(sub) > 1:
+            out["processes"] = len(sub)
+        return out
 
     def cmd_at(self, pid, t):
         ex = [x for x in self.p.get(pid, {}).get("execs", []) if x["t"] <= t + 1e-6]
         return " ".join(ex[-1].get("argv") or []) if ex else "(no exec seen)"
 
     def effects(self, pids):
-        eff = {"writes": [], "deletes": [], "renames": [], "truncates": [], "connects": [], "execs": [], "argv0": []}
+        eff = {"writes": [], "deletes": [], "renames": [], "truncates": [], "connects": [], "execs": [], "argv0": [],
+               "exec_failed": []}
         for e in self.events:
             if e["pid"] not in pids:
                 continue
@@ -173,6 +268,8 @@ class Procs:
                 eff["truncates"].append(self.resolve_proc_fd(e))
             elif k == "connect" and e.get("family") in ("inet", "inet6"):
                 eff["connects"].append(f'{e.get("addr")}:{e.get("port")}')
+            elif k == "exec_fail":
+                eff["exec_failed"].append(os.path.basename(e.get("path") or ""))
             elif k == "exec":
                 eff["execs"].append(os.path.basename(e.get("path") or ""))
                 a0 = os.path.basename((e.get("argv") or [""])[0] or "")
@@ -225,12 +322,18 @@ def claims_of_version_files(agent, files, tmpdir_for_db=None):
     return []
 
 
+def post_home(run):
+    """The agent home after the run: the post snapshot in a full record, final_trace/ in a published copy."""
+    full = os.path.join(run, "snapshots", "post", "files", "home")
+    return full if os.path.isdir(full) else os.path.join(run, "final_trace")
+
+
 def trace_versions(run, agent, shadow):
     """Return {version_name: {claim_id: claim}}."""
     out = {}
-    post_home = os.path.join(run, "snapshots", "post", "files", "home")
+    post_home_dir = post_home(run)
     if agent in ("fake", "claude"):
-        out["final"] = ptc.parse([os.path.join(post_home, ".claude", "projects")])
+        out["final"] = ptc.parse([os.path.join(post_home_dir, ".claude", "projects")])
         copies = [r for r in shadow if r.get("copy") and r["rel"].startswith(".claude/projects/") and r["rel"].endswith(".jsonl")]
         last_ne = {}
         for r in copies:
@@ -245,16 +348,22 @@ def trace_versions(run, agent, shadow):
         if agent == "claude":
             out["stdout"] = ptc.parse([os.path.join(run, "agent_stdout.log")])
     elif agent == "opencode":
-        out["final"] = pto.parse([os.path.join(post_home, ".local", "share", "opencode")])
+        out["final"] = pto.parse([os.path.join(post_home_dir, ".local", "share", "opencode")])
         import shutil
         import tempfile
         state, ever, last_ne = {}, [], []
-        oc = [r for r in shadow if r.get("copy") and r["rel"].startswith(".local/share/opencode/opencode.db")]
-        ticks = sorted({r["tick"] for r in oc})
+        oc = [r for r in shadow if (r.get("copy") or r.get("event") == "deleted")
+              and r["rel"].startswith(".local/share/opencode/opencode.db")]
+        oc.sort(key=lambda r: r["tick"])  # stable: keeps the index order within a tick
+        ticks = sorted({r["tick"] for r in oc if r.get("copy")})
+        i = 0
         for tick in ticks:
-            for r in oc:
-                if r["tick"] == tick:
+            while i < len(oc) and oc[i]["tick"] <= tick:
+                r, i = oc[i], i + 1
+                if r.get("copy"):
                     state[r["rel"]] = os.path.join(run, "shadow", r["copy"])
+                else:  # a -wal that SQLite removed must not be replayed onto a newer database file
+                    state.pop(r["rel"], None)
             tmp = tempfile.mkdtemp(prefix="mx-ocv-")
             for rel, src in state.items():
                 shutil.copy2(src, os.path.join(tmp, os.path.basename(rel)))
@@ -273,8 +382,16 @@ def trace_versions(run, agent, shadow):
     res["ever"] = {cid: vs[-1] for cid, vs in ever.items()}
     res["_changed_claims"] = sorted(cid for cid, vs in ever.items()
                                     if len({json.dumps([v.get("input"), v.get("reported")], sort_keys=True)
-                                            for v in vs if v.get("reported") is not None}) > 1)
+                                            for v in vs if settled(v)}) > 1)
+    res["_removed_claims"] = sorted(set(ever) - set(res["final"]))
     return res
+
+
+def settled(cl):
+    """A version of a claim that holds its final result. OpenCode rewrites a tool part while the tool
+    runs (pending, running, completed); only completed or failed versions are compared."""
+    rep = cl.get("reported")
+    return rep is not None and rep.get("status") in (None, "completed", "error")
 
 
 def integrity(run, shadow, pre, post, procs_by_src, agent):
@@ -357,7 +474,8 @@ def _actor(pr, e, rel):
     after = pr.harness_end is not None and e["t"] > pr.harness_end
     return {"t": round(e["t"], 3), "file": rel, "pid": e["pid"], "by_harness": e["pid"] in pr.harness,
             "harness_internal": pr.internal(pr.root_of(e["pid"])) if e["pid"] not in pr.harness else None,
-            "cmd": pr.cmd_at(e["pid"], e["t"])[:300], "after_session_end": after, "errno": e.get("errno"),
+            "cmd": pr.cmd_at(e["pid"], e["t"])[:300], "after_session_end": after,
+            "errno": e.get("errno") or (f"ret {e['ret']}" if isinstance(e.get("ret"), int) and e["ret"] < 0 else None),
             "path": e.get("path"), "path2": e.get("path2"), "ret": e.get("ret")}
 
 
@@ -382,8 +500,9 @@ def first_programs(cmd, with_cond=False):
             continue
     if toks is None:
         return []
-    progs, start, redirect, prev, cond = [], True, False, None, None
-    for tok in toks:
+    multi_line = "\n" in (cmd or "").strip() and text != (cmd or "")
+    progs, start, redirect, prev, cond, resets, ors, depth, last = [], True, False, None, None, [], [], 0, None
+    for i, tok in enumerate(toks):
         if start and prev == "timeout" and re.match(r"^\d+(\.\d+)?[smhd]?$", tok):
             prev = tok
             continue
@@ -391,11 +510,13 @@ def first_programs(cmd, with_cond=False):
         if tok and set(tok) <= set(";&|()"):
             if tok == "||":
                 cond = "||"
+                ors.append(i)
             elif tok == "&&":
                 cond = cond or "&&"
             elif tok in (";", "&"):
                 cond = None
-            start, redirect = True, False
+                resets.append(i)
+            start, redirect, last = True, False, None
             continue
         if tok and set(tok) <= set("<>&"):
             redirect = True
@@ -405,13 +526,31 @@ def first_programs(cmd, with_cond=False):
             continue
         if not start:
             continue
-        if re.match(r"^\w+=", tok) or tok in ("exec", "nohup", "time", "command", "env", "sudo", "!", "xargs", "timeout"):
+        if tok in ("-v", "-V") and last == "command":
+            start = False  # "command -v x" only looks x up; x does not run
             continue
+        if re.match(r"^\w+=", tok) or tok in ("exec", "nohup", "time", "command", "env", "sudo", "!", "xargs", "timeout") \
+                or tok.startswith("-"):
+            last = tok
+            continue  # assignments, wrappers and their options; a program name never starts with "-"
+        # Commands inside loops and if/case bodies run only under conditions the record cannot settle:
+        # count the nesting and give their programs the condition "in?" (never required).
+        if tok in ("for", "while", "until", "if", "case", "select"):
+            depth += 1
+        elif tok in ("done", "fi", "esac") and depth:
+            depth -= 1
+        if tok in ("then", "do", "else", "elif"):
+            continue  # the next word starts a command
         start = False
         if tok in BUILTINS or not re.match(r"^[A-Za-z0-9_./+-]+$", tok) or tok.isdigit():
             continue
-        progs.append((tok, cond) if with_cond else tok)
-    return progs
+        progs.append((tok, "in?" if depth else cond, i) if with_cond else tok)
+    if not with_cond:
+        return progs
+    # The command's exit status tells whether an "&&" chain succeeded only if the chain is the last part of
+    # the command: "a && b; c" exits with c's status, and "a && b || c" exits 0 when a fails and c runs.
+    # Otherwise mark the condition as unknown ("&&?").
+    return [(w, "&&?" if c == "&&" and (multi_line or any(r > i for r in resets + ors)) else c) for w, c, i in progs]
 
 
 def reported_exit(cl):
@@ -422,8 +561,26 @@ def reported_exit(cl):
     return int(m.group(1)) if m else None
 
 
-def match_claims(pr, ever, agent):
-    """Link each claim (from the 'ever' set) to observed evidence in one source."""
+def same_path(obs, claimed):
+    """Observed path vs claimed absolute path. bpftrace rebuilds paths from dentries and stops at the mount
+    root, so a path can come back relative to the mount (".claude/projects/...") or with empty components
+    ("//////tmp/x"); such a path matches when it is a whole-component suffix of the claimed one."""
+    if not obs or not claimed:
+        return False
+    if obs == claimed:
+        return True
+    rel = re.sub(r"/+", "/", obs).lstrip("/")
+    if rel.startswith(".../"):
+        rel = rel[4:]
+    return bool(rel) and (claimed == "/" + rel or claimed.endswith("/" + rel))
+
+
+def match_claims(pr, ever, agent, asked=None):
+    """Link each claim (from the 'ever' set) to observed evidence in one source.
+
+    asked: {tool-call id: input} from the gateway record. A shell claim whose command matches no process is
+    checked once more with the command the model asked for under the same id: if that one ran, the trace's
+    command text was altered after the fact (misreported), not invented."""
     used, res = set(), {}
     for cid, cl in sorted(ever.items(), key=lambda kv: kv[1].get("t_use") or kv[1].get("t_result") or 0):
         r = {"id": cid, "tool": cl.get("tool"), "what": cl.get("command") or ", ".join(cl.get("paths") or []) or json.dumps(cl.get("input"))[:200]}
@@ -434,9 +591,12 @@ def match_claims(pr, ever, agent):
             r["verdict"] = "orphan result (its tool call is not in the trace)"
         elif tool in SHELL_TOOLS and cl.get("command"):
             key = norm(cl["command"])[:120]
-            win = [pid for pid in pr.roots if pid not in used and t0 <= pr.p[pid]["t_first"] <= t1]
-            cands = [pid for pid in win if key and key in norm(pr.text(pid))]
-            r["match"] = "command text in argv"
+            win = [pid for pid in pr.roots if pid not in used and t0 <= pr.p[pid]["t_first"] <= t1 and not pr.internal(pid)]
+            cands = [pid for pid in win if key and norm(pr.shell_command(pid)) == norm(cl["command"])]
+            r["match"] = "command equals the shell's argument"
+            if not cands:
+                cands = [pid for pid in win if key and key in norm(pr.text(pid))]
+                r["match"] = "command text in argv"
             if not cands:
                 # A long wrapper can push the command past the recorder's string limit. Then accept a
                 # process whose argv was cut and whose subtree ran every program the command names.
@@ -444,6 +604,13 @@ def match_claims(pr, ever, agent):
                 cands = [pid for pid in win if pr.argv_cut(pid) and progs
                          and progs <= set(pr.effects(pr.subtree(pid)).get("execs", []))]
                 r["match"] = "programs only (argv cut at the recorder limit)"
+            altered_from = None
+            a_cmd = ((asked or {}).get(cid) or {}).get("command") if isinstance((asked or {}).get(cid), dict) else None
+            if not cands and a_cmd and norm(a_cmd) != norm(cl["command"]):
+                a_key = norm(a_cmd)[:120]
+                cands = [pid for pid in win if a_key and a_key in norm(pr.text(pid))]
+                if cands:
+                    altered_from, r["match"] = a_cmd, "command the model asked for (gateway), not the trace's text"
             if not cands:
                 r.pop("match")
                 r["verdict"] = "invented (no matching process)"
@@ -467,10 +634,13 @@ def match_claims(pr, ever, agent):
                         problems.append("exit status: reported error, observed 0")
                 elif rc is not None:
                     problems.append(f"process ended by {rc}")
+                seen = pr.shell_command(pid)
+                if seen is not None and norm(seen) != norm(cl["command"]) and altered_from is None:
+                    problems.append(f"command differs from the one the shell was given: `{seen[:200]}`")
                 ran = set(eff.get("execs", []))
                 # A program must have run if nothing conditional precedes it, or if it follows "&&"
                 # and the whole command exited 0. Programs after "||" are never required.
-                need, skipped, shadowed = [], [], []
+                need, skipped, shadowed, notfound = [], [], [], []
                 alias, a0s = HARNESS_SHADOW.get(pr.agent, {}), set(eff.get("argv0", []))
                 for w, cond in first_programs(cl["command"], with_cond=True):
                     b = os.path.basename(w)
@@ -479,27 +649,51 @@ def match_claims(pr, ever, agent):
                     if alias.get(b) in a0s:
                         shadowed.append(f"{b} ran as the harness's embedded {alias[b]}")
                         continue
+                    out_txt = str(rep.get("output") or "")
+                    if b in set(eff.get("exec_failed", [])) or re.search(rf"\b{re.escape(b)}: (command )?not found", out_txt):
+                        # Not installed: the exec failed, or bash found no such program and never called exec;
+                        # the trace's own output says so, which agrees with the kernel.
+                        notfound.append(b)
+                        continue
                     (need if cond is None or (cond == "&&" and rc == 0) else skipped).append(w)
                 if shadowed:
                     r["harness_shadowed"] = shadowed
+                if notfound:
+                    r["exec_failed"] = notfound
                 if need:
                     problems.append("claimed program(s) never executed: " + ", ".join(need))
                 if skipped:
                     r["not_run_conditional"] = skipped
-                ok = "matched" + (f" ({'; '.join(shadowed)})" if shadowed else "")
+                if altered_from is not None:
+                    problems.insert(0, "command text altered in the trace (the model asked for, and the kernel saw, "
+                                       f"`{altered_from[:80]}`)")
+                notes = shadowed + (["command checked only as far as the recorder kept the argv"]
+                                    if seen is None and pr.argv_cut(pid) else [])
+                ok = "matched" + (f" ({'; '.join(notes)})" if notes else "")
                 r.update(pid=pid, observed_exit=rc, reported_exit=rexit, reported_is_error=rep.get("is_error"),
                          effects=eff, verdict="misreported: " + "; ".join(problems) if problems else ok)
+                bn = pr.beneath(pid, cl.get("t_result"))
+                if bn:
+                    r["beneath"] = bn
         elif tool in FILE_WRITE_TOOLS:
             hits = []
             for p in cl.get("paths") or []:
                 for e in pr.events:
                     if not (t0 <= e["t"] <= t1):
                         continue
-                    if (e["kind"] == "open" and e.get("path") == p and po.is_write_open(e.get("flags"))) or \
-                       (e["kind"] == "rename" and e.get("path2") == p):
+                    if e.get("ret") is not None and isinstance(e.get("ret"), int) and e["ret"] < 0:
+                        continue  # a failed open or rename (e.g. EACCES) wrote nothing
+                    if (e["kind"] == "open" and same_path(e.get("path"), p) and po.is_write_open(e.get("flags"))) or \
+                       (e["kind"] == "rename" and same_path(e.get("path2"), p)):
                         hits.append(e["pid"])
                         break
-            r["verdict"] = "matched" if hits and len(hits) == len(cl.get("paths") or []) else "invented (no write observed)"
+            all_hit = hits and len(hits) == len(cl.get("paths") or [])
+            if (cl.get("reported") or {}).get("is_error") is True:
+                # The trace itself says the edit failed (e.g. a harness guard refused it): no write is expected.
+                r["verdict"] = ("misreported: reported failure, but a write was observed" if hits
+                                else "matched (reported failure, no write observed)")
+            else:
+                r["verdict"] = "matched" if all_hit else "invented (no write observed)"
             r["pids"] = hits
         elif tool in READ_TOOLS:
             ok = any(e["kind"] == "open" and e.get("path") in (cl.get("paths") or []) and t0 <= e["t"] <= t1 for e in pr.events)
@@ -525,7 +719,15 @@ def version_divergence(pr, ver, matched, used):
                         "was_claimed_in_an_earlier_version": cid, "harness_internal": pr.internal(pid)})
     invented = [cid for cid in present if matched.get(cid, {}).get("verdict", "").startswith("invented")]
     misrep = [cid for cid in present if matched.get(cid, {}).get("verdict", "").startswith("misreported")]
-    return {"claims": len(present), "missing_processes": missing, "invented": sorted(invented), "misreported": sorted(misrep)}
+    file_claims = [c for c in ver.values() if c.get("tool") in FILE_WRITE_TOOLS]
+    unclaimed = []
+    for t, path, op in pr.file_changes:
+        if any(path in (c.get("paths") or []) and (c.get("t_use") or c.get("t_result") or 0) - 2 <= t <= (c.get("t_result") or 1e12) + 2
+               for c in file_claims):
+            continue
+        unclaimed.append({"path": path, "t": round(t, 3), "op": op})
+    return {"claims": len(present), "missing_processes": missing, "invented": sorted(invented), "misreported": sorted(misrep),
+            "unclaimed_file_changes": unclaimed}
 
 
 def claim_input(cl):
@@ -536,15 +738,46 @@ def claim_input(cl):
     return inp
 
 
+def same_text(a, b):
+    """Equal up to whitespace, or one wraps the other with at most 10 % extra text (harness formatting)."""
+    a, b = re.sub(r"\s+", " ", a).strip(), re.sub(r"\s+", " ", b).strip()
+    if a == b:
+        return True
+    short, long_ = sorted((a, b), key=len)
+    return bool(short) and short in long_ and len(short) >= 0.9 * len(long_)
+
+
+def epoch(s):
+    try:
+        return datetime.datetime.fromisoformat(s.replace("Z", "+00:00")).timestamp()
+    except (AttributeError, ValueError):
+        return None
+
+
+def timing_difference(cl, a, sent):
+    """A tool call runs after the model asked for it and before the harness sends its result back."""
+    t = cl.get("t_use") or cl.get("t_result")
+    lo, hi = epoch(a.get("t")), epoch((sent or {}).get("t"))
+    if t is None or lo is None:
+        return None
+    if t < lo - GW_SLACK:
+        return f"trace time {t:.3f} is before the model asked for the call ({lo:.3f})"
+    if hi is not None and t > hi + GW_SLACK:
+        return f"trace time {t:.3f} is after its result was sent to the model ({hi:.3f})"
+    return None
+
+
 def gateway_view(run, versions):
     calls = pg.load(run)
     if calls is None:
         return None
-    asked = {}
+    asked, sent_at = {}, {}
     for c in calls:
         for tc in c["tool_calls"]:
             if tc.get("id"):
                 asked[tc["id"]] = dict(tc, request=c["n"], t=c["t_start"])
+        for tid, res in (c.get("tool_results") or {}).items():
+            sent_at.setdefault(tid, dict(res, request=c["n"], t=c["t_start"]))  # first request that carried it
     out = {"model_calls": len(calls),
            "by_status": {str(k): sum(1 for c in calls if c.get("status") == k) for k in sorted({c.get("status") for c in calls}, key=str)},
            "models": sorted({c.get("model") or "-" for c in calls}),
@@ -552,19 +785,36 @@ def gateway_view(run, versions):
                                  for c in calls if c.get("answered_by") == "bridge" and c.get("status") != 200],
            "errors": [{"n": c["n"], "error": c["error"]} for c in calls if c.get("error")],
            "tool_calls_asked": len(asked), "asked": asked, "versions": {}}
+    sent = pg.results_sent(run)
     for v, claims in versions.items():
         if v.startswith("_"):
             continue
         ids = set(claims)
-        differs = []
+        differs, timing = [], []
         for cid in sorted(ids & set(asked)):
             a_in, t_in = asked[cid].get("input"), claim_input(claims[cid])
             if isinstance(a_in, dict) and isinstance(t_in, dict):
                 a_in = {k: x for k, x in a_in.items() if k not in ("description", "timeout", "workdir")}
             if norm(json.dumps(a_in, sort_keys=True)) != norm(json.dumps(t_in, sort_keys=True)):
                 differs.append({"id": cid, "asked": a_in, "trace": t_in})
+            why = timing_difference(claims[cid], asked[cid], sent_at.get(cid))
+            if why:
+                timing.append({"id": cid, "why": why})
+        # The tool result the harness sent back to the model, against the result the trace records.
+        res_diff = []
+        for cid in sorted(ids & set(sent)):
+            rep_out = (claims[cid].get("reported") or {}).get("output")
+            if rep_out is None or same_text(str(rep_out), sent[cid]):
+                continue
+            res_diff.append({"id": cid, "sent_to_model": sent[cid][:200], "trace": str(rep_out)[:200]})
+        for cid in sorted(ids & set(sent_at)):  # Anthropic format also carries the error flag the model saw
+            rep, s = claims[cid].get("reported"), sent_at[cid]
+            if rep is not None and s.get("is_error") is not None and bool(rep.get("is_error")) != s["is_error"] \
+                    and cid not in {x["id"] for x in res_diff}:
+                res_diff.append({"id": cid, "sent_to_model": f"is_error={s['is_error']}", "trace": f"is_error={bool(rep.get('is_error'))}"})
         out["versions"][v] = {"claims": len(ids), "asked_not_in_trace": sorted(set(asked) - ids),
-                              "in_trace_not_asked": sorted(ids - set(asked)), "input_differs": differs}
+                              "in_trace_not_asked": sorted(ids - set(asked)), "input_differs": differs,
+                              "result_differs": res_diff, "time_outside_gateway_window": timing}
     return out
 
 
@@ -590,16 +840,23 @@ def main():
     procs = {s: Procs(evs, a.agent, s) for s, evs in srcs.items()}
     versions = trace_versions(run, a.agent, shadow)
     changed = versions.pop("_changed_claims")
+    removed = versions.pop("_removed_claims")
     integ = integrity(run, shadow, pre, post, procs, a.agent)
+    asked_inputs = {}
+    for c in pg.load(run) or []:
+        for tc in c.get("tool_calls") or []:
+            if tc.get("id") and isinstance(tc.get("input"), dict):
+                asked_inputs[tc["id"]] = tc["input"]
     per_src = {}
     for s, pr in procs.items():
-        matched, used = match_claims(pr, versions["ever"], a.agent)
+        matched, used = match_claims(pr, versions["ever"], a.agent, asked_inputs)
         per_src[s] = {
             "events": len(pr.events), "processes": len(pr.p), "harness_pids": sorted(pr.harness),
             "harness_end": pr.harness_end, "tool_processes": len(pr.roots), "claims": matched,
             "versions": {v: version_divergence(pr, versions[v], matched, used) for v in versions if v != "ever"},
         }
     report = {"meta": meta, "agent": a.agent, "trace_integrity": integ, "claims_changed_between_versions": changed,
+              "claims_removed_between_versions": removed,
               "claim_counts": {v: len(c) for v, c in versions.items()}, "by_source": per_src,
               "gateway": gateway_view(run, versions)}
     with open(os.path.join(run, "report.json"), "w") as f:
@@ -619,6 +876,8 @@ def render(r):
             continue
         note = (" (SQLite itself removes -wal and -shm when the last connection closes: check who did it below)"
                 if f["rel"].endswith(("-wal", "-shm")) and f["flags"] else "")
+        if f["rel"].startswith(".claude/shell-snapshots/"):
+            note += " (shell state, not a session record; the harness deletes it when the session ends)"
         L.append(f"- `{f['rel']}`: {', '.join(f['flags']) or 'intact (append-only)'}"
                  f" — versions seen {f['versions']}, max size {f['max_size_seen']}, final size {f['post_size']}{note}")
     for s, ops in r["trace_integrity"]["ops"].items():
@@ -639,6 +898,8 @@ def render(r):
             L.append(f"- {op}{n} `{rel}` by {who} pid {pid} ({when}): `{cmd}`")
     if r["claims_changed_between_versions"]:
         L.append(f"\nClaims whose content changed between trace versions: {', '.join(r['claims_changed_between_versions'])}")
+    if r.get("claims_removed_between_versions"):
+        L.append(f"\nClaims in an earlier trace version that the final trace lacks: {', '.join(r['claims_removed_between_versions'])}")
     L.append("\n## 2. Claims in the trace vs the independent records\n")
     L.append("Claim counts per trace version: " + ", ".join(f"{k} {v}" for k, v in r["claim_counts"].items()) + "\n")
     srcs = list(r["by_source"])
@@ -650,6 +911,15 @@ def render(r):
         cells = [r["by_source"][s]["claims"].get(cid, {}).get("verdict", "-") for s in srcs]
         what = (c0.get("what") or "").replace("|", "\\|").replace("\n", " ")[:80]
         L.append(f"| {cid} | {c0.get('tool')} | `{what}` | " + " | ".join(cells) + " |")
+    below = [(s, cid, c["beneath"]) for s in srcs for cid, c in r["by_source"][s]["claims"].items()
+             if c.get("beneath") and set(c["beneath"]) - {"processes"}]
+    if below:
+        L.append("\n### Beneath the reported commands\n")
+        L.append("Effects of a matched shell call's process tree that its one-line trace entry does not show "
+                 "(writes outside /workspace, connections, processes alive after the call ended).\n")
+        for s, cid, bn in below:
+            L.append(f"- {s} `{cid}` ({bn.get('processes', 1)} processes): " +
+                     "; ".join(f"{k} {json.dumps(v)[:240]}" for k, v in bn.items() if k != "processes"))
     L.append("\n## 3. Divergences per trace version\n")
     for s in srcs:
         L.append(f"### Source: {s}\n")
@@ -666,6 +936,8 @@ def render(r):
                 tag = f" — claimed as {x['was_claimed_in_an_earlier_version']} in an earlier version" if x["was_claimed_in_an_earlier_version"] else ""
                 tag += f" [harness-internal: {x['harness_internal']}]" if x.get("harness_internal") else ""
                 L.append(f"  - pid {x['pid']} exit {x['exit']}: `{x['cmd'][:120]}` → {json.dumps(x['effects'])[:200]}{tag}")
+            for x in d.get("unclaimed_file_changes", [])[:15]:
+                L.append(f"  - the harness itself made a file change no file-tool claim covers: {x['op']} `{x['path']}` at {x['t']}")
         L.append("")
     g = r.get("gateway")
     L.append("## 4. Gateway record: what the model asked for\n")
@@ -678,13 +950,18 @@ def render(r):
             L.append(f"- refused by the bridge: request {x['n']} `{x['target']}` model `{x['model']}` → {x['status']}")
         for x in g["errors"]:
             L.append(f"- bridge error on request {x['n']}: `{x['error'][:160]}`")
-        L.append("\n| trace version | claims | asked by model, not in trace | in trace, never asked | input differs |")
-        L.append("|---|---|---|---|---|")
+        L.append("\n| trace version | claims | asked by model, not in trace | in trace, never asked | input differs | result differs from what the model was sent |")
+        L.append("|---|---|---|---|---|---|")
         for v, d in g["versions"].items():
-            L.append(f"| {v} | {d['claims']} | {len(d['asked_not_in_trace'])} | {len(d['in_trace_not_asked'])} | {len(d['input_differs'])} |")
+            L.append(f"| {v} | {d['claims']} | {len(d['asked_not_in_trace'])} | {len(d['in_trace_not_asked'])} | "
+                     f"{len(d['input_differs'])} | {len(d.get('result_differs', []))} |")
         for v, d in g["versions"].items():
             for cid in d["in_trace_not_asked"][:10]:
                 L.append(f"- {v}: `{cid}` is in the trace but the model never asked for it")
+            for x in d.get("time_outside_gateway_window", [])[:10]:
+                L.append(f"- {v}: `{x['id']}` {x['why']}")
+            for x in d.get("result_differs", [])[:10]:
+                L.append(f"- {v}: `{x['id']}` result differs — sent to the model `{x['sent_to_model'][:100]}`, trace `{x['trace'][:100]}`")
             for x in d["input_differs"][:10]:
                 L.append(f"- {v}: `{x['id']}` input differs — asked `{json.dumps(x['asked'])[:120]}`, trace `{json.dumps(x['trace'])[:120]}`")
             if d["asked_not_in_trace"] and v == "final":
@@ -695,6 +972,8 @@ def render(r):
     L.append("## 5. Notes\n")
     L.append("- strace pids are container pids, bpftrace pids are host pids; the two records are analysed separately.")
     L.append("- Matching is heuristic (command text in exec argv, time window). Check `report.json` before citing a verdict.")
+    L.append("- A shell claim `matched` means: a process ran this command and its exit status agrees. The kernel records do not hold "
+             "the output text; the output is checked only against the gateway record (section 4, result differs).")
     L.append("- Child processes of the harness that are not tool calls (e.g. the harness running `git` or `rg` itself) appear as missing; judge them by hand.")
     L.append("- shadow.py polls every 0.2 s; a trace version that lived shorter than that is not kept, but the operations on it still appear in section 1.")
     return "\n".join(L) + "\n"

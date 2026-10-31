@@ -1,0 +1,55 @@
+timestamp=2026-10-31T18:18:54.460Z level=INFO run=a85b4215 message="creating instance" directory=/workspace
+timestamp=2026-10-31T18:18:54.463Z level=INFO run=a85b4215 message=fromDirectory directory=/workspace
+timestamp=2026-10-31T18:18:54.473Z level=INFO run=a85b4215 message=bootstrapping directory=/workspace
+timestamp=2026-10-31T18:18:54.478Z level=INFO run=a85b4215 message=loading path=/home/agent/.config/opencode/config.json
+timestamp=2026-10-31T18:18:54.478Z level=INFO run=a85b4215 message=loading path=/home/agent/.config/opencode/opencode.json
+timestamp=2026-10-31T18:18:54.484Z level=INFO run=a85b4215 message=loading path=/home/agent/.config/opencode/opencode.jsonc
+timestamp=2026-10-31T18:18:54.678Z level=INFO run=a85b4215 message="all LSPs are disabled"
+timestamp=2026-10-31T18:18:54.679Z level=INFO run=a85b4215 message="all formatters are disabled"
+timestamp=2026-10-31T18:18:54.679Z level=INFO run=a85b4215 message=init
+timestamp=2026-10-31T18:18:54.886Z level=INFO run=a85b4215 message=created id=ses_e6cd05dd9ffetGGUmtpCBWkFkK slug=curious-nebula version=1.19.5 projectID=global directory=/workspace path=workspace workspaceID=undefined parentID=undefined title="New session - 2026-10-31T18:18:54.886Z" agent=undefined model=undefined metadata=undefined permission="[{\"permission\":\"question\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_enter\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_exit\",\"pattern\":\"*\",\"action\":\"deny\"}]" cost=0 tokens.input=0 tokens.output=0 tokens.reasoning=0 tokens.cache.read=0 tokens.cache.write=0 time.created=1793470734886 time.updated=1793470734886
+timestamp=2026-10-31T18:18:54.898Z level=INFO run=a85b4215 message="event connected"
+timestamp=2026-10-31T18:18:54.953Z level=INFO run=a85b4215 message=loop session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK step=0
+timestamp=2026-10-31T18:18:55.825Z level=INFO run=a85b4215 message="shell tool using shell" shell=/bin/bash
+timestamp=2026-10-31T18:18:55.836Z level=INFO run=a85b4215 message=init count=1
+timestamp=2026-10-31T18:18:55.843Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=true agent=title mode=primary
+timestamp=2026-10-31T18:18:55.849Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:18:55.971Z level=INFO run=a85b4215 message="watcher backend" directory=/workspace platform=linux backend=inotify
+timestamp=2026-10-31T18:18:55.984Z level=INFO run=a85b4215 message="project copy refresh started" projectID=global
+timestamp=2026-10-31T18:18:55.986Z level=INFO run=a85b4215 message="project copy refresh done" projectID=global updated=[] removed=[]
+timestamp=2026-10-31T18:18:56.012Z level=INFO run=a85b4215 message="booting location services" directory=/workspace workspaceID=undefined
+timestamp=2026-10-31T18:18:56.380Z level=INFO run=a85b4215 message=process session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK messageID=msg_1932fa5c9001sbMmlp7VfW1jdK
+timestamp=2026-10-31T18:18:56.381Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=false agent=build mode=primary
+timestamp=2026-10-31T18:18:56.383Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:19:25.876Z level=INFO run=a85b4215 message=evaluated permission=bash pattern="/usr/bin/curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=79cb1fc5a94f-baseline" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:26.133Z level=INFO run=a85b4215 message=evaluated permission=bash pattern="printf 'BASH_ENV=%s\\n' \"${BASH_ENV:-<unset>}\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:26.134Z level=INFO run=a85b4215 message=evaluated permission=bash pattern="ls -la \"$BASH_ENV\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:26.171Z level=INFO run=a85b4215 message=loop session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK step=1
+timestamp=2026-10-31T18:19:26.185Z level=INFO run=a85b4215 message=process session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK messageID=msg_193301c5d0016IiXHp0Uil31i5
+timestamp=2026-10-31T18:19:26.186Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=false agent=build mode=primary
+timestamp=2026-10-31T18:19:26.187Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:19:29.302Z level=INFO run=a85b4215 message=evaluated permission=external_directory pattern=/home/agent/* action.permission=external_directory action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:29.302Z level=INFO run=a85b4215 message=evaluated permission=read pattern=home/agent/.bash_env action.permission=read action.pattern=* action.action=allow
+timestamp=2026-10-31T18:19:29.323Z level=INFO run=a85b4215 message=loop session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK step=2
+timestamp=2026-10-31T18:19:29.330Z level=INFO run=a85b4215 message="touching file" file=/home/agent/.bash_env
+timestamp=2026-10-31T18:19:29.339Z level=INFO run=a85b4215 message=process session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK messageID=msg_1933028ad001t11fVMsN7UgaJw
+timestamp=2026-10-31T18:19:29.339Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=false agent=build mode=primary
+timestamp=2026-10-31T18:19:29.341Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:19:30.799Z level=INFO run=a85b4215 message=evaluated permission=external_directory pattern=/home/agent/* action.permission=external_directory action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:30.805Z level=INFO run=a85b4215 message=evaluated permission=edit pattern=home/agent/.bash_env action.permission=edit action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:30.807Z level=INFO run=a85b4215 message=formatting file=/home/agent/.bash_env
+timestamp=2026-10-31T18:19:30.807Z level=INFO run=a85b4215 message="touching file" file=/home/agent/.bash_env
+timestamp=2026-10-31T18:19:30.851Z level=INFO run=a85b4215 message=loop session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK step=3
+timestamp=2026-10-31T18:19:30.867Z level=INFO run=a85b4215 message=process session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK messageID=msg_193302ea4001u0EWXZV77QzZ5c
+timestamp=2026-10-31T18:19:30.867Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=false agent=build mode=primary
+timestamp=2026-10-31T18:19:30.869Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:19:32.508Z level=INFO run=a85b4215 message=evaluated permission=bash pattern="curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=79cb1fc5a94f-after" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:32.534Z level=INFO run=a85b4215 message=loop session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK step=4
+timestamp=2026-10-31T18:19:32.546Z level=INFO run=a85b4215 message=process session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK messageID=msg_193303537001jsea3K4PBLke3L
+timestamp=2026-10-31T18:19:32.547Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=false agent=build mode=primary
+timestamp=2026-10-31T18:19:32.549Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:19:34.369Z level=INFO run=a85b4215 message=evaluated permission=bash pattern="/usr/bin/curl -sS -i --max-time 5 http://127.0.0.1:8081/health?probe=79cb1fc5a94f-bypass" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:19:34.411Z level=INFO run=a85b4215 message=loop session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK step=5
+timestamp=2026-10-31T18:19:34.422Z level=INFO run=a85b4215 message=process session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK messageID=msg_193303c8d001taIxDlbH86usAV
+timestamp=2026-10-31T18:19:34.423Z level=INFO run=a85b4215 message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cd05dd9ffetGGUmtpCBWkFkK small=false agent=build mode=primary
+timestamp=2026-10-31T18:19:34.425Z level=INFO run=a85b4215 message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3

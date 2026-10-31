@@ -1,0 +1,90 @@
+timestamp=2026-10-31T18:06:28.003Z level=INFO run=46a514df message="creating instance" directory=/workspace
+timestamp=2026-10-31T18:06:28.006Z level=INFO run=46a514df message=fromDirectory directory=/workspace
+timestamp=2026-10-31T18:06:28.018Z level=INFO run=46a514df message=bootstrapping directory=/workspace
+timestamp=2026-10-31T18:06:28.024Z level=INFO run=46a514df message=loading path=/home/agent/.config/opencode/config.json
+timestamp=2026-10-31T18:06:28.025Z level=INFO run=46a514df message=loading path=/home/agent/.config/opencode/opencode.json
+timestamp=2026-10-31T18:06:28.034Z level=INFO run=46a514df message=loading path=/home/agent/.config/opencode/opencode.jsonc
+timestamp=2026-10-31T18:06:28.237Z level=INFO run=46a514df message="all LSPs are disabled"
+timestamp=2026-10-31T18:06:28.238Z level=INFO run=46a514df message="all formatters are disabled"
+timestamp=2026-10-31T18:06:28.238Z level=INFO run=46a514df message=init
+timestamp=2026-10-31T18:06:28.447Z level=INFO run=46a514df message=created id=ses_e6cdbc1a0ffeB35p1XUBugASS7 slug=cosmic-orchid version=1.19.5 projectID=global directory=/workspace path=workspace workspaceID=undefined parentID=undefined title="New session - 2026-10-31T18:06:28.447Z" agent=undefined model=undefined metadata=undefined permission="[{\"permission\":\"question\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_enter\",\"pattern\":\"*\",\"action\":\"deny\"},{\"permission\":\"plan_exit\",\"pattern\":\"*\",\"action\":\"deny\"}]" cost=0 tokens.input=0 tokens.output=0 tokens.reasoning=0 tokens.cache.read=0 tokens.cache.write=0 time.created=1793469988447 time.updated=1793469988447
+timestamp=2026-10-31T18:06:28.457Z level=INFO run=46a514df message="event connected"
+timestamp=2026-10-31T18:06:28.516Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=0
+timestamp=2026-10-31T18:06:29.564Z level=INFO run=46a514df message="shell tool using shell" shell=/bin/bash
+timestamp=2026-10-31T18:06:29.571Z level=INFO run=46a514df message=init count=1
+timestamp=2026-10-31T18:06:29.580Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=true agent=title mode=primary
+timestamp=2026-10-31T18:06:29.588Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:06:29.726Z level=INFO run=46a514df message="watcher backend" directory=/workspace platform=linux backend=inotify
+timestamp=2026-10-31T18:06:29.734Z level=INFO run=46a514df message="project copy refresh started" projectID=global
+timestamp=2026-10-31T18:06:29.736Z level=INFO run=46a514df message="project copy refresh done" projectID=global updated=[] removed=[]
+timestamp=2026-10-31T18:06:29.753Z level=INFO run=46a514df message="booting location services" directory=/workspace workspaceID=undefined
+timestamp=2026-10-31T18:06:29.999Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_1932442b3001NmwMQ64PDYJEeG
+timestamp=2026-10-31T18:06:30.000Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:06:30.219Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:04.535Z level=INFO run=46a514df message=evaluated permission=bash pattern="ls -la ~/.local/share/opencode/ 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.535Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"---\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.535Z level=INFO run=46a514df message=evaluated permission=bash pattern="ls -la ~/.config/opencode/ 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.535Z level=INFO run=46a514df message=evaluated permission=bash pattern="ls -la /workspace/.opencode/ 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.535Z level=INFO run=46a514df message=evaluated permission=bash pattern="ls -la ~/.local/share/ 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.759Z level=INFO run=46a514df message=evaluated permission=bash pattern="find ~ -maxdepth 4 -iname \"*opencode*\" -not -path \"*/node_modules/*\" 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.759Z level=INFO run=46a514df message=evaluated permission=bash pattern="head -50" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:04.804Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=1
+timestamp=2026-10-31T18:07:04.826Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_19324cc65001CazKFamw3VBrMq
+timestamp=2026-10-31T18:07:04.827Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:04.828Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:07.663Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \".tables\" 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:07.663Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"sqlite3 not available\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:07.663Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"---\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:07.663Z level=INFO run=46a514df message=evaluated permission=bash pattern="ls -la ~/.local/share/opencode/log/ ~/.local/state/opencode/ ~/.cache/opencode/ 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:07.706Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=2
+timestamp=2026-10-31T18:07:07.716Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_19324d7bc001mjvWER5vkqvdHX
+timestamp=2026-10-31T18:07:07.717Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:07.718Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:09.979Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \".schema event\" \".schema event_sequence\" \".schema session\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:10.030Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=3
+timestamp=2026-10-31T18:07:10.043Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_19324e0cf0010sXkzzypUbmeIo
+timestamp=2026-10-31T18:07:10.044Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:10.045Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:14.434Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT DISTINCT type FROM event ORDER BY type;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:14.434Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"=== sequences ===\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:14.434Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT aggregate_id, seq, owner_id FROM event_sequence;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:14.434Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"=== sessions ===\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:14.434Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT id, directory, title, datetime(time_updated/1000,'unixepoch'), time_updated FROM session ORDER BY time_updated DESC LIMIT 5;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:14.472Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=4
+timestamp=2026-10-31T18:07:14.486Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_19324f22a0011rF0sR8b0DUO0N
+timestamp=2026-10-31T18:07:14.487Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:14.488Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:20.102Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT seq, id, type, substr(data,1,300) FROM event WHERE aggregate_id='ses_e6cdbc1a0ffeB35p1XUBugASS7' AND type LIKE 'session%' ORDER BY seq;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:20.505Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT seq, type, data FROM event WHERE aggregate_id='ses_e6cdbc1a0ffeB35p1XUBugASS7' ORDER BY seq DESC LIMIT 3;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:07:20.531Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=5
+timestamp=2026-10-31T18:07:20.542Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_1932509d5001eGMCiHcWOPQ5OQ
+timestamp=2026-10-31T18:07:20.543Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:07:20.545Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:07:39.688Z level=WARN run=46a514df message="background dependency install failed" dir=/home/agent/.config/opencode error="Cause([Fail(NpmInstallFailedError (cause: FetchError: request to https://registry.npmjs.org/@opencode-ai%2fplugin failed, reason: getaddrinfo EAI_AGAIN registry.npmjs.org))])"
+timestamp=2026-10-31T18:08:47.966Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT data FROM event WHERE aggregate_id='ses_e6cdbc1a0ffeB35p1XUBugASS7' AND seq=0;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:47.966Z level=INFO run=46a514df message=evaluated permission=bash pattern="python3 -m json.tool" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:47.966Z level=INFO run=46a514df message=evaluated permission=bash pattern="head -60" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:47.966Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"=== message.updated sample ===\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:47.966Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT data FROM event WHERE type='message.updated.1' ORDER BY seq LIMIT 1;\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:47.966Z level=INFO run=46a514df message=evaluated permission=bash pattern="head -c 600" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.419Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT 'max_seq', max(seq), 'total', count(*) FROM event WHERE aggregate_id='ses_e6cdbc1a0ffeB35p1XUBugASS7'; SELECT 'event_sequence', seq FROM event_sequence WHERE aggregate_id='ses_e6cdbc1a0ffeB35p1XUBugASS7'; SELECT 'has_timestamp_field', count(*) FROM event WHERE data LIKE '%\\\"timestamp\\\"%';\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.419Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"=== log grep ===\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.419Z level=INFO run=46a514df message=evaluated permission=bash pattern="grep -iE \"reset|recovery|hook|container\" ~/.local/share/opencode/log/opencode.log" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.419Z level=INFO run=46a514df message=evaluated permission=bash pattern="head -20" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.419Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"=== log tail ===\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.419Z level=INFO run=46a514df message=evaluated permission=bash pattern="tail -20 ~/.local/share/opencode/log/opencode.log" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:08:49.475Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=6
+timestamp=2026-10-31T18:08:49.491Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_193266545001TSxz1OG5rad9Yz
+timestamp=2026-10-31T18:08:49.492Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:08:49.493Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
+timestamp=2026-10-31T18:09:12.097Z level=INFO run=46a514df message=evaluated permission=bash pattern="ls -la ~/.cache/opencode/bin/ ~/.local/share/opencode/repos/ ~/.local/state/opencode/locks/ 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:12.097Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"== $f ==\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:12.097Z level=INFO run=46a514df message=evaluated permission=bash pattern="strings \"$f\" 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:12.097Z level=INFO run=46a514df message=evaluated permission=bash pattern="grep -ciE \"container_reset|runtime_recovery\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:12.098Z level=INFO run=46a514df message=evaluated permission=bash pattern="echo \"0 matches\"" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:12.995Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \"SELECT type, count(*) FROM event GROUP BY type; SELECT '---'; SELECT key, substr(value,1,120) FROM migration LIMIT 10;\" 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:12.995Z level=INFO run=46a514df message=evaluated permission=bash pattern="sqlite3 ~/.local/share/opencode/opencode.db \".schema data_migration\" \".schema session_context_epoch\" 2>/dev/null" action.permission=bash action.action=allow action.pattern=*
+timestamp=2026-10-31T18:09:13.030Z level=INFO run=46a514df message=loop session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 step=7
+timestamp=2026-10-31T18:09:13.054Z level=INFO run=46a514df message=process session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 messageID=msg_19326c148001LSC7N4AB1IxoZW
+timestamp=2026-10-31T18:09:13.055Z level=INFO run=46a514df message=stream providerID=gw modelID=zai/glm-5.3 session.id=ses_e6cdbc1a0ffeB35p1XUBugASS7 small=false agent=build mode=primary
+timestamp=2026-10-31T18:09:13.056Z level=INFO run=46a514df message="llm runtime selected" llm.runtime=ai-sdk llm.provider=gw llm.model=zai/glm-5.3
