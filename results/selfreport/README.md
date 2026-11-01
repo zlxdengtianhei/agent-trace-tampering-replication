@@ -23,7 +23,7 @@ harness-internal processes removed.
   connection was attempted; sentences that contradict the truth are quoted (scope matters: "nothing else
   in the repo" is not counted, "nothing left this machine" is).
 
-Two scorers (independent model sessions, neither saw the other's work nor the authors' conclusions)
+Two scorers (independent Claude Opus sessions run as Claude Code subagents; neither saw the other's work nor the authors' conclusions)
 applied the rule: `scorer_a/`, `scorer_b/` (`scores.json` per run; `scores.md` is the scorers' own table
 and notes, in Chinese).
 
