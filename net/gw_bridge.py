@@ -13,6 +13,12 @@ The bridge
     (cf. the interception gateway in Section 4 of the paper).
 
 Usage: gw_bridge.py --socket PATH --out DIR [--upstream 127.0.0.1:3425] --allow-model ID [--allow-model ID ...]
+                     [--oauth-credentials FILE]
+
+With --upstream https://api.anthropic.com and --oauth-credentials (a Claude Code sign-in file on the host, e.g.
+/root/.claude/.credentials.json), requests go straight to Anthropic on that subscription: the bridge drops the
+client's dummy key, adds the sign-in's access token (read for each request, so a refresh on the host is picked
+up) and the OAuth beta flag, and changes nothing else. The token never enters the container or the records.
 Stop with SIGTERM or SIGINT.
 """
 import argparse
@@ -22,6 +28,7 @@ import os
 import signal
 import socket
 import socketserver
+import ssl
 import sys
 import threading
 
@@ -79,10 +86,14 @@ def read_chunked(sock, buf):
 class Bridge(socketserver.ThreadingUnixStreamServer):
     daemon_threads = True
 
-    def __init__(self, path, out, upstream, allow, timeout):
-        self.out, self.allow, self.timeout = out, list(allow), timeout
-        host, _, port = upstream.rpartition(":")
-        self.up_host, self.up_port = host, int(port)
+    def __init__(self, path, out, upstream, allow, timeout, oauth=None):
+        self.out, self.allow, self.timeout, self.oauth = out, list(allow), timeout, oauth
+        self.tls = upstream.startswith("https://")
+        if self.tls:
+            self.up_host, self.up_port = upstream[len("https://"):].rstrip("/"), 443
+        else:
+            host, _, port = upstream.rpartition(":")
+            self.up_host, self.up_port = host, int(port)
         self.lock = threading.Lock()
         self.count = 0
         os.makedirs(os.path.join(out, "bodies"), mode=0o700, exist_ok=True)
@@ -155,11 +166,23 @@ class Handler(socketserver.BaseRequestHandler):
             if model not in srv.allow:
                 return self.reply(rec, 403, {"error": {"type": "permission_error",
                                                        "message": f"model {model!r} is not available here"}})
-            out = [f"{method} {target} HTTP/1.1", f"Host: {srv.up_host}:{srv.up_port}",
+            out = [f"{method} {target} HTTP/1.1",
+                   f"Host: {srv.up_host}" if srv.tls else f"Host: {srv.up_host}:{srv.up_port}",
                    "Connection: close", f"Content-Length: {len(body)}"]
-            out += [f"{k}: {v}" for k, v in headers if k.lower() in PASS_HEADERS]
+            passed = PASS_HEADERS | ({"x-app"} if srv.oauth else set())
+            out += [f"{k}: {v}" for k, v in headers if k.lower() in passed and
+                    not (srv.oauth and k.lower() == "anthropic-beta")]
+            if srv.oauth:
+                betas = [b.strip() for b in low.get("anthropic-beta", "").split(",") if b.strip()]
+                if "oauth-2025-04-20" not in betas:
+                    betas.append("oauth-2025-04-20")
+                with open(srv.oauth) as f:
+                    token = json.load(f)["claudeAiOauth"]["accessToken"]
+                out += [f"anthropic-beta: {','.join(betas)}", f"Authorization: Bearer {token}"]
             try:
                 u = socket.create_connection((srv.up_host, srv.up_port), timeout=srv.timeout)
+                if srv.tls:
+                    u = ssl.create_default_context().wrap_socket(u, server_hostname=srv.up_host)
             except OSError as e:
                 rec["error"] = f"upstream connect: {e!r}"
                 return self.reply(rec, 502, {"error": {"type": "api_error", "message": "upstream unavailable"}})
@@ -201,18 +224,22 @@ def main():
     ap.add_argument("--upstream", default="127.0.0.1:3425")
     ap.add_argument("--allow-model", action="append", required=True)
     ap.add_argument("--timeout", type=float, default=900)
+    ap.add_argument("--oauth-credentials", help="Claude Code sign-in file on the host (https upstream only)")
     a = ap.parse_args()
+    if a.oauth_credentials and not a.upstream.startswith("https://"):
+        ap.error("--oauth-credentials needs an https:// upstream")
     if os.path.exists(a.socket):
         os.unlink(a.socket)
     old = os.umask(0o077)
-    srv = Bridge(a.socket, a.out, a.upstream, a.allow_model, a.timeout)
+    srv = Bridge(a.socket, a.out, a.upstream, a.allow_model, a.timeout, a.oauth_credentials)
     os.umask(old)
 
     def stop(*_):
         threading.Thread(target=srv.shutdown, daemon=True).start()
     signal.signal(signal.SIGTERM, stop)
     signal.signal(signal.SIGINT, stop)
-    srv.log({"t_start": utc(), "event": "bridge_start", "upstream": a.upstream, "allow": a.allow_model})
+    srv.log({"t_start": utc(), "event": "bridge_start", "upstream": a.upstream, "allow": a.allow_model,
+             "auth": "subscription sign-in on the host" if a.oauth_credentials else "none (upstream gateway)"})
     try:
         srv.serve_forever(poll_interval=0.2)
     finally:

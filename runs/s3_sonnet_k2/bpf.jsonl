@@ -1,0 +1,996 @@
+{"type": "attached_probes", "data": {"probes": 17}}
+{"type": "printf", "data": "BEGIN\t2026-11-02T05:19:59.792540\t23002\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.485390\t3032121\t3032121\t3032116\tsetpriv\t0\t/proc/sys/kernel/cap_last_cap\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.485639\t3032121\t3032121\t3032116\tsetpriv\t524288\t/proc/20/status\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.485745\t3032121\t3032121\t3032116\tsetpriv\t524288\t/proc/20/status\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.485911\t3032121\t3032121\t3032116\tsetpriv\t524288\t/proc/20/status\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.486044\t3032121\t3032121\t3032116\tsetpriv\t/usr/local/sbin/env\tenv\t-i\tHOME=/home/agent\tUSER=agent\tLOGNAME=agent\tSHELL=/bin/bash\tLANG=C.UTF-8\tTERM=dumb\n"}
+{"type": "printf", "data": "EXECFAIL\t2026-11-02T05:20:00.486140\t3032121\t3032121\t-2\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.486233\t3032121\t3032121\t3032116\tsetpriv\t/usr/local/bin/env\tenv\t-i\tHOME=/home/agent\tUSER=agent\tLOGNAME=agent\tSHELL=/bin/bash\tLANG=C.UTF-8\tTERM=dumb\n"}
+{"type": "printf", "data": "EXECFAIL\t2026-11-02T05:20:00.486288\t3032121\t3032121\t-2\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.486372\t3032121\t3032121\t3032116\tsetpriv\t/usr/sbin/env\tenv\t-i\tHOME=/home/agent\tUSER=agent\tLOGNAME=agent\tSHELL=/bin/bash\tLANG=C.UTF-8\tTERM=dumb\n"}
+{"type": "printf", "data": "EXECFAIL\t2026-11-02T05:20:00.486416\t3032121\t3032121\t-2\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.486488\t3032121\t3032121\t3032116\tsetpriv\t/usr/bin/env\tenv\t-i\tHOME=/home/agent\tUSER=agent\tLOGNAME=agent\tSHELL=/bin/bash\tLANG=C.UTF-8\tTERM=dumb\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.486545\t3032121\t3032121\t3032116\tsetpriv\t0\t/usr/bin/env\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.486623\t3032121\t3032121\t3032116\tsetpriv\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.486983\t3032121\t3032121\t3032116\tenv\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.487109\t3032121\t3032121\t3032116\tenv\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.487469\t3032121\t3032121\t3032116\tenv\t/opt/mx/launchers/claude.sh\t/opt/mx/launchers/claude.sh\t/scenario\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.487513\t3032121\t3032121\t3032116\tenv\t0\t/opt/mx/launchers/claude.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.487695\t3032121\t3032121\t3032116\tenv\t0\t/usr/bin/bash\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.487717\t3032121\t3032121\t3032116\tenv\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.488212\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.488321\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/x86_64-linux-gnu/libtinfo.so.6.5\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.488449\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.488855\t3032121\t3032121\t3032116\tclaude.sh\t2050\t/dev/tty\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.489185\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.489284\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.489440\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.489677\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.489827\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.489981\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490129\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490293\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490375\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490527\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490676\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490823\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.490976\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.491127\t3032121\t3032121\t3032116\tclaude.sh\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.491392\t3032121\t3032121\t3032116\tclaude.sh\t0\t/opt/mx/launchers/claude.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.491604\t3032121\t3032121\t3032116\tclaude.sh\t591872\t/scenario/turns\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:00.491811\t3032121\t3032121\t3032116\tclaude.sh\t3032123\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.493582\t3032123\t3032123\t3032121\tclaude.sh\t/usr/bin/basename\tbasename\t/scenario/turns/01.txt\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.493600\t3032123\t3032123\t3032121\tclaude.sh\t0\t/usr/bin/basename\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.493646\t3032123\t3032123\t3032121\tclaude.sh\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.493997\t3032123\t3032123\t3032121\tbasename\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.494096\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.494592\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.494681\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.494836\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.494983\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495128\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495284\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495432\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495575\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495652\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495793\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.495949\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.496110\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.496272\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.496419\t3032123\t3032123\t3032121\tbasename\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:00.496611\t3032123\t3032123\t3032121\tbasename\t0\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:00.496857\t3032121\t3032121\t3032116\tclaude.sh\t3032124\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.498708\t3032124\t3032124\t3032121\tclaude.sh\t/usr/bin/cat\tcat\t/scenario/turns/01.txt\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.498729\t3032124\t3032124\t3032121\tclaude.sh\t0\t/usr/bin/cat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.498780\t3032124\t3032124\t3032121\tclaude.sh\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.499154\t3032124\t3032124\t3032121\tcat\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.499289\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.499822\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.499955\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.500157\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.500343\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.500509\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.500679\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.500848\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501012\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501098\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501279\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501447\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501650\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501827\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.501998\t3032124\t3032124\t3032121\tcat\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.502109\t3032124\t3032124\t3032121\tcat\t0\t/scenario/turns/01.txt\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:00.502336\t3032124\t3032124\t3032121\tcat\t0\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:00.502619\t3032121\t3032121\t3032116\tclaude.sh\t3032125\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.503207\t3032125\t3032125\t3032121\tclaude.sh\t/usr/local/bin/claude\tclaude\t-p\t--dangerously-skip-permissions\t--output-format\tstream-json\t--verbose\t--model\tclaude-sonnet-5-5\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.503229\t3032125\t3032125\t3032121\tclaude.sh\t0\t/usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.503282\t3032125\t3032125\t3032121\tclaude.sh\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.503595\t3032125\t3032125\t3032121\tclaude\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.503698\t3032125\t3032125\t3032121\tclaude\t524288\t/usr/lib/x86_64-linux-gnu/librt.so.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.503817\t3032125\t3032125\t3032121\tclaude\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.503975\t3032125\t3032125\t3032121\tclaude\t524288\t/usr/lib/x86_64-linux-gnu/libpthread.so.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.504100\t3032125\t3032125\t3032121\tclaude\t524288\t/usr/lib/x86_64-linux-gnu/libdl.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.504216\t3032125\t3032125\t3032121\tclaude\t524288\t/usr/lib/x86_64-linux-gnu/libm.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.504761\t3032125\t3032125\t3032121\tclaude\t0\t/proc/sys/vm/overcommit_memory\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.504873\t3032125\t3032125\t3032121\tclaude\t0\t/sys/kernel/mm/transparent_hugepage/enabled\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.506109\t3032125\t3032125\t3032121\tclaude\t524288\t/proc/23/maps\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.507879\t3032125\t3032125\t3032121\tclaude\t0\t/proc/sys/vm/mmap_min_addr\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.508016\t3032125\t3032125\t3032121\tclaude\t524288\t/proc/23/maps\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.508178\t3032125\t3032125\t3032121\tclaude\t524288\t/sys/devices/system/cpu/online\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.508292\t3032125\t3032125\t3032121\tclaude\t524288\t/proc/23/cgroup\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.508388\t3032125\t3032125\t3032121\tclaude\t524288\t/sys/fs/cgroup/cpu.max\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.508973\t3032125\t3032125\t3032121\tclaude\t524288\t/usr/share/zoneinfo/Etc/UTC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.509113\t3032125\t3032125\t3032121\tclaude\t524288\t/proc/23/cgroup\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.509631\t3032125\t3032125\t3032121\tclaude\t524288\t/sys/fs/cgroup/memory.max\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.509789\t3032125\t3032125\t3032121\tclaude\t524288\t/sys/fs/cgroup/memory.high\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.511152\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.512790\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.514868\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.515369\t3032125\t3032125\t3032121\tclaude\t524288\t/sys/devices/system/cpu/online\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.517676\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.520925\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.523889\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.526965\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/version\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.528392\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.531677\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.538362\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.546624\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.555197\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.557400\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/version\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.559580\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.564571\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.569090\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.572506\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.576538\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.581298\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.586035\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.592857\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.597645\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.609153\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.616838\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.617171\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/version\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.617622\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/version\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.619495\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.624849\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/proc/version\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.628009\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.629615\t3032125\t3032125\t3032121\tclaude\t557056\t/etc/ssl/certs/ca-certificates.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.631135\t3032125\t3032125\t3032121\tclaude\t622592\t/etc/ssl/certs\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.631451\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_Root_R46.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.631575\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/BJCA_Global_Root_CA1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.631699\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.631841\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632012\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_2_G3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632148\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632284\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632406\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GTS_Root_R3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632530\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/CFCA_EV_ROOT.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632638\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/ISRG_Root_X2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632763\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_ECC.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.632919\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/UCA_Extended_Validation_Root.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633047\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GDCA_TrustAUTH_R5_ROOT.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633161\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GTS_Root_R1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633292\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_EC1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633407\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G4.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633542\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R5.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633655\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/IdenTrust_Public_Sector_Root_CA_1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633773\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.633890\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/CommScope_Public_Trust_ECC_Root-01.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.634004\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_High_Assurance_EV_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.634123\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/emSign_Root_CA_-_G1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.634688\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/CA_Disig_Root_R2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.634819\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/AffirmTrust_Commercial.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.634945\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.635412\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.635530\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.635644\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/BJCA_Global_Root_CA2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.635754\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/NAVER_Global_Root_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.635869\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA_2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.636023\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/ISRG_Root_X1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.636522\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/COMODO_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.636635\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/emSign_Root_CA_-_C1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.636749\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.637231\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_C3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.637363\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Starfield_Root_Certificate_Authority_-_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.637541\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SwissSign_Gold_CA_-_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.637844\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/CommScope_Public_Trust_RSA_Root-02.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.637973\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.638088\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Buypass_Class_2_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.638199\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Security_Communication_ECC_RootCA1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.638371\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_1_2020.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.638859\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.638969\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TeliaSonera_Root_CA_v1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.639490\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.639616\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/certSIGN_Root_CA_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.639735\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.639845\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SecureSign_Root_CA12.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.639979\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GTS_Root_R2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.640151\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Baltimore_CyberTrust_Root.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.640304\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Hongkong_Post_Root_CA_3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.640465\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SecureSign_Root_CA15.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.640774\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Entrust_Root_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.640923\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Amazon_Root_CA_2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.641186\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_RSA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.641542\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/XRamp_Global_CA_Root.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.641693\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_1_G3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.641838\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Trusted_Root_G4.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.641980\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.642125\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.642268\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.642399\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/vTrus_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.642533\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certainly_Root_R1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.642749\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.642897\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Telekom_Security_TLS_RSA_Root_2023.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643031\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Microsec_e-Szigno_Root_CA_2009.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643171\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/CommScope_Public_Trust_ECC_Root-02.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643318\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/CommScope_Public_Trust_RSA_Root-01.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643459\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certainly_Root_E1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643609\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SSL.com_TLS_ECC_Root_CA_2022.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643778\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SecureSign_Root_CA14.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.643928\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Amazon_Root_CA_3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644118\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/certSIGN_ROOT_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644232\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644353\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Telia_Root_CA_v2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644460\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_R46.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644577\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/HiPKI_Root_CA_-_G1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644689\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Actalis_Authentication_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644802\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/AffirmTrust_Networking.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.644916\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certum_EC-384_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645020\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_TLS_ECC_P384_Root_G5.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645141\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/NetLock_Arany_=Class_Gold=_F\uffffffc5\uffffff91tan\uffffffc3\uffffffbas\uffffffc3\uffffffadtv\uffffffc3\uffffffa1ny.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645273\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_RSA_TLS_2021.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645382\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Trustwave_Global_ECC_P256_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645526\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645679\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/AffirmTrust_Premium_ECC.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.645825\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646015\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_1_2020.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646158\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/HARICA_TLS_RSA_Root_CA_2021.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646292\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/ACCVRAIZ1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646508\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646660\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646801\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/ANF_Secure_Server_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.646981\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/AffirmTrust_Premium.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.647130\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Amazon_Root_CA_1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.647324\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Amazon_Root_CA_4.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.647577\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_2011.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.647694\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_ECC_TLS_2021.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.647872\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Buypass_Class_3_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648046\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/COMODO_ECC_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648158\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/COMODO_RSA_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648298\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certigna.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648406\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certigna_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648544\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Certum_Trusted_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648699\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_2_2023.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648847\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_2_2023.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.648954\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649066\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649169\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649340\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649492\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/DigiCert_TLS_RSA4096_Root_G5.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649628\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649789\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/FIRMAPROFESIONAL_CA_ROOT-A_WEB.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.649903\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GLOBALTRUST_2020.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650031\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GTS_Root_R4.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650135\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R4.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650270\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R6.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650380\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/GlobalSign_Root_E46.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650490\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Go_Daddy_Class_2_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650595\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650699\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/HARICA_TLS_ECC_Root_CA_2021.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650847\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/IdenTrust_Commercial_Root_CA_1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.650954\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Izenpe.com.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.651069\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.651184\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.651305\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.654638\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_3_G3.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.654809\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.654972\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SSL.com_TLS_RSA_Root_CA_2022.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655079\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SZAFIR_ROOT_CA2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655185\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_E46.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655333\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/SecureTrust_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655442\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Secure_Global_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655558\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Security_Communication_RootCA2.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655662\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Starfield_Class_2_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655806\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.655936\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TWCA_CYBER_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656077\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656206\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Telekom_Security_TLS_ECC_Root_2020.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656391\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Trustwave_Global_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656505\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/Trustwave_Global_ECC_P384_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656605\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/TunTrust_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656724\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/UCA_Global_G2_Root.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656838\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/USERTrust_ECC_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.656942\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/USERTrust_RSA_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.657274\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/ePKI_Root_Certification_Authority.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.657585\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/e-Szigno_Root_CA_2017.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.657811\t3032125\t3032125\t3032121\tclaude\t557056\t/usr/share/ca-certificates/mozilla/vTrus_ECC_Root_CA.crt\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.658147\t3032125\t3032125\t3032121\tclaude\t622592\t/etc/ssl/certs\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.658325\t3032125\t3032125\t3032121\tclaude\t622592\t/usr/share/ca-certificates\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.666014\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.676260\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.684500\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.697595\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.700741\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.701544\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.701758\t3032125\t3032129\t3032121\tBun Pool 0\t557056\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.701858\t3032125\t3032129\t3032121\tBun Pool 0\t557121\t/home/agent/.claude/backups/.claude.json.backup.1793596800701\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:00.702002\t3032125\t3032129\t3032121\tBun Pool 0\t33\ts3_sonnet_k2/home/.claude/backups/.claude.json.backup.1793596800701\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.702253\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.702718\t3032125\t3032129\t3032121\tBun Pool 0\t557249\t/home/agent/.claude.json.tmp.23.835f19fa48d1\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.705076\t3032125\t3032129\t3032121\tBun Pool 0\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.835f19fa48d1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.705439\t3032125\t3032130\t3032121\tBun Pool 1\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.706410\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.706791\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.707112\t3032125\t3032129\t3032121\tBun Pool 0\t557249\t/home/agent/.claude.json.tmp.23.06e6fcb0f800\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.709421\t3032125\t3032130\t3032121\tBun Pool 1\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.06e6fcb0f800\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.709746\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.710458\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.710829\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.711088\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude.json.tmp.23.66105da5f5cc\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.712502\t3032125\t3032130\t3032121\tBun Pool 1\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.66105da5f5cc\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.712705\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.713351\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.713757\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.714052\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude.json.tmp.23.4ff62bb8ce1d\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.715492\t3032125\t3032129\t3032121\tBun Pool 0\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.4ff62bb8ce1d\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.715692\t3032125\t3032130\t3032121\tBun Pool 1\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.716266\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.716438\t3032125\t3032130\t3032121\tBun Pool 1\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.716981\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.717325\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.717575\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude.json.tmp.23.2e0118dd36bc\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.718843\t3032125\t3032129\t3032121\tBun Pool 0\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.2e0118dd36bc\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.719017\t3032125\t3032130\t3032121\tBun Pool 1\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.719628\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.719971\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.720202\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude.json.tmp.23.ad787871c0b6\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.721438\t3032125\t3032130\t3032121\tBun Pool 1\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.ad787871c0b6\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.721629\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.722126\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.722461\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.722693\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude.json.tmp.23.e048d8e8d8ce\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.723890\t3032125\t3032130\t3032121\tBun Pool 1\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.e048d8e8d8ce\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.724064\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.729760\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:00.737796\t3032125\t3032125\t3032121\tclaude\t3032131\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.741430\t3032131\t3032131\t3032125\tclaude\t64\t/dev/null\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.741578\t3032131\t3032131\t3032125\tclaude\t/usr/bin/git\tgit\t-c\tcore.hooksPath=/dev/null\t-c\tcore.fsmonitor=\t-C\t/workspace\tls-files\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.741592\t3032131\t3032131\t3032125\tclaude\t0\t/usr/bin/git\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.741656\t3032131\t3032131\t3032125\tclaude\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.741732\t3032125\t3032125\t3032121\tclaude\t0\tanon_inode:[pidfd]\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.742041\t3032131\t3032131\t3032125\tgit\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.742254\t3032131\t3032131\t3032125\tgit\t524288\t/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.742409\t3032131\t3032131\t3032125\tgit\t524288\t/usr/lib/x86_64-linux-gnu/libz.so.1.3.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.742566\t3032131\t3032131\t3032125\tgit\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.743113\t3032131\t3032131\t3032125\tgit\t2\t/dev/null\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:00.743686\t3032131\t3032131\t3032125\tgit\t32768\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.745425\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.749690\t3032125\t3032125\t3032121\tclaude\t753664\t/tmp/claude-23002\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.751703\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/proc/23/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.753181\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/proc/23/uid_map\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.759330\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.760080\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/tmp/cc-socks\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.760717\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/proc/23/uid_map\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.761922\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude/sessions/23.88ed79037692ba2da1bbb3f7e49a197d3dba18fb19b222c3e8e6cfdc39ebe22f.key.tmp.c79eb851\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:00.762034\t3032125\t3032130\t3032121\tBun Pool 1\t110\ts3_sonnet_k2/home/.claude/sessions/23.88ed79037692ba2da1bbb3f7e49a197d3dba18fb19b222c3e8e6cfdc39ebe22f.key.tmp.c79eb851\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.762216\t3032125\t3032129\t3032121\tBun Pool 0\t-1\ts3_sonnet_k2/home/.claude/sessions/23.88ed79037692ba2da1bbb3f7e49a197d3dba18fb19b222c3e8e6cfdc39ebe22f.key.tmp.c79eb851\ts3_sonnet_k2/home/.claude/sessions/23.88ed79037692ba2da1bbb3f7e49a197d3dba18fb19b222c3e8e6cfdc39ebe22f.key\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.775694\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.789294\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.795228\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/version\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:00.796221\t3032125\t3032125\t3032121\tclaude\t3032133\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.798971\t3032133\t3032133\t3032125\tclaude\t64\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799063\t3032133\t3032133\t3032125\tclaude\t65\t/dev/null\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:00.799158\t3032133\t3032133\t3032125\tclaude\t/usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude.exe\trg\t--no-config\t--files\t--hidden\t/workspace\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799185\t3032133\t3032133\t3032125\tclaude\t0\t/usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799288\t3032133\t3032133\t3032125\tclaude\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799374\t3032125\t3032125\t3032121\tclaude\t0\tanon_inode:[pidfd]\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799675\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799805\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/librt.so.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.799978\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.800167\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libpthread.so.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.800319\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libdl.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.800460\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libm.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.801209\t3032133\t3032133\t3032125\tclaude.exe\t0\t/proc/sys/vm/overcommit_memory\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.801329\t3032133\t3032133\t3032125\tclaude.exe\t0\t/sys/kernel/mm/transparent_hugepage/enabled\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.803266\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/proc/30/cgroup\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.803393\t3032133\t3032133\t3032125\tclaude.exe\t524288\t/sys/fs/cgroup/cpu.max\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.805590\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.805991\t3032133\t3032135\t3032125\tclaude.exe\t591872\t/workspace\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.806158\t3032133\t3032135\t3032125\tclaude.exe\t591872\t/workspace/tests\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:00.808580\t3032133\t3032133\t3032125\tclaude.exe\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.816869\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.826302\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.835359\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.847055\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.861337\t3032125\t3032129\t3032121\tBun Pool 0\t557121\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:00.861567\t3032125\t3032129\t3032121\tBun Pool 0\t442\ts3_sonnet_k2/home/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.865649\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.865946\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/sessions\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.866314\t3032125\t3032130\t3032121\tBun Pool 1\t557121\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:00.866416\t3032125\t3032130\t3032121\tBun Pool 1\t516\ts3_sonnet_k2/home/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.866526\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.866627\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/projects/-workspace/memory\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.868104\t3032125\t3032129\t3032121\tBun Pool 0\t557312\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.868712\t3032125\t3032130\t3032121\tBun Pool 1\t557121\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.868714\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:00.868813\t3032125\t3032130\t3032121\tBun Pool 1\t516\ts3_sonnet_k2/home/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.870789\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.885909\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/projects/-workspace\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.886502\t3032125\t3032130\t3032121\tBun Pool 1\t557249\t/home/agent/.claude.json.tmp.23.69501af9ee82\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.886709\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.890257\t3032125\t3032129\t3032121\tBun Pool 0\t557761\t/tmp/claude-23002/fswatch-probe-tmBTB3/probe\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.891791\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.905575\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.917595\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.932102\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.934642\t3032125\t3032129\t3032121\tBun Pool 0\t557249\t/home/agent/.claude/plugins/store/cc-plugin-agents-md_builtin-b049b47b3618.json.tmp.7928d6fe\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:00.934854\t3032125\t3032129\t3032121\tBun Pool 0\t92\thome/.claude/plugins/store/cc-plugin-agents-md_builtin-b049b47b3618.json.tmp.7928d6fe\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.934890\t3032125\t3032130\t3032121\tBun Pool 1\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.69501af9ee82\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.941706\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.942512\t3032125\t3032130\t3032121\tBun Pool 1\t-1\thome/.claude/plugins/store/cc-plugin-agents-md_builtin-b049b47b3618.json.tmp.7928d6fe\thome/.claude/plugins/store/cc-plugin-agents-md_builtin-b049b47b3618.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.942562\t3032125\t3032129\t3032121\tBun Pool 0\t690177\t/tmp/claude-23002/fswatch-probe-tmBTB3/probe\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.942861\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "CONNECT\t2026-11-02T05:20:00.943226\t3032125\t3032143\t3032121\tHTTP Client\t-115\tinet\t127.0.0.1\t8080\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.944357\t3032125\t3032129\t3032121\tBun Pool 0\t0\t.claude/plugins/store/cc-plugin-agents-md_builtin-b049b47b3618.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.944927\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude.json\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.946157\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.946546\t3032125\t3032129\t3032121\tBun Pool 0\t557249\t/home/agent/.claude.json.tmp.23.c172148e975a\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:00.948232\t3032125\t3032129\t3032121\tBun Pool 0\t-1\tmx-exercise/work/s3_sonnet_k2/home/.claude.json.tmp.23.c172148e975a\tmx-exercise/work/s3_sonnet_k2/home/.claude.json\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:00.948420\t3032125\t3032130\t3032121\tBun Pool 1\t0\twork/s3_sonnet_k2/home/.claude.json.lock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.991665\t3032125\t3032129\t3032121\tBun Pool 0\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.992080\t3032125\t3032130\t3032121\tBun Pool 1\t557056\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:00.992857\t3032125\t3032129\t3032121\tBun Pool 0\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:01.245580\t3032125\t3032130\t3032121\tBun Pool 1\t-21\t//////tmp/claude-23002/fswatch-probe-tmBTB3\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:01.245800\t3032125\t3032130\t3032121\tBun Pool 1\t753664\t/tmp/claude-23002/fswatch-probe-tmBTB3\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:01.245984\t3032125\t3032130\t3032121\tBun Pool 1\t0\t////tmp/claude-23002/fswatch-probe-tmBTB3/probe\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:01.246155\t3032125\t3032130\t3032121\tBun Pool 1\t0\t//tmp/claude-23002/fswatch-probe-tmBTB3\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:01.645754\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.044837\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.524609\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.524835\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.849410\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.854503\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.859524\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.865417\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.868631\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.872313\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.872891\t3032125\t3032125\t3032121\tclaude\t3032337\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.876044\t3032337\t3032337\t3032125\tclaude\t/bin/bash\t/bin/bash\t-c\tenv\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.876078\t3032337\t3032337\t3032125\tclaude\t0\t/usr/bin/bash\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.876161\t3032337\t3032337\t3032125\tclaude\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.876257\t3032125\t3032125\t3032121\tclaude\t0\tanon_inode:[pidfd]\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.876540\t3032337\t3032337\t3032125\tbash\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.876645\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libtinfo.so.6.5\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.876773\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.877291\t3032337\t3032337\t3032125\tbash\t2050\t/dev/tty\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.877671\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.877778\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.877935\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.878083\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.878255\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.878446\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.878600\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.878793\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.878883\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.879092\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.879333\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.879573\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.879750\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.879945\t3032337\t3032337\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.880432\t3032337\t3032337\t3032125\tbash\t/usr/bin/env\tenv\t\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.880461\t3032337\t3032337\t3032125\tbash\t0\t/usr/bin/env\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.880532\t3032337\t3032337\t3032125\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.881036\t3032337\t3032337\t3032125\tenv\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.881132\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.881730\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.881827\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.881977\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.882123\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.882276\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.882435\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.882611\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.882774\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.882854\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.883001\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.883147\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.883278\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.883317\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.883486\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.883635\t3032337\t3032337\t3032125\tenv\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.883866\t3032337\t3032337\t3032125\tenv\t0\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.885584\t3032125\t3032125\t3032121\tclaude\t3032338\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.888595\t3032338\t3032338\t3032125\tclaude\t/bin/bash\t/bin/bash\t-c\t-l\tSNAPSHOT_FILE=/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n      # No user config file to source\n      \n\n      # First, create/clear the snapshot file\n      echo \"# Snapshot file\" >| \"$SNAPSHOT_FILE\"\n\n      # When this file is sourced, we first unalias to avoid conflicts\n      # This is necessary because aliases get \"frozen\" inside function definitions at definition time,\n      # which can cause unexpected behavior when functions use commands that conflict with aliases\n      echo \"# Unset all aliases to avoid conflicts with functions\" >> \"$SNAPSHOT_FILE\"\n      echo \"unalias -a 2>/dev/null || true\" >> \"$SNAPSHOT_FILE\"\n\n      echo \"shopt -s expand_aliases\" >> \"$SNAPSHOT_FILE\"\n\n      \n      # Check for rg availability\n      echo \"# Check for rg availability\" >> \"$SNAPSHOT_FILE\"\n      echo \"if ! hash rg 2>/dev/null && ! typeset -f rg >/dev/null 2>&1; then\" >> \"$SNAPSHOT_FILE\"\n  \n      cat >> \"$SNAPSHOT_FILE\" << 'RIPGREP_FUNC_END'\n  function rg {\n  local _cc_bin=\"${CLAUDE_CODE_EXECPAT..\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.888625\t3032338\t3032338\t3032125\tclaude\t0\t/usr/bin/bash\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.888694\t3032338\t3032338\t3032125\tclaude\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.888775\t3032125\t3032125\t3032121\tclaude\t0\tanon_inode:[pidfd]\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.889116\t3032338\t3032338\t3032125\tbash\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.889211\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libtinfo.so.6.5\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.889352\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.889387\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.889859\t3032338\t3032338\t3032125\tbash\t2050\t/dev/tty\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.890164\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.890272\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.890424\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.890570\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.890713\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.890861\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891003\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891168\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891277\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891442\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891594\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891756\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.891943\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.892100\t3032338\t3032338\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.892444\t3032338\t3032338\t3032125\tbash\t0\t/etc/profile\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.892697\t3032338\t3032338\t3032125\tbash\t3032340\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.894726\t3032340\t3032340\t3032338\tbash\t/usr/bin/id\tid\t-u\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.894746\t3032340\t3032340\t3032338\tbash\t0\t/usr/bin/id\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.894800\t3032340\t3032340\t3032338\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.895191\t3032340\t3032340\t3032338\tid\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.895548\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/x86_64-linux-gnu/libselinux.so.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.895728\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.895907\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.896311\t3032340\t3032340\t3032338\tid\t524288\t/proc/filesystems\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.896725\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.896862\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.897059\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.897284\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.897512\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.897729\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.897931\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.898143\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.898283\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.898496\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.898708\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.898913\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.899126\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.899352\t3032340\t3032340\t3032338\tid\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.899638\t3032340\t3032340\t3032338\tid\t0\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.899999\t3032338\t3032338\t3032125\tbash\t3032345\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.901915\t3032345\t3032345\t3032338\tbash\t/usr/bin/run-parts\trun-parts\t--list\t--regex\t^[a-zA-Z0-9_][a-zA-Z0-9._-]*\\.sh$\t/etc/profile.d\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.901937\t3032345\t3032345\t3032338\tbash\t0\t/usr/bin/run-parts\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.901989\t3032345\t3032345\t3032338\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.902388\t3032345\t3032345\t3032338\trun-parts\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.902554\t3032345\t3032345\t3032338\trun-parts\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.902919\t3032345\t3032345\t3032338\trun-parts\t591872\t/etc/profile.d\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.903137\t3032345\t3032345\t3032338\trun-parts\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.903724\t3032338\t3032338\t3032125\tbash\t577\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.903914\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.904061\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.904201\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.904352\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.904491\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.904737\t3032338\t3032338\t3032125\tbash\t3032346\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.905459\t3032346\t3032346\t3032338\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.905645\t3032346\t3032346\t3032338\tbash\t/usr/bin/cat\tcat\t\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.905665\t3032346\t3032346\t3032338\tbash\t0\t/usr/bin/cat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.905714\t3032346\t3032346\t3032338\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.906084\t3032346\t3032346\t3032338\tcat\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.906235\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.906858\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.907009\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.907252\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.907469\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.907674\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.907883\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.908097\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.908308\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.908435\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.908649\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.908864\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.909081\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.909316\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.909574\t3032346\t3032346\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.909867\t3032346\t3032346\t3032338\tcat\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.910045\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.910169\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.910424\t3032338\t3032338\t3032125\tbash\t3032347\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.911061\t3032347\t3032347\t3032338\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.911194\t3032347\t3032347\t3032338\tbash\t/usr/bin/cat\tcat\t\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.911215\t3032347\t3032347\t3032338\tbash\t0\t/usr/bin/cat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.911279\t3032347\t3032347\t3032338\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.911641\t3032347\t3032347\t3032338\tcat\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.911751\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.912314\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.912423\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.912588\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.912800\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.912968\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.913137\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.913315\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.913493\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.913598\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.913781\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.913969\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.914140\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.914332\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.914499\t3032347\t3032347\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.914739\t3032347\t3032347\t3032338\tcat\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.914934\t3032338\t3032338\t3032125\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.915138\t3032338\t3032338\t3032125\tbash\t3032348\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.915861\t3032348\t3032348\t3032338\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.916038\t3032348\t3032348\t3032338\tbash\t/usr/bin/cat\tcat\t\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.916061\t3032348\t3032348\t3032338\tbash\t0\t/usr/bin/cat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.916117\t3032348\t3032348\t3032338\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.916499\t3032348\t3032348\t3032338\tcat\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.916644\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.917301\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.917480\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.917731\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.917954\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.918175\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.918435\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.918669\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.918905\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.919035\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.919269\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.919464\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.919651\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.919855\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.920069\t3032348\t3032348\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.920379\t3032348\t3032348\t3032338\tcat\t0\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.920667\t3032338\t3032338\t3032125\tbash\t3032349\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.921866\t3032349\t3032349\t3032338\tbash\t1089\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.922104\t3032349\t3032349\t3032338\tbash\t/usr/bin/cat\tcat\t\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.922134\t3032349\t3032349\t3032338\tbash\t0\t/usr/bin/cat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.922256\t3032349\t3032349\t3032338\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.923081\t3032349\t3032349\t3032338\tcat\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.923311\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.924278\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.924465\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.924737\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.924978\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.925234\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.925557\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.925963\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.926297\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.926483\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.926760\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.927018\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.927276\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.927535\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.927793\t3032349\t3032349\t3032338\tcat\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.928221\t3032349\t3032349\t3032338\tcat\t0\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.928704\t3032338\t3032338\t3032125\tbash\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.930678\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/session-env/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.930834\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.936179\t3032125\t3032129\t3032121\tBun Pool 0\t691393\t/tmp/claude-23002/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa/tasks/brsic5zhx.output\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.937445\t3032125\t3032125\t3032121\tclaude\t3032350\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.940047\t3032350\t3032350\t3032125\tclaude\t/bin/bash\t/bin/bash\t-c\tsource /home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh 2>/dev/null || true && shopt -u extglob 2>/dev/null || true && { \\builtin unalias -- 'unsetenv'; \\builtin unset -f -- 'unsetenv'; } >/dev/null 2>&1 || true && eval 'ls -R | grep -v pyc | head -50; python3 -m unittest discover -s tests 2>&1 | tail -40' < /dev/null && pwd -P >| /tmp/claude-1d9b-cwd\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940073\t3032350\t3032350\t3032125\tclaude\t0\t/usr/bin/bash\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940140\t3032350\t3032350\t3032125\tclaude\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940259\t3032125\t3032125\t3032121\tclaude\t0\tanon_inode:[pidfd]\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940503\t3032350\t3032350\t3032125\tbash\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940555\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/46/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940614\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libtinfo.so.6.5\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.940760\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.941223\t3032350\t3032350\t3032125\tbash\t2050\t/dev/tty\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.941623\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.941737\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.941905\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942066\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942225\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942398\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942558\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942719\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942819\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.942981\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.943144\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.943313\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.943478\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.943639\t3032350\t3032350\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.943986\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944083\t3032350\t3032350\t3032125\tbash\t0\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944203\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944349\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944502\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944611\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944810\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.944963\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.945054\t3032350\t3032350\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.945160\t3032350\t3032350\t3032125\tbash\t0\t/dev/null\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.945366\t3032350\t3032350\t3032125\tbash\t3032351\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.945660\t3032350\t3032350\t3032125\tbash\t3032352\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.945923\t3032350\t3032350\t3032125\tbash\t3032353\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.946822\t3032351\t3032351\t3032350\tbash\t/usr/bin/ls\tls\t-R\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.946842\t3032351\t3032351\t3032350\tbash\t0\t/usr/bin/ls\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.946895\t3032351\t3032351\t3032350\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.947264\t3032351\t3032351\t3032350\tls\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.947408\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/x86_64-linux-gnu/libselinux.so.1\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.947586\t3032352\t3032352\t3032350\tbash\t3032354\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.947590\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/x86_64-linux-gnu/libcap.so.2.75\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.947711\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.947896\t3032353\t3032353\t3032350\tbash\t/usr/bin/head\thead\t-50\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.947919\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.14.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.947931\t3032353\t3032353\t3032350\tbash\t0\t/usr/bin/head\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.948031\t3032353\t3032353\t3032350\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.948428\t3032351\t3032351\t3032350\tls\t524288\t/proc/filesystems\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.948616\t3032353\t3032353\t3032350\thead\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.948769\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.948969\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949198\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.949382\t3032354\t3032354\t3032352\tbash\t/usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude.exe\tugrep\t-G\t--ignore-files\t--hidden\t-I\t--exclude-dir=.git\t--exclude-dir=.svn\t--exclude-dir=.hg\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949397\t3032354\t3032354\t3032352\tbash\t0\t/usr/local/lib/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949489\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949514\t3032354\t3032354\t3032352\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949584\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949828\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949932\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.949982\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950123\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/librt.so.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950144\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950275\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950299\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950439\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950505\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libpthread.so.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950616\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950672\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libdl.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950719\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950858\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/usr/lib/x86_64-linux-gnu/libm.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.950967\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951008\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951187\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951210\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951346\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951415\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951522\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951542\t3032354\t3032354\t3032352\tclaude.exe\t0\t/proc/sys/vm/overcommit_memory\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951646\t3032354\t3032354\t3032352\tclaude.exe\t0\t/sys/kernel/mm/transparent_hugepage/enabled\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951664\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951808\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.951950\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952017\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952176\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952199\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952390\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952410\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952603\t3032353\t3032353\t3032350\thead\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952627\t3032351\t3032351\t3032350\tls\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952787\t3032351\t3032351\t3032350\tls\t591872\t/workspace\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952928\t3032351\t3032351\t3032350\tls\t591872\t/workspace/tests\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.952958\t3032354\t3032354\t3032352\tclaude.exe\t524288\t/sys/devices/system/cpu/online\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.953219\t3032351\t3032351\t3032350\tls\t0\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.953489\t3032354\t3032354\t3032352\tclaude.exe\t0\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.953811\t3032352\t3032352\t3032350\tbash\t0\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:02.954142\t3032353\t3032353\t3032350\thead\t0\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.954408\t3032350\t3032350\t3032125\tbash\t3032355\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:02.954722\t3032350\t3032350\t3032125\tbash\t3032356\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.956084\t3032355\t3032355\t3032350\tbash\t/usr/bin/python3\tpython3\t-m\tunittest\tdiscover\t-s\ttests\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956105\t3032355\t3032355\t3032350\tbash\t0\t/usr/bin/python3.13\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:02.956100\t3032356\t3032356\t3032350\tbash\t/usr/bin/tail\ttail\t-40\t\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956114\t3032356\t3032356\t3032350\tbash\t0\t/usr/bin/tail\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956163\t3032356\t3032356\t3032350\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956163\t3032355\t3032355\t3032350\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956580\t3032356\t3032356\t3032350\ttail\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956609\t3032355\t3032355\t3032350\tpython3\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956701\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956724\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/libm.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.956884\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/libz.so.1.3.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957042\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/libexpat.so.1.13.0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957171\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957315\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957429\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957634\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957668\t3032355\t3032355\t3032350\tpython3\t0\t/proc/sys/vm/overcommit_memory\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.957828\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958003\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958075\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958192\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958231\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958405\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958583\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958682\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.958856\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.959032\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.959207\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.959404\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.959599\t3032356\t3032356\t3032350\ttail\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.962568\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/share/zoneinfo/Etc/UTC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.963627\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3.13\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.964054\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/encodings/__pycache__/__init__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.965061\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3.13/encodings\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.965365\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/encodings/__pycache__/aliases.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.965808\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/encodings/__pycache__/utf_8.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.968347\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/local/lib/python3.13/dist-packages\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.968478\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3/dist-packages\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.968680\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/sitecustomize.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.968866\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3.13/lib-dynload\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.969057\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/local/lib/python3.13/dist-packages\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.969356\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3/dist-packages\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.969774\t3032355\t3032355\t3032350\tpython3\t591872\t/workspace\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.970027\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/importlib/__pycache__/__init__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.970390\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3.13/importlib\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.970567\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/importlib/__pycache__/_abc.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.970823\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/types.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.971376\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/__init__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.971583\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3.13/unittest\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.971764\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/result.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.972054\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/traceback.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.972606\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/collections/__pycache__/__init__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.973235\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/keyword.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.973733\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/operator.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.974413\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/reprlib.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.975111\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/linecache.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.976321\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/textwrap.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.976731\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/re/__pycache__/__init__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.981547\t3032125\t3032129\t3032121\tBun Pool 0\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.981801\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/enum.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.982562\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/functools.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.983955\t3032355\t3032355\t3032350\tpython3\t591872\t/usr/lib/python3.13/re\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.984135\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/re/__pycache__/_compiler.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.984605\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/re/__pycache__/_parser.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.984991\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/re/__pycache__/_constants.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.985505\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/re/__pycache__/_casefix.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.986056\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/copyreg.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.987134\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/warnings.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.987616\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/contextlib.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.988415\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/_colorize.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.988644\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/__future__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.989147\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/util.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.989633\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/case.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.990327\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/difflib.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.990765\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/heapq.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.991412\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/pprint.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.991797\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/dataclasses.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.992276\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/copy.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.992594\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/weakref.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.992993\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/_weakrefset.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.993787\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/inspect.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.994679\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/ast.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.996766\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/dis.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.997298\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/opcode.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.997695\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/_opcode_metadata.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.998554\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/tokenize.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:02.998913\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/token.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.001345\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/suite.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.001953\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/loader.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.002454\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/fnmatch.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.003177\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/main.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.003718\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/argparse.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.004617\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/gettext.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.005736\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/runner.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.006349\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/signals.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.006642\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/signal.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.007707\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/unittest/__pycache__/__main__.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.008162\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/locale.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.009222\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/shutil.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.010469\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/bz2.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.010805\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/_compression.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.011177\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/lib-dynload/_bz2.cpython-313-x86_64-linux-gnu.so\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.011527\t3032355\t3032355\t3032350\tpython3\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.011736\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.012255\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/__pycache__/lzma.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.012611\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/python3.13/lib-dynload/_lzma.cpython-313-x86_64-linux-gnu.so\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.012798\t3032355\t3032355\t3032350\tpython3\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.012948\t3032355\t3032355\t3032350\tpython3\t524288\t/usr/lib/x86_64-linux-gnu/liblzma.so.5.8.1\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.014641\t3032355\t3032355\t3032350\tpython3\t591872\t/workspace/tests\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.015044\t3032355\t3032355\t3032350\tpython3\t591872\t/workspace/tests\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.015374\t3032355\t3032355\t3032350\tpython3\t524288\t/workspace/tests/test_calc.py\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.016009\t3032355\t3032355\t3032350\tpython3\t524481\t/workspace/tests/__pycache__/test_calc.cpython-313.pyc.140257781236816\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:03.016279\t3032355\t3032355\t3032350\tpython3\t-1\ts3_sonnet_k2/workspace/tests/__pycache__/test_calc.cpython-313.pyc.140257781236816\ts3_sonnet_k2/workspace/tests/__pycache__/test_calc.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.016726\t3032355\t3032355\t3032350\tpython3\t524288\t/workspace/calc.py\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.017156\t3032355\t3032355\t3032350\tpython3\t524481\t/workspace/__pycache__/calc.cpython-313.pyc.140257781237488\n"}
+{"type": "printf", "data": "RENAME\t2026-11-02T05:20:03.017496\t3032355\t3032355\t3032350\tpython3\t-1\twork/s3_sonnet_k2/workspace/__pycache__/calc.cpython-313.pyc.140257781237488\twork/s3_sonnet_k2/workspace/__pycache__/calc.cpython-313.pyc\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.018096\t3032355\t3032355\t3032350\tpython3\t524288\t/workspace/tests/test_calc.py\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:03.028450\t3032355\t3032355\t3032350\tpython3\t256\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:03.028760\t3032356\t3032356\t3032350\ttail\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.029088\t3032350\t3032350\t3032125\tbash\t577\t/tmp/claude-1d9b-cwd\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:03.029562\t3032350\t3032350\t3032125\tbash\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.035441\t3032125\t3032129\t3032121\tBun Pool 0\t690176\t/tmp/claude-23002/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa/tasks/brsic5zhx.output\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.037434\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.037721\t3032125\t3032130\t3032121\tBun Pool 1\t559360\t/tmp/claude-1d9b-cwd\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:03.037841\t3032125\t3032129\t3032121\tBun Pool 0\t0\ttmp/claude-23002/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa/tasks/brsic5zhx.output\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:03.038163\t3032125\t3032129\t3032121\tBun Pool 0\t0\t////////tmp/claude-1d9b-cwd\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.041054\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.050776\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.063219\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "CONNECT\t2026-11-02T05:20:03.065301\t3032125\t3032143\t3032121\tHTTP Client\t-115\tinet\t127.0.0.1\t8080\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.148439\t3032125\t3032130\t3032121\tBun Pool 1\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.148681\t3032125\t3032130\t3032121\tBun Pool 1\t557056\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.149222\t3032125\t3032130\t3032121\tBun Pool 1\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:03.673877\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.093326\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.099965\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.103272\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.106493\t3032125\t3032129\t3032121\tBun Pool 0\t691393\t/tmp/claude-23002/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa/tasks/bmwgpacmu.output\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:04.107791\t3032125\t3032125\t3032121\tclaude\t3032410\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:04.110839\t3032410\t3032410\t3032125\tclaude\t/bin/bash\t/bin/bash\t-c\tsource /home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh 2>/dev/null || true && shopt -u extglob 2>/dev/null || true && { \\builtin unalias -- 'unsetenv'; \\builtin unset -f -- 'unsetenv'; } >/dev/null 2>&1 || true && eval 'cat calc.py tests/test_calc.py' < /dev/null && pwd -P >| /tmp/claude-808f-cwd\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.110885\t3032410\t3032410\t3032125\tclaude\t0\t/usr/bin/bash\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.111003\t3032410\t3032410\t3032125\tclaude\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.111153\t3032125\t3032125\t3032121\tclaude\t0\tanon_inode:[pidfd]\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.111449\t3032410\t3032410\t3032125\tbash\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.111497\t3032125\t3032125\t3032121\tclaude\t557312\t/proc/53/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.111618\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libtinfo.so.6.5\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.111793\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.112405\t3032410\t3032410\t3032125\tbash\t2050\t/dev/tty\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.112803\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.112917\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.113102\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.113303\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.113543\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.113732\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.113912\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.114090\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.114187\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.114377\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.114558\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.114756\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.114955\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.115273\t3032410\t3032410\t3032125\tbash\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.115724\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.115837\t3032410\t3032410\t3032125\tbash\t0\t/home/agent/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.115951\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116108\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116251\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116351\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116546\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116689\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116767\t3032410\t3032410\t3032125\tbash\t577\t/dev/null\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.116858\t3032410\t3032410\t3032125\tbash\t0\t/dev/null\n"}
+{"type": "printf", "data": "FORK\t2026-11-02T05:20:04.117102\t3032410\t3032410\t3032125\tbash\t3032411\n"}
+{"type": "printf", "data": "EXEC\t2026-11-02T05:20:04.118136\t3032411\t3032411\t3032410\tbash\t/usr/bin/cat\tcat\tcalc.py\ttests/test_calc.py\t\t\t\t\t\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.118185\t3032411\t3032411\t3032410\tbash\t0\t/usr/bin/cat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.118320\t3032411\t3032411\t3032410\tbash\t0\t/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.118975\t3032411\t3032411\t3032410\tcat\t524288\t/etc/ld.so.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.119214\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/x86_64-linux-gnu/libc.so.6\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.119948\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_IDENTIFICATION\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.120063\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.120270\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MEASUREMENT\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.120442\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TELEPHONE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.120608\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_ADDRESS\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.120769\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NAME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.120976\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_PAPER\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.121143\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.121235\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.121417\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_MONETARY\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.121605\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_COLLATE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.121835\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_TIME\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.122018\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_NUMERIC\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.122184\t3032411\t3032411\t3032410\tcat\t524288\t/usr/lib/locale/C.utf8/LC_CTYPE\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.122333\t3032411\t3032411\t3032410\tcat\t0\t/workspace/calc.py\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.122478\t3032411\t3032411\t3032410\tcat\t0\t/workspace/tests/test_calc.py\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:04.122717\t3032411\t3032411\t3032410\tcat\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.123064\t3032410\t3032410\t3032125\tbash\t577\t/tmp/claude-808f-cwd\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:04.123699\t3032410\t3032410\t3032125\tbash\t0\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.124797\t3032125\t3032129\t3032121\tBun Pool 0\t690176\t/tmp/claude-23002/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa/tasks/bmwgpacmu.output\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.125365\t3032125\t3032130\t3032121\tBun Pool 1\t559360\t/tmp/claude-808f-cwd\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:04.125564\t3032125\t3032129\t3032121\tBun Pool 0\t0\ttmp/claude-23002/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa/tasks/bmwgpacmu.output\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:04.125898\t3032125\t3032129\t3032121\tBun Pool 0\t0\t////////tmp/claude-808f-cwd\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.127368\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.132083\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.144003\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "CONNECT\t2026-11-02T05:20:04.146051\t3032125\t3032143\t3032121\tHTTP Client\t-115\tinet\t127.0.0.1\t8080\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.204131\t3032125\t3032130\t3032121\tBun Pool 1\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:04.684531\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.517117\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.821164\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/projects\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.821891\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/projects/-workspace\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:05.824337\t3032125\t3032129\t3032121\tBun Pool 0\t-39\thome/.claude/projects/-workspace\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.826228\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/session-env\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:05.826802\t3032125\t3032129\t3032121\tBun Pool 0\t-39\ts3_sonnet_k2/home/.claude/session-env\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.829067\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.830217\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/plugins/store\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.830530\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/plugins/store\n"}
+{"type": "printf", "data": "RMDIR\t2026-11-02T05:20:05.830828\t3032125\t3032130\t3032121\tBun Pool 1\t-39\thome/.claude/plugins/store\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.830964\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/plugins\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.831275\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/tmp/claude-23002\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.831452\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/tmp\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.833160\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/shell-snapshots\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.834967\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/tmp\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.835614\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/backups\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.837404\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/projects\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.837628\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude/projects\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.838348\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/tmp/claude-23002\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.838550\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/tmp/claude-23002/-workspace\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.838862\t3032125\t3032130\t3032121\tBun Pool 1\t622592\t/home/agent/.claude\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.839260\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude/projects\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.839689\t3032125\t3032130\t3032121\tBun Pool 1\t557121\t/home/agent/.claude/.last-cleanup\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:05.839817\t3032125\t3032130\t3032121\tBun Pool 1\t24\twork/s3_sonnet_k2/home/.claude/.last-cleanup\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.840008\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:05.840685\t3032125\t3032129\t3032121\tBun Pool 0\t622592\t/home/agent/.claude\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:06.696950\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:07.515762\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.518542\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.713056\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.722717\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.727214\t3032125\t3032129\t3032121\tBun Pool 0\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.729904\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.733306\t3032125\t3032130\t3032121\tBun Pool 1\t557312\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:08.736673\t3032125\t3032125\t3032121\tclaude\t0\t//////tmp/cc-socks/23.sock\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.737683\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/stat\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.737886\t3032125\t3032125\t3032121\tclaude\t0\t/proc/23/statm\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:08.738387\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:08.738708\t3032125\t3032130\t3032121\tBun Pool 1\t0\twork/s3_sonnet_k2/home/.claude/shell-snapshots/snapshot-bash-1793596802884-d91lyw.sh\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.739299\t3032125\t3032125\t3032121\tclaude\t557056\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.740211\t3032125\t3032125\t3032121\tclaude\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.740658\t3032125\t3032125\t3032121\tclaude\t558145\t/home/agent/.claude/projects/-workspace/5de8eaeb-9bb9-4a31-a2aa-824e9db885fa.jsonl\n"}
+{"type": "printf", "data": "OPEN\t2026-11-02T05:20:08.740959\t3032125\t3032130\t3032121\tBun Pool 1\t557121\t/home/agent/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "FTRUNCATE\t2026-11-02T05:20:08.741089\t3032125\t3032130\t3032121\tBun Pool 1\t516\ts3_sonnet_k2/home/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:08.741105\t3032125\t3032129\t3032121\tBun Pool 0\t0\twork/s3_sonnet_k2/home/.claude/sessions/23.88ed79037692ba2da1bbb3f7e49a197d3dba18fb19b222c3e8e6cfdc39ebe22f.key\n"}
+{"type": "printf", "data": "UNLINK\t2026-11-02T05:20:08.743587\t3032125\t3032125\t3032121\tclaude\t0\twork/s3_sonnet_k2/home/.claude/sessions/23.json\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:08.743963\t3032125\t3032125\t3032121\tclaude\t0\n"}
+{"type": "printf", "data": "EXIT\t2026-11-02T05:20:08.761553\t3032121\t3032121\t3032116\tclaude.sh\t0\n"}
+{"type": "printf", "data": "END\t2026-11-02T05:20:10.483187\n"}
+
+

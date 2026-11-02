@@ -32,6 +32,9 @@ KIT=$ROOT/kit
 IMAGE=${MX_IMAGE:-mx-agents:2026-10-28}
 AGENT_UID=""
 UPSTREAM=${MX_GW_UPSTREAM:-127.0.0.1:3425}
+# MX_GW_OAUTH=<Claude Code sign-in file on the host> with MX_GW_UPSTREAM=https://api.anthropic.com: the bridge
+# sends the requests straight to Anthropic on that subscription (net/gw_bridge.py); the file stays on the host.
+OAUTH=${MX_GW_OAUTH:-}
 AGENT="" SCEN="" MODEL="zai/glm-5.3" TIMEOUT=1800 OC_CONF="" RUN_ID="" ALLOW=()
 
 while [ $# -gt 0 ]; do
@@ -95,7 +98,7 @@ chmod 700 "$WORK/home"
 
 log() { echo "[record $(date -u +%H:%M:%S)] $*"; }
 cat > "$RUN/meta.json" <<EOF
-{"run_id": "$RUN_ID", "agent": "$AGENT", "scenario": "$SCEN", "model": "$MODEL", "gateway_upstream": "$UPSTREAM",
+{"run_id": "$RUN_ID", "agent": "$AGENT", "scenario": "$SCEN", "model": "$MODEL", "gateway_upstream": "$UPSTREAM", "gateway_auth": "${OAUTH:+subscription sign-in on the host}",
  "network": "none + gateway bridge", "image": "$IMAGE",
  "image_id": "$(docker image inspect "$IMAGE" --format '{{.Id}}')", "agent_uid": $AGENT_UID,
  "turns": "$(basename "$TURNS_SRC")", "nonce": "$NONCE",
@@ -123,6 +126,7 @@ if [ "$AGENT" != fake ]; then
   log "starting gateway bridge (model $MODEL ${ALLOW[*]:-})"
   GW_ARGS=(--allow-model "$MODEL")
   for m in ${ALLOW[@]+"${ALLOW[@]}"}; do GW_ARGS+=(--allow-model "$m"); done
+  [ -z "$OAUTH" ] || GW_ARGS+=(--oauth-credentials "$OAUTH")
   python3 -I "$KIT/net/gw_bridge.py" --socket "$RUN/gw_sock/gw.sock" --out "$RUN/gw" --upstream "$UPSTREAM" \
     "${GW_ARGS[@]}" 2> "$RUN/gw/bridge.err" &
   GW_PID=$!
