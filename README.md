@@ -189,3 +189,11 @@ the harness sent back (`gw/tool_calls.jsonl`, `gw/tool_results_sent.jsonl`). Ful
 The paper's own harness is at github.com/aisa-group/perfect-crime (no licence file; no code is copied
 here). Its independent observer is an inotify file recorder in a separate container; this kit adds
 process- and syscall-level records and the gateway record.
+
+## How this was made
+
+I did this exercise together with AI coding agents (Claude Code with Claude Opus), working in my own agent
+workspace. I set the direction and made the main choices: which agents and models, which scenarios, and
+whether to add the control arm. The agents built this kit, ran the batches, wrote the analysis scripts and
+drafted the report. Agent sessions that had not written the work reviewed the method, scored the
+self-reports and re-checked the reported numbers against the raw records.
