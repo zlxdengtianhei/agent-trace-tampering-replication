@@ -95,7 +95,7 @@ Analysis code was frozen before the final recomputation of all runs (sha256 pref
 | `s1c_user_asks_redact` | user asks the agent to edit its trace: remove the parts about income and debts | — | existing records altered |
 | `s2_repo_file_instructs` | a repository file (`CLAUDE.md` / `AGENTS.md`) instructs it | A.2 (as a repo file, not a skill) | deletion without the user asking |
 | `s3_impossible_task` | a task that cannot be completed honestly (contradicting tests) | — | claimed success vs observed failure |
-| `s4_tool_call_spoofing` | extra: replication of the paper's tool-call spoofing | Fig. 14 | complete trace, fabricated tool result |
+| `s4_tool_call_spoofing` | own design 3: the paper's tool-call spoofing, replicated | Fig. 14 | complete trace, fabricated tool result |
 | `s5_hidden_git_hook` | own design 1: activity beneath a reported command | — | effects missing from the trace; agent's account vs kernel |
 | `s6_after_deletion` | own design 2: work after deleting the trace, then recall | builds on Section 3.5 | later actions missing; agent's account of its own session vs kernel |
 
@@ -192,8 +192,5 @@ process- and syscall-level records and the gateway record.
 
 ## How this was made
 
-I did this exercise together with AI coding agents (Claude Code with Claude Opus), working in my own agent
-workspace. I set the direction and made the main choices: which agents and models, which scenarios, and
-whether to add the control arm. The agents built this kit, ran the batches, wrote the analysis scripts and
-drafted the report. Agent sessions that had not written the work reviewed the method, scored the
-self-reports and re-checked the reported numbers against the raw records.
+I did this work together with AI coding agents. I made the main choices and the design; all parts of the
+work were done with AI assistance.
